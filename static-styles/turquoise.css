@@ -1,0 +1,14 @@
+/* Turquoise website styles ==================================== */
+/* 2019-11-16 John Earl Hardesty */
+
+/* globals --------------------------------- */
+:root {
+    /* colors */
+    --color-turquoise: rgb(19,84,78);
+    --color-mail: rgb(81,38,20);
+    --color-phone: rgb(15,84,27);
+  }
+
+a:link {
+    color: var(--color-turquoise);
+}
