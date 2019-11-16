@@ -12,3 +12,7 @@
 a:link {
     color: var(--color-turquoise);
 }
+a:hover {
+    background: var(--color-turquoise);
+    color: white;
+}
