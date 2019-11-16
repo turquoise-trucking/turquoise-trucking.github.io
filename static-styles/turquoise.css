@@ -16,3 +16,6 @@ a:hover {
     background: var(--color-turquoise);
     color: white;
 }
+.logo {
+    width: 25%;
+}
