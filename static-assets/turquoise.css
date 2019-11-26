@@ -41,8 +41,8 @@ footer {
 }
 
 
-.nav-list li a:hover:before {
-    margin-left: 0;
+.nav-list li a:hover:after, a.external-link:hover::after {
+    margin-left: 5px;
     opacity: 1;
     visibility: visible;
 }
@@ -58,10 +58,10 @@ footer {
     padding-bottom: 10px;
 }
 
-.nav-list li a:before {
-    /* content: "\226B"; */
-    font-family: "fa-solid-900";
-    content: "\f042";
+.nav-list li a:after, a.external-link:after  {
+    font-family: "Font Awesome 5 Free";
+    content: "\f054";
+    font-weight: 900;
     color: white ;
     display: inline-block;
     vertical-align: baseline;
@@ -72,14 +72,25 @@ footer {
     transition: .22s ease;
 }
 
-.ninety-four::after {
-    margin-left: 0.25em;
-    font-size: 2em;
-    vertical-align: middle;
-    font-family: "turquoise-truck";
+a.external-link:after {
+    content: "\f35d";
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f0c8";
-  }
+}
 
-  .ninety-four.arrow::after {
-    content: "\f152";
+.nav-fb a:hover i {color: #46b}
+.nav-fb {font-size: 110%;}
+
+.nav-home a:hover i,
+.nav-about a:hover i,
+.nav-contact a:hover i,
+.nav-drivers a:hover i,
+.nav-customers a:hover i {color: #128A80}
+
+.footer-dark {
+    background: #128A80;
+    color: #31D6C8;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
