@@ -21,7 +21,7 @@ a:hover {background: var(--color-turquoise);color: white;}
     background: var(--color-turquoise);
 }
 .masthead {
-    background-image: url("static-assets/road_header.jpg");
+    background-image: url("road_header.jpg");
     background-position: center;
 }
 
