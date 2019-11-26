@@ -23,6 +23,7 @@ a:hover {background: var(--color-turquoise);color: white;}
 .masthead {
     background-image: url("road_header.jpg");
     background-position: center;
+    height: 15%;
 }
 
 #footer {
