@@ -59,9 +59,9 @@ footer {
 }
 
 .nav-list li a:before {
-    content: "\226B";
-    /* font-family: "Font Awesome 5 Free"; */
-    /* color: #4d6de6; */
+    /* content: "\226B"; */
+    font-family: "fa-solid-900";
+    content: "\f042";
     color: white ;
     display: inline-block;
     vertical-align: baseline;
@@ -72,19 +72,14 @@ footer {
     transition: .22s ease;
 }
 
-.nav-list li a.nav-home:before {
-    content: ">>";
-}
-
-.icon::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+.ninety-four::after {
+    margin-left: 0.25em;
+    font-size: 2em;
+    vertical-align: middle;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c8";
   }
 
-  .tester::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
-  }
-
+  .ninety-four.arrow::after {
+    content: "\f152";
