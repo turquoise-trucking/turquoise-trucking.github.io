@@ -17,49 +17,13 @@
     </head>
 
 <body>
-<!-- navbar with collapse -->
-<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
-    <!-- Brand -->
-    <!-- <a class="navbar-brand" href="#">Turquoise Trucking</a> -->
-    <a class="navbar-brand" href="index.html">
-        <img src="static-assets/turquoise-icon-med.png" alt="logo" style="width: 40px;" >
-    </a>
-    
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About Turquoise</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="drivers.html">Drivers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="customers.html">Customers</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container">
+<!-- masthead -->
+<div class="container-fluid masthead">
     <div class="row">
         <div class="col-sm-6">
             <img class="logo" src="static-assets/turquoise-logo.png">
         </div>
-        <!--<div class="col-sm-6" style="background: yellow;">
-            <a class="btn btn-success" href="tel:+18447997900" role="button">Call 844-799-7900</a>
-            <br>
-            <a class="btn btn-secondary" href="mailto:contact@turquoisetruck.com" role="button">Email us</a>
-        </div> -->
-        <div class="col-sm-6">
+        <div class="col-sm-6 align-middle">
             <div class="btn-group float-right" style="padding-top: 0.75em;">
                 <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i> Call 844-799-7900</a>
                 <a class="btn btn-warning" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i> Email us</a>
@@ -68,7 +32,37 @@
     </div>
 </div>
 
-
+<!-- navbar with collapse -->
+<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!-- Brand -->
+        <!-- <a class="navbar-brand" href="#">Turquoise Trucking</a> -->
+        <a class="navbar-brand" href="index.html">
+            <img src="static-assets/turquoise-icon-med.png" alt="logo" style="width: 40px;" >
+        </a>
+        
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Turquoise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="drivers.html">Drivers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customers.html">Customers</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
 <div class="container">
@@ -120,12 +114,12 @@
                 </dl>
                 <dl class="contact-list">
                     <dt>Address: <a href="https://g.page/TurquoiseTrucking?share" target="_blank" rel="noreferrer"><i class="fas fa-map-marker-alt"></i> (Directions)</a></dt>
-                    <dd>3330 Southgate Ct SW Ste 222 
+                    <dd>3330 Southgate Ct SW Ste&nbsp;222 
                         <br> Cedar Rapids IA 52404</dd>
                 </dl>
                 <dl class="contact-list">
                     <dt>Email:</dt>
-                    <dd><a href="mailto:contact@turquoisetruck.com"><i class="fas fa-envelope"></i> contact@turquoisetruck.com</a></dd>
+                    <dd><a href="mailto:contact@turquoisetruck.com?subject=Hi, from your website"><i class="fas fa-envelope"></i> Send us a message</a></dd>
                 </dl>
                 
             </div>
@@ -142,14 +136,15 @@
         </div>
     </div>
 </div>
+
 <div class="footer-dark small">
-    <div class="container-fluid w-75">
+    <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-md-8">
                 <p>Made with Bootstrap and Font Awesome</p>
             </div>
-            <div class="col text-right">
-                <p>&copy; Turquoise Trucking</p>
+            <div class="col-md-4">
+                <p>&copy; Turquoise LLC</p>
             </div>
         </div>
     </div>

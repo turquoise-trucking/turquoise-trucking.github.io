@@ -20,6 +20,10 @@ a:hover {background: var(--color-turquoise);color: white;}
 .bg-turquoise {
     background: var(--color-turquoise);
 }
+.masthead {
+    background-image: url("static-assets/road_header.jpg");
+    background-position: center;
+}
 
 #footer {
     position: relative;
@@ -30,7 +34,8 @@ a:hover {background: var(--color-turquoise);color: white;}
     padding-top: 1.5em;
 }
 
-footer {
+.footer-classic,
+.footer-dark {
     padding-top: 0.5em;
 }
 
@@ -38,6 +43,7 @@ footer {
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
     color: #ffffff;
     text-decoration: none;
+    padding-top: 0.5em;
 }
 
 
@@ -86,6 +92,10 @@ a.external-link:after {
 .nav-contact a:hover i,
 .nav-drivers a:hover i,
 .nav-customers a:hover i {color: #128A80}
+
+.contact-list a:hover i.fa-phone,
+.contact-list a:hover i.fa-map-marker-alt,
+.contact-list a:hover i.fa-envelope {color: #568A80;}
 
 .footer-dark {
     background: #128A80;
