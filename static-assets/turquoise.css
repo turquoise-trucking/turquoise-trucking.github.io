@@ -19,6 +19,7 @@ a:hover {background: var(--color-turquoise);color: white;}
 }
 .bg-turquoise {
     background: var(--color-turquoise);
+    border-top: 2px solid #10b5a8;
 }
 .masthead {
     background-image: url("road_header.jpg");
@@ -35,10 +36,12 @@ a:hover {background: var(--color-turquoise);color: white;}
     padding-top: 1.5em;
 }
 
-.footer-classic,
+.footer div div div,
 .footer-dark {
     padding-top: 0.5em;
 }
+
+
 
 /* footer example */
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
