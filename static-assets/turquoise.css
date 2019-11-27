@@ -26,6 +26,10 @@ a:hover {background: var(--color-turquoise);color: white;}
     background-position: center;
     height: 15%;
 }
+/* About page styling */
+.card {
+    margin-bottom: 1em;
+}
 
 #footer {
     position: relative;
@@ -40,7 +44,6 @@ a:hover {background: var(--color-turquoise);color: white;}
 .footer-dark {
     padding-top: 0.5em;
 }
-
 
 
 /* footer example */
