@@ -1,7 +1,7 @@
-/* Turquoise website styles ==================================== */
+/* Turquoise website styles =================================================== */
 /* 2019-11-16 John Earl Hardesty */
 
-/* globals --------------------------------- */
+/* globals -------------------------------------------------------------------- */
 :root {
     /* colors */
     --color-turquoise: #30d5c8;
@@ -26,11 +26,15 @@ a:hover {background: var(--color-turquoise);color: white;}
     background-position: center;
     height: 15%;
 }
-/* About page styling */
+/* content styling ------------------------------------------------------------ */
 .card {
     margin-bottom: 1em;
 }
 
+
+
+
+/* footer styling ------------------------------------------------------------- */
 #footer {
     position: relative;
     left: 0;
@@ -45,8 +49,6 @@ a:hover {background: var(--color-turquoise);color: white;}
     padding-top: 0.5em;
 }
 
-
-/* footer example */
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
     color: #ffffff;
     text-decoration: none;
