@@ -30,7 +30,10 @@ a:hover {background: var(--color-turquoise);color: white;}
 .card {
     margin-bottom: 1em;
 }
-
+.apply-button a:link,
+.apply-button a:visited, {
+    color: white;
+}
 
 
 
