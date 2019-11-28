@@ -35,7 +35,7 @@ a:hover {background: var(--color-turquoise);color: white;}
 .card-title a:link,
 .card-title a:visited,
 .card-title a:active {
-    color: var(--color-turquoise);
+    color: #128A80;
     
 }
 
