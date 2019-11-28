@@ -26,12 +26,24 @@ a:hover {background: var(--color-turquoise);color: white;}
     background-position: center;
     height: 15%;
 }
-.active {
+.nav-item .active {
     border-bottom: 4px solid var(--color-turquoise);
     color: #128A80 !important;
 }
 
 /* content styling ------------------------------------------------------------ */
+.card-title a:link,
+.card-title a:visited,
+.card-title a:active {
+    color: var(--color-turquoise);
+    
+}
+
+.card-title a:hover {
+    color: #128A80;
+    text-decoration: none;
+}
+
 .card {
     margin-bottom: 1em;
 }
@@ -43,6 +55,7 @@ a:hover {background: var(--color-turquoise);color: white;}
 .fb-btn {
     background: #46b
 }
+
 
 /* footer styling ------------------------------------------------------------- */
 #footer {
