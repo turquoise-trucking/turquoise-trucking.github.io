@@ -26,16 +26,23 @@ a:hover {background: var(--color-turquoise);color: white;}
     background-position: center;
     height: 15%;
 }
+.active {
+    border-bottom: 4px solid var(--color-turquoise);
+    color: #128A80 !important;
+}
+
 /* content styling ------------------------------------------------------------ */
 .card {
     margin-bottom: 1em;
 }
 .apply-button a:link,
-.apply-button a:visited, {
+.apply-button a:visited {
     color: white;
 }
 
-
+.fb-btn {
+    background: #46b
+}
 
 /* footer styling ------------------------------------------------------------- */
 #footer {
