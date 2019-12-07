@@ -22,6 +22,10 @@ $( document ).ready(function() {
     $('#return-to-top').click(scrollToTop);
     $(window).scroll(toggleScrollToTopButton);
 
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+      })
+
     /* return to top https://codepen.io/rdallaire/pen/apoyx ----------------------- */
     // ===== Scroll to Top ==== 
     /*

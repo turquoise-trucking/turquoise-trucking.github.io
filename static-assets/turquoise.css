@@ -74,7 +74,7 @@ a:hover {background: var(--color-turquoise);color: white;}
 }
 @media only screen and (max-width: 600px) {
     /* hides return arrow on mobile, fixes Safari iOS issues */
-    #return-to-top {
+    #return-to-top, #return-to-top i {
         display: none;
     }
   }
