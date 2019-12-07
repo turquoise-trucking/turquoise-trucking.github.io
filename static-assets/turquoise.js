@@ -3,7 +3,7 @@
 
 
 $( document ).ready(function() {
-    
+
     /* return to top https://codepen.io/rdallaire/pen/apoyx ----------------------- */
     // ===== Scroll to Top ==== 
     $(window).scroll(function() {
@@ -14,7 +14,7 @@ $( document ).ready(function() {
         }
     });
     $('#return-to-top').click(function() {      // When arrow is clicked
-        $('body,html').animate({
+        $('body').animate({
             scrollTop : 0                       // Scroll to top of body
         }, 500);
     });
