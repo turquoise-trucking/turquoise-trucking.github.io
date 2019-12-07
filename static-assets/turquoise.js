@@ -9,7 +9,7 @@ function scrollToTop() {
   function toggleScrollToTopButton() {
     var threshold = 50;
     if ($(window).scrollTop() > threshold) {
-      $('##return-to-top').fadeIn('slow');
+      $('#return-to-top').fadeIn('slow');
     } else {
       $('#return-to-top').fadeOut('slow');
     }
