@@ -35,15 +35,12 @@ a:hover {background: var(--color-turquoise);color: white;}
 .card-title a:link,
 .card-title a:visited,
 .card-title a:active {
-    color: #128A80;
-    
+    color: #128A80; 
 }
-
 .card-title a:hover {
     color: #128A80;
     text-decoration: none;
 }
-
 .card {
     margin-bottom: 1em;
 }
@@ -51,11 +48,12 @@ a:hover {background: var(--color-turquoise);color: white;}
 .apply-button a:visited {
     color: white;
 }
-
 .fb-btn {
     background: #46b
 }
-
+.popover-dismiss {
+    cursor: help;
+}
 
 /* footer styling ------------------------------------------------------------- */
 #footer {
