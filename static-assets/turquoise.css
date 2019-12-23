@@ -14,6 +14,10 @@ a:link {color: var(--color-turquoise);}
 a:hover {background: var(--color-turquoise);color: white;}
 */
 
+.sideborder {
+    border: 1px solid #777;
+    border-width: 0px 1px 0px 1px;
+}
 .logo {
     width: 100%;
 }
