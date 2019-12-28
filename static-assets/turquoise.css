@@ -27,7 +27,7 @@
 }
 .masthead-gradient {
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 100%) !important;
+    background: linear-gradient(90deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.35) 40%, rgba(255,255,255,0) 100%) !important;
 }
 .masthead {
     background-image: url("road_header.jpg");
@@ -55,11 +55,6 @@
     .logo {
         min-width: 250px;
         min-height: 55px;
-    }
-    .masthead-gradient {
-        /* almost translucent background */
-        background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0) 100%) !important;
     }
 }
 
