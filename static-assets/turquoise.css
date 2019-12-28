@@ -15,8 +15,8 @@ a:hover {background: var(--color-turquoise);color: white;}
 */
 
 .maxwidth {
-    /* max-width: 1400px; 
-    leave until fixed max-width problem */
+    max-width: 1400px; 
+    /* leave until fixed max-width problem */
 }
 
 .logo {
@@ -29,7 +29,6 @@ a:hover {background: var(--color-turquoise);color: white;}
 .masthead {
     background-image: url("road_header.jpg");
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     height: 15%;
 }
