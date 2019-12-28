@@ -55,7 +55,7 @@
     .masthead-gradient {
         /* almost translucent background */
         background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 100%) !important;
+        background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0) 100%) !important;
     }
 }
 .masthead-gradient {
