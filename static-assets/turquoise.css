@@ -25,6 +25,10 @@
     background: var(--color-turquoise); 
     border: 1px solid #10b5a8;
 }
+.masthead-gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 100%) !important;
+}
 .masthead {
     background-image: url("road_header.jpg");
     background-position: center;
@@ -58,10 +62,7 @@
         background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0) 100%) !important;
     }
 }
-.masthead-gradient {
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 100%) !important;
-}
+
 /* content styling ------------------------------------------------------------ */
 .card-title a:link,
 .card-title a:visited,
