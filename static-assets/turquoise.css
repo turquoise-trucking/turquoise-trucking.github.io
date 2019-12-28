@@ -18,10 +18,7 @@ a:hover {background: var(--color-turquoise);color: white;}
     /* max-width: 1400px; 
     leave until fixed max-width problem */
 }
-body, html {
-    max-width: 1400px;
-    margin: auto;
-}
+
 .logo {
     width: 100%;
 }
