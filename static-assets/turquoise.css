@@ -96,40 +96,32 @@
     height: 10em;
     padding-top: 1.5em;
 }
-
 .footer {
     border-top: 2px solid #10b5a8;
 }
-
 .footer div div div,
 .footer-dark {
     padding-top: 0.5em;
 }
-
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
     color: #ffffff;
     text-decoration: none;
     padding-top: 0.5em;
 }
-
-
 .nav-list li a:hover:after, a.external-link:hover::after {
     margin-left: 5px;
     opacity: 1;
     visibility: visible;
 }
-
 .nav-list {
     padding: 0;
     margin: 0;
 }
-
 .nav-list li {
     list-style: none;
     padding-top: 5px;
     padding-bottom: 10px;
 }
-
 .nav-list li a:after, a.external-link:after  {
     font-family: "Font Awesome 5 Free";
     content: "\f054";
@@ -143,13 +135,11 @@
     visibility: hidden;
     transition: .22s ease;
 }
-
 a.external-link:after {
     content: "\f35d";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
 }
-
 .nav-fb a:hover i {color: #46b}
 .nav-fb {font-size: 110%;}
 
