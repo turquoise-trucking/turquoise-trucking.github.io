@@ -31,10 +31,6 @@
     background-repeat: no-repeat;
     height: 15%;
 }
-.masthead-gradient {
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 100%) !important;
-}
 .nav-item .active {
     border-bottom: 4px solid var(--color-turquoise);
     color: #128A80 !important;
@@ -62,7 +58,10 @@
         background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 100%) !important;
     }
 }
-
+.masthead-gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 100%) !important;
+}
 /* content styling ------------------------------------------------------------ */
 .card-title a:link,
 .card-title a:visited,
