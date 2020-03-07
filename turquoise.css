@@ -211,9 +211,6 @@ a.external-link:after {
     margin-bottom: 1.5em;
     
 }
-.membership a.external-link:after {
-    display: inline;
-}
 .membership col {
     margin-left: 0em;
     padding-left: 0em;
