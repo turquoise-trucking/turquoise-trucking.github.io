@@ -225,7 +225,7 @@ a.external-link:after {
 .membership img {
     max-height: 64px;
     margin-right: 1em;
-    padding: 0.25em;
+    padding: 0.25em 0.15em;
 }
 .nav-fb a:hover i {
 	color: #46b;
