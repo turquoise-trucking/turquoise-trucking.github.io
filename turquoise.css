@@ -209,6 +209,10 @@ a.external-link:after {
 }
 .membership {
     margin-bottom: 1.5em;
+    
+}
+.membership a.external-link:after {
+    display: inline;
 }
 .membership col {
     margin-left: 0em;
