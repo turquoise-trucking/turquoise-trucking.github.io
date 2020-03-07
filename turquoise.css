@@ -1,0 +1,291 @@
+/*   
+Theme Name: 2019 Turquoise Theme
+Theme URI: https://github.com/turquoise-trucking/2019-turquoise-theme
+Description: Theme for WordPress with Bootstrap for styling.
+Author: John Earl Hardesty
+Author URI: https://github.com/Heardwulf
+Version: 1.2
+*/
+
+/* 2019-11-16 John Earl Hardesty */
+/* Update 1.2 2020-02-08 fixes for block-level padding issues and rewrite */
+
+/* Turquoise website styles =================================================== */
+
+/* masthead (top of page) ----------------------------------------------------- */
+.logo {
+    width: 100%;
+}
+.masthead-wide {
+    /*max-width: 1600px; */
+    /* leave until fixed max-width problem */
+    width: 100%;
+    /*background-color: #128A80;*/
+}
+.bg-turquoise {
+    background: #30d5c8; 
+    border: 1px solid #10b5a8;
+}
+.masthead-gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.35) 40%, rgba(255,255,255,0) 100%) !important;
+}
+.masthead {
+    background-image: url("static-assets/road_header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 15%;
+    margin-top: 0em;
+    padding-top: 0em;
+}
+.masthead-btn {
+	padding: 0.75em;
+}
+.nav-item .active {
+    border-bottom: 4px solid #30d5c8;
+    color: #128A80 !important;
+}
+.nav-tray {
+    background-color: #f8f9fa;
+    width: 100%;
+}
+.navbar-brand img {
+	/* was 64x43 prior */
+	width: 40px;
+    height: 27px;
+}
+@media only screen and (min-width: 1200px) {
+    /* prevents logo growing too large on widescreens*/
+    .logo {
+        max-width: 500px;
+        max-height: 120px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    /* small screen settings */ 
+    .logo {
+        min-width: 250px;
+        min-height: 55px;
+    }
+}
+
+
+/* page content --------------------------------------------------------------- */
+.card-title a:link,
+.card-title a:visited,
+.card-title a:active {
+    color: #128A80; 
+}
+.card-title a:hover {
+    color: #128A80;
+    text-decoration: none;
+}
+.apply-button a:link,
+.apply-button a:visited {
+    color: white;
+}
+.card-text strong {
+    color: #555;
+}
+/*  
+	Following style taken from WebAIM 
+    https://webaim.org/techniques/skipnav/#maincontent
+*/
+#skiptocontent a {
+	padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	border-bottom-right-radius:8px;
+	background:#BF1722;
+	-webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+#skiptocontent a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+.hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+.fb-btn {
+    background: #46b
+}
+.carousel-inner {
+	box-shadow: 0px 3px 4px #999; 
+	/* border: 1px solid #aaa;
+	border-color: #aaa #999 #888; */
+	border-radius: 8px;
+}
+/* expand abbreviations on mobile */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: none;
+}
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+@media screen and (min-width: 600px) {
+	abbr[title] {
+		border-bottom: 2px dotted #30d5c8;
+		text-decoration: none;
+		cursor:help;
+	}
+	abbr[title]:after {
+		content: "";
+	}
+}
+
+/* footer (bottom of page) ---------------------------------------------------- */
+.footer {
+    padding-top: 0.5em;
+    border-top: 2px solid #10b5a8;
+}
+.footer h3 {
+	font-size: 140%;
+}
+.footer div div div,
+.footer-dark {
+    padding-top: 0.5em;
+}
+.footer-classic a, 
+.footer-classic a:focus, 
+.footer-classic a:active {
+    color: #ffffff;
+    text-decoration: none;
+    padding-top: 0.5em;
+}
+.nav-list li a:hover:after, 
+a.external-link:hover::after {
+    margin-left: 5px;
+    opacity: 1;
+    visibility: visible;
+}
+.nav-list {
+    padding: 0;
+    margin: 0;
+}
+.nav-list li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.nav-list li a:after, 
+a.external-link:after  {
+    font-family: "Font Awesome 5 Free";
+    content: "\f054";
+    font-weight: 900;
+    color: white ;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -20px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+a.external-link:after {
+    content: "\f35d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.valign-middle {
+    vertical-align: middle;
+}
+.membership {
+    margin-bottom: 1.5em;
+}
+.membership col {
+    margin-left: 0em;
+    padding-left: 0em;
+}
+.membership ul {
+    padding-left: 0.8em;
+}
+.membership ul li {
+    list-style-type: none;
+    float: left;
+    vertical-align: middle;
+}
+.membership img {
+    max-height: 64px;
+    margin-right: 1em;
+}
+.nav-fb a:hover i {
+	color: #46b;
+}
+.nav-fb {
+	font-size: 110%;
+}
+.nav-home a:hover i,
+.nav-about a:hover i,
+.nav-contact a:hover i,
+.nav-drivers a:hover i,
+.nav-customers a:hover i {
+	color: #128A80;
+}
+.contact-list a:hover i.fa-phone,
+.contact-list a:hover i.fa-map-marker-alt,
+.contact-list a:hover i.fa-envelope {
+	color: #568A80;
+}
+.footer-dark {
+    background: #128A80;
+    color: #31D6C8;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-bottom: 0em;
+}
+.footer-dark a   {
+    color: #31D6C8;
+}
+.footer-dark a:hover {
+    color: white;
+}
+.redcross {
+	width: 28px; 
+	margin-left: -5px;
+}
+dl dd {
+    margin-left: 0em;
+}
+
+
+/* WordPress fixes ------------------------------------------------------------ */
+body, html {
+    /* ensures no gaps in vertical screen edges */
+    margin-top: 0em;
+    margin-bottom: 0em;
+	padding-bottom: 0em;
+}
+nav,
+div.card, 
+div.card-deck, 
+div#carouselExampleIndicators {
+    /* vertical space between block level objects */
+    /* add selectors as needed */
+    margin-bottom: 1.0em !important; 
+}
+.btn-block {
+	margin-bottom: 1.5em !important; 
+}
+p.wps {
+	/* prevent wautop function from removing paragraph tags */
+    color: black;
+}
