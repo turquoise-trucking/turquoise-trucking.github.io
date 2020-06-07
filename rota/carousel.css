@@ -39,37 +39,6 @@ body {
 }
 
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -81,10 +50,10 @@ body {
     font-size: 1.25rem;
     line-height: 1.4;
   }
+}
 
-  .featurette-heading {
-    font-size: 50px;
-  }
+@media (max-width: 40em) {
+  
 }
 
 @media (min-width: 62em) {
