@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Rota</title>
+  <meta name="description" content="Rota; rail, ocean, truck, air. Coming soon.">
+  <meta name="author" content="John Earl Hardesty">
+  <!-- bootstrap styles -->
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/74abbf3163.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&family=Quicksand&display=swap" rel="stylesheet">
+  <!-- favicons -->
+  <link rel="shortcut icon" type="image/png" href="images/icon-rota.png">
+  <link rel="apple-touch-icon" type="image/png" href="images/icon-rota-apple.png">
+  <style>
+    body, html {
+      margin: 0rem;
+      padding: 0rem;
+      height: 100%
+    }
+    .bg {
+      /* The image used */
+      background-image: url("images/bg-cargo.jpg");
+
+      /* Add the blur effect 
+      johnearl: Looks better without!
+      filter: blur(4px);
+      -webkit-filter: blur(4px); */
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .soon {
+      font-family: 'Nunito Sans', sans-serif;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      width: 27.5rem;
+      position: absolute;
+      background-color: white;
+      border: 1px solid var(--rota-gray);
+      border-width: 0 1px; 
+      box-shadow: 0px 0px 50px var(--rota-gray);
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    /*.soon img {
+      width: 40%;
+    } */
+    @media only screen and (max-width: 600px) {
+      .soon {
+        width: 100%;
+        border-width: 0;
+        
+      }
+    }
+    .soon p {
+      font-size: 315%;
+      color: var(--rota-gray);
+    }
+    :root {
+      --rota-black: #1e1e1e;
+      --rota-gray: #404040;
+      --rota-red: #eb3f3f;
+    }
+    footer {
+      color: var(--rota-gray);
+      text-align: center;
+      /*padding-top: 6rem; */
+      padding: 0 0 1.5rem;
+      font-family: 'Quicksand', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <main class="soon mx-auto">
+    <img src="images/logo-rota.png" alt="Rota: rail, ocean, truck, air." class="img-fluid">
+    <br>
+    <p>Coming soon</p>
+  </main>
+
+  <footer class="fixed-bottom">
+    Copyright &copy; 2020 Rota LLC. All Rights Reserved.
+  </footer>
+ 
+  <!-- jquery required by bootstrap -->
+      <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
