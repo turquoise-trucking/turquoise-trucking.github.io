@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Get a quote &bull; Rota</title>
+      <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&family=Quicksand&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/74abbf3163.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <!-- Favicons -->
+
+
+    <style>
+      h1.nocarousel {
+        text-shadow: 0 2px 2px #999 !important;
+        color: #eb3f3f;
+      }
+      .input-hidden {
+        position: absolute;
+        left: -9999px;
+      }
+      label p {
+        position: absolute;
+        bottom: 2.25em;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 175%;
+        text-shadow: 0 0 5px var(--rota-gray);
+        color: white;
+        text-align: right;
+        z-index: 5;
+        transition: 300ms all;
+      }
+      p.btn-title-1 {
+        left: 5em;
+      }
+      p.btn-title-2 {
+        left: 3.8em;
+      }
+      p.btn-title-3 {
+        left: 4em;
+      }
+      p.btn-title-4 {
+        left: 5.2em;
+      }
+      input[type=radio]:checked + label>img {
+        /*border: 1px solid #eb3f3f;*/
+        box-shadow: 0 5px 5px 0px #404040;
+      }
+      input[type=radio]:checked + label p {
+        color: #eb3f3f;
+        text-shadow: 0 2px 2px black;
+        font-size: 200%;
+        bottom: 1em;
+      }
+      /* Stuff after this is only to make things more pretty */
+      input[type=radio] + label>img {
+        border: 1px solid #404040;
+        width: 200px;
+        transition: 600ms all;
+      }
+
+      input[type=radio]:checked + label>img,
+      input[type=radio]:checked + label p {
+        transform: 
+          scale(1.15)
+      }
+      input[type=radio]:checked + label p.btn-title-1 {
+        left: 2.5em;
+        text-align: center;
+      }
+      input[type=radio]:checked + label p.btn-title-2 {
+        left: 1.95em;
+        text-align: center;
+      }
+      input[type=radio]:checked + label p.btn-title-3 {
+        left: 2em;
+        text-align: center;
+      }
+      input[type=radio]:checked + label p.btn-title-4 {
+        left: 2.5em;
+        text-align: center;
+      }
+
+      input[type=radio]:checked + label>img {
+        /*filter: blur(0.1rem);*/
+        opacity: 0.6;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="rota.css" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img style="width: 4rem;" src="images/brand-rota.png" alt="Rota."></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rail</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ocean</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Truck</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Air</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carriers.html">Carriers</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+          <button class="btn btn-outline-danger" type="button"><i class="fas fa-file-alt"></i> Get a quote</button>
+        </form>
+      </div>
+    </nav>
+</header>
+
+<main class="container-lg" role="main">
+  <div class="container" style="margin-top: 2em;">
+    <h1 class="nocarousel">Get a quote</h1>
+    <p class="lead">Fill out a form and let us know what you need.</p>
+  </div>
+  <form class="needs-validation" novalidate>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Name</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="John Smith" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom02">Company</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Sample Company LLC" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Email</label>
+        <input type="email" class="form-control" id="validationCustom03" placeholder="jsmith@samplellc.com" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom04">Phone</label>
+        <input type="tel" class="form-control" id="validationCustom04" placeholder="123-456-7890" 
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom04">How'd you hear about us?</label>
+        <select class="custom-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>Our website</option>
+          <option>Web search</option>
+          <option>Social media</option>
+          <option>Recommended by a friend</option>
+          <option>Other</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Origin Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Destination Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight" 
+        id="rail" class="input-hidden" />
+        <label for="rail"><p class="btn-title-1">Rail</p>
+        <img 
+          src="images/button-rail.jpg" 
+          alt="Rail.">
+        </label>
+      </div>
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight"
+        id="ocean" class="input-hidden" />
+        <label for="ocean"><p class="btn-title-2">Ocean</p>
+        <img 
+          src="images/button-ocean.jpg" 
+          alt="Ocean.">
+        </label>
+      </div>
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight" 
+        id="truck" class="input-hidden" />
+        <label for="truck"><p class="btn-title-3">Truck</p>
+        <img 
+          src="images/button-truck.jpg" 
+          alt="Truck.">
+        </label>
+      </div>
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight"
+        id="air" class="input-hidden" />
+        <label for="air"><p class="btn-title-4">Air</p>
+        <img 
+          src="images/button-air.jpg" 
+          alt="Air.">
+        </label>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>Copyright &copy; 2020 Rota LLC. All Rights Reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+  <!-- jquery required by bootstrap -->
+      <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
