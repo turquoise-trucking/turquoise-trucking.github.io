@@ -7,8 +7,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>Get a quote &bull; Rota</title>
-      <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&family=Quicksand&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&family=Quicksand&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- font awesome -->
@@ -35,7 +35,7 @@
         color: white;
         text-align: right;
         z-index: 5;
-        transition: 300ms all;
+        transition: 450ms all;
       }
       p.btn-title-1 {
         left: 5em;
@@ -57,9 +57,8 @@
         color: #eb3f3f;
         text-shadow: 0 2px 2px black;
         font-size: 200%;
-        bottom: 1em;
+        bottom: 2em;
       }
-      /* Stuff after this is only to make things more pretty */
       input[type=radio] + label>img {
         border: 1px solid #404040;
         width: 200px;
@@ -76,7 +75,7 @@
         text-align: center;
       }
       input[type=radio]:checked + label p.btn-title-2 {
-        left: 1.95em;
+        left: 1.85em;
         text-align: center;
       }
       input[type=radio]:checked + label p.btn-title-3 {
@@ -90,8 +89,9 @@
 
       input[type=radio]:checked + label>img {
         /*filter: blur(0.1rem);*/
-        opacity: 0.6;
+        opacity: 0.5;
       }
+      
     </style>
     <!-- Custom styles for this template -->
     <link href="rota.css" rel="stylesheet">
@@ -204,7 +204,7 @@
     <div class="form-row">
       <div class="col-md-3 mb-3">
         <input type="radio" name="freight" 
-        id="rail" class="input-hidden" />
+        id="rail" value="rail" class="input-hidden" />
         <label for="rail"><p class="btn-title-1">Rail</p>
         <img 
           src="images/button-rail.jpg" 
@@ -213,7 +213,7 @@
       </div>
       <div class="col-md-3 mb-3">
         <input type="radio" name="freight"
-        id="ocean" class="input-hidden" />
+        id="ocean" value="ocean" class="input-hidden" />
         <label for="ocean"><p class="btn-title-2">Ocean</p>
         <img 
           src="images/button-ocean.jpg" 
@@ -222,7 +222,7 @@
       </div>
       <div class="col-md-3 mb-3">
         <input type="radio" name="freight" 
-        id="truck" class="input-hidden" />
+        id="truck" value="truck" class="input-hidden" />
         <label for="truck"><p class="btn-title-3">Truck</p>
         <img 
           src="images/button-truck.jpg" 
@@ -231,7 +231,7 @@
       </div>
       <div class="col-md-3 mb-3">
         <input type="radio" name="freight"
-        id="air" class="input-hidden" />
+        id="air" value="air" class="input-hidden" />
         <label for="air"><p class="btn-title-4">Air</p>
         <img 
           src="images/button-air.jpg" 
@@ -242,7 +242,54 @@
         </div>
       </div>
     </div>
-
+    <fieldset>
+      <legend>Pieces and Sizes</legend>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="pieceCount">Number of pieces</label>
+          <input type="text" class="form-control" id="pieceCount" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="form-check form-check-inline btn-nudge">
+            <input class="form-check-input" type="radio" name="pieceUnits" id="inlineRadio1" value="imperial">
+            <label class="form-check-label" for="inlineRadio1">Inches and Pounds</label>
+          </div>
+          <div class="form-check form-check-inline btn-nudge">
+            <input class="form-check-input" type="radio" name="pieceUnits" id="inlineRadio2" value="metric">
+            <label class="form-check-label" for="inlineRadio2">Centimeters and Kilograms</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-2 mb-3">
+          <label for="pieceNumber01">Pieces</label>
+          <input type="number" class="form-control" id="pieceNumber01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceLength01">Length</label>
+          <input type="text" class="form-control" id="pieceLength01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceWidth01">Width</label>
+          <input type="text" class="form-control" id="pieceWidth01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceHeight01">Height</label>
+          <input type="text" class="form-control" id="pieceHeight01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceWeight01">Weight</label>
+          <input type="text" class="form-control" id="pieceWeight01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <a href="#" class="btn btn-danger btn-nudge addPieces"><i class="fas fa-plus-square"></i> More</a>
+        </div>
+      </div>
+      <div id="appendPieces"></div>
+    </fieldset>
     <div class="form-group">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -254,13 +301,14 @@
         </div>
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-danger" type="submit">Submit form</button>
   </form>
   
   <script>
   // Example starter JavaScript for disabling form submissions if there are invalid fields
   (function() {
     'use strict';
+
     window.addEventListener('load', function() {
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
       var forms = document.getElementsByClassName('needs-validation');

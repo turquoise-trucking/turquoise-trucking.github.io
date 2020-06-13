@@ -50,6 +50,9 @@ body {
     font-size: 1.25rem;
     line-height: 1.4;
   }
+  .btn-nudge {
+    margin-top: 0em;
+  }
 }
 
 @media (max-width: 40em) {
@@ -59,6 +62,9 @@ body {
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
+  }
+  .btn-nudge {
+    margin-top: 2em;
   }
 }
 
