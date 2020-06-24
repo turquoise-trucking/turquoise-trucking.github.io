@@ -38,7 +38,40 @@ body {
   height: 32rem;
 }
 
+.abbr-div {
+  margin: 1em 0em 1em;
+  padding-bottom: 0em;
+  padding-top: 0em;
+}
 
+.abbr-letter {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 315%;
+  color: var(--rota-black);
+  /* text-shadow: 0 5px 1px var(--rota-gray); */
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+.abbr-word {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: left;
+  margin-top: -0.5em;
+  padding-top: 0em;
+}
+.abbr-word a:hover {
+  color: white;
+}
+.abbr-word span {
+  border: 1px solid black;
+  padding: 0.2em 0.5em;
+}
+.abbr-div div ul {
+  margin-left: 0em;
+  padding-left: 0em;
+}
+.abbr-div div ul li {
+  list-style-type: none;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
