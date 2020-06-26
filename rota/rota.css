@@ -96,7 +96,8 @@ body {
 }
 
 @media only screen 
-and (min-device-width : 375px) {
+and (min-device-width : 375px) 
+and (max-device-width : 667px)  {
   .card-img-overlay {
     width: 100%;
     background-color: rgb(64,64,64,0.3);
