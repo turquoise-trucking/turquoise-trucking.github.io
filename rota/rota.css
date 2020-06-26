@@ -37,9 +37,15 @@ body {
   min-width: 100%;
   height: 32rem;
 }
-
+.card-img-overlay {
+  padding: 0px; 
+  margin: 0em auto;
+  width: 80%;
+  /*background-color: rgb(64,64,64,0.3);
+  border-radius: 0px 0 10px 10px;*/
+}
 .abbr-div {
-  margin: 1em 0em 1em;
+  margin: 0em 0em 1em;
   padding-bottom: 0em;
   padding-top: 0em;
 }
@@ -47,7 +53,7 @@ body {
 .abbr-letter {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 315%;
-  color: var(--rota-black);
+  color: white;
   /* text-shadow: 0 5px 1px var(--rota-gray); */
   margin-bottom: 0em;
   padding-bottom: 0em;
@@ -57,9 +63,10 @@ body {
   text-align: left;
   margin-top: -0.5em;
   padding-top: 0em;
+  color: white;
 }
 .abbr-word a:hover {
-  color: white;
+  color: black;
 }
 .abbr-word span {
   border: 1px solid black;
