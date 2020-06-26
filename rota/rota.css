@@ -93,6 +93,10 @@ body {
   .btn-nudge {
     margin-top: 0em;
   }
+  .card-img-overlay {
+    width: 100%;
+    background-color: rgb(64,64,64,0.3);
+  }
 }
 
 @media (max-width: 40em) {
