@@ -40,9 +40,13 @@ body {
 .card-img-overlay {
   padding: 0px; 
   margin: 0em auto;
-  width: 80%;
+  width: 100%;
   /*background-color: rgb(64,64,64,0.3);
   border-radius: 0px 0 10px 10px;*/
+}
+.low-grad {
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 35%);
 }
 .abbr-div {
   margin: 0em 0em 1em;
