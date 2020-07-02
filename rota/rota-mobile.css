@@ -81,7 +81,34 @@ body {
 .abbr-div div ul li {
   list-style-type: none;
 }
+#listRail ,
+#listOcean li,
+#listTruck li,
+#listAir li {
+  margin-left: 0.5em;
+}
 
+.popover-body {
+  box-shadow: 0px 2px 4px var(--rota-gray);
+}
+
+.popover-body ul {
+  margin: 0em;
+  padding-left: 0.5em;
+}
+
+.popover-body ul li {
+  list-style-type: none;
+}
+
+.popover-body ul li:before { 
+  content: "\2022";
+  font-weight: bold;
+  font-size: 120%;
+  margin-left: -10px; 
+  margin-right: 5px; 
+  color: var(--rota-red);
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
