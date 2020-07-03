@@ -4,7 +4,7 @@
 
 body {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0rem;
   color: #5a5a5a;
 }
 
@@ -88,8 +88,11 @@ body {
   margin-left: 0.5em;
 }
 
+.popover {
+  opacity: 0.95;
+}
 .popover-body {
-  box-shadow: 0px 2px 4px var(--rota-gray);
+  box-shadow: 0px 2px 5px var(--rota-gray);
 }
 
 .popover-body ul {
@@ -108,6 +111,57 @@ body {
   margin-left: -10px; 
   margin-right: 5px; 
   color: var(--rota-red);
+}
+
+.homepage-title {
+  font-size: 150%;
+  margin-left: 4rem;
+}
+
+.card {
+  margin-bottom: 1em;
+  box-shadow: 0px 2px 5px rgb(200,200,200);
+  background: rgb(240,240,240);
+}
+
+.homepage-icons {
+  color: var(--rota-red);
+  font-size: 250%;
+  position: absolute;
+  top: 0.15em;
+}
+
+.navbar {
+  box-shadow: 0px 0px 15px rgb(190,190,190);
+} 
+
+.marketing .row .lead {
+  text-align: left;
+  margin: 0em 1em 1em 1em;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 110%;
+}
+
+.homepage-form {
+  background: var(--rota-gray); 
+  margin: 1em 0em 0em;
+  width: 100%; 
+  padding: 2em 0.8em;
+}
+
+footer {
+  margin: 0em;
+  width: 100%; 
+  padding: 2em 0.8em;
+}
+.homepage-form h3, .homepage-form form label {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.homepage-form h3 {
+  font-size: 120%;
+  text-align: center;
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -153,6 +207,8 @@ and (min-width: 775px) {
 
 h2 {
   color: var(--rota-red);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 200%;
 }
 
 a[href^=tel] {
@@ -173,3 +229,12 @@ h1 {
 .btn-outline-danger {
   color: var(--rota-red);
 }
+
+/* Dev backgrounds for rota buttons in homepage 
+   used to style individual columns
+   
+   background: rgb(0,200,0,0.5);
+   background: rgb(200,0,0,0.5);
+   background: rgb(0,0,200,0.5); 
+   background: rgb(200,0,200,0.5);
+   */

@@ -71,25 +71,25 @@
     <img src="images/bg-cargo.jpg" class="card-img" alt="Port with cargo containers.">
     <div class="card-img-overlay low-grad">
       <div class="row abbr-div justify-content-start">
-        <div class="col-3" style="background: rgb(0,200,0,0.5);">
+        <div class="col-3">
           <p class="abbr-letter">r</p>
           <p class="abbr-word">
               <a tabindex="0" id="ListRail" class="btn btn-outline-light" role="button">Rail</a>
           </p>
         </div>
-        <div class="col-3" style="background: rgb(200,0,0,0.5); padding-left: 0em;">
+        <div class="col-3" style="padding-left: 0em;">
           <p class="abbr-letter">o</p>
           <p class="abbr-word">
             <a tabindex="0" id="ListOcean" class="btn btn-outline-light" role="button">Ocean</a>
           </p>
         </div>
-        <div class="col-3" style="background: rgb(0,0,200,0.5); ">
+        <div class="col-3">
           <p class="abbr-letter">t</p>
           <p class="abbr-word">
             <a tabindex="0" id="ListTruck" class="btn btn-outline-light" role="button">Truck</a>
           </p>
         </div>
-        <div class="col-3" style="background: rgb(200,0,200,0.5);">
+        <div class="col-3">
           <p class="abbr-letter">a</p>
           <p class="abbr-word">
             <a tabindex="0" id="ListAir" class="btn btn-outline-light" role="button">Air</a>
@@ -110,33 +110,89 @@
   <div class="container marketing">
     <div class="row">
       <h2>Logistics through<br> modern technology.</h2>
-      <p class="lead">(Vision statement) Connect businesses with carriers to deliver logistics for rail, ocean, truck, and air cargo.</p>
+      <p class="lead"><!--(Vision statement)--> Connecting businesses with carriers to deliver logistics for rail, ocean, truck, and air cargo.</p>
     </div>
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <p><i class="fas fa-database"></i></p>
-        <h3>Data driven</h3>
-        <p>When you choose Rota you get peace of mind from beginning to end. Whether by rail, ocean, truck, or air; we take the worry out of logistics.</p>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title homepage-title">Data Driven</h5>
+            <p class="homepage-icons"><i class="fas fa-database"></i></p>
+            <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <h2>Safety</h2>
-        <p>We ensure your product will be safely shipped whether by rail, ocean, truck, or air.</p>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title homepage-title">Connected</h5>
+            <p class="homepage-icons"><i class="fas fa-sitemap"></i></p>
+            <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <h2>Efficiency</h2>
-        <p>Our team has over 20 years of experience in freight. We will make sure your product will arrive as efficiently as possible. </p>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title homepage-title">Safe &amp; Reliable</h5>
+            <p class="homepage-icons"><i class="fas fa-shield-alt"></i></h6>
+            <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-
-
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>Copyright &copy; 2020 Rota LLC. All Rights Reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-
+  </div>
 </main>
+
+<!-- Contact form -->
+<div class="container homepage-form">
+  <h3>How can we help you today?</h3>
+  <form class="needs-validation" novalidate>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Name</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="John Smith" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom02">Company</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Sample Company LLC" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Email</label>
+        <input type="email" class="form-control" id="validationCustom03" placeholder="jsmith@samplellc.com" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom04">Phone</label>
+        <input type="tel" class="form-control" id="validationCustom04" placeholder="123-456-7890" 
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <p style="color: white; font-weight: bold; text-align: center;">FORM PENDING</p>
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer class="container bg-light footer">
+  <p style="font-weight: bold; text-align: center;">DESIGN PENDING</p>
+  <p class="float-right"><a href="#">Back to top</a></p>
+  <p>Copyright &copy; 2020 Rota LLC. All Rights Reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+
   <!-- jquery required by bootstrap -->
       <!-- JS, Popper.js, and jQuery -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
