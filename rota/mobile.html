@@ -27,6 +27,12 @@
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="/rota/"><img style="width: 4rem;" src="images/brand-rota.png" alt="Rota."></a> <span class="sr-only">(current)</span>
 
+      <!--
+      <form class="form-inline my-2 my-md-0">
+        <a href="quote.html" class="btn btn-outline-danger" type="button"><i class="fas fa-file-alt"></i> Get a quote</a>
+      </form>
+      -->
+
       <form class="form-inline my-2 my-md-0">
         <a href="quote.html" class="btn btn-outline-danger" type="button"><i class="fas fa-file-alt"></i> Get a quote</a>
       </form>
@@ -152,14 +158,14 @@
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom01">Name</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="John Smith" required>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="First and last name" required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
       <div class="col-md-6 mb-3">
         <label for="validationCustom02">Company</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Sample Company LLC" required>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Company name" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -168,29 +174,74 @@
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom03">Email</label>
-        <input type="email" class="form-control" id="validationCustom03" placeholder="jsmith@samplellc.com" required>
+        <input type="email" class="form-control" id="validationCustom03" placeholder="name@email.com" required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
       <div class="col-md-6 mb-3">
         <label for="validationCustom04">Phone</label>
-        <input type="tel" class="form-control" id="validationCustom04" placeholder="123-456-7890" 
+        <input type="tel" class="form-control" id="validationCustom04" placeholder="XXX-XXX-XXXX" 
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
     </div>
-    <p style="color: white; font-weight: bold; text-align: center;">FORM PENDING</p>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Tell us how we can help.</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <img src="images/temp-recaptcha.png" style="width: 300px">
+      </div>
+    </div>  
+    <div class="row justify-content-center">
+      <div class="col-6" style="padding-top: 1em;">
+        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+      </div>
+    </div>
   </form>
 </div>
 
 <!-- FOOTER -->
 <footer class="container bg-light footer">
-  <p style="font-weight: bold; text-align: center;">DESIGN PENDING</p>
-  <p class="float-right"><a href="#">Back to top</a></p>
-  <p>Copyright &copy; 2020 Rota LLC. All Rights Reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <div class="row">
+    <div class="col-sm-4">
+      <ul>
+        <li>
+          <a href="/rota/">Home </a>
+        </li>
+        <li>
+          <a href="quote.html">Get a quote</a>
+        </li>
+        <li>
+          <a href="carriers.html">Become a carrier</a>
+        </li>
+        <li>
+          <a href="#">Learn more about us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <ul>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">Privacy policy</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4 footer-right">
+      <a href="mobile.html"><img src="images/brand-rota.png"></a>
+      <p>&copy; 2020 Rota LLC. All Rights Reserved.</p>
+    </div>
+  </div>
 </footer>
 
   <!-- jquery required by bootstrap -->

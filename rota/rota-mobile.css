@@ -154,6 +154,47 @@ footer {
   width: 100%; 
   padding: 2em 0.8em;
 }
+
+footer ul {
+  margin: 0em 0em 1em;
+  padding-left: 0.2em;
+}
+
+footer ul li {
+  list-style-type: none;
+  padding: 0.5em 0.5em 0.5em 0em;
+}
+
+footer ul li:before { 
+  content: "\2583";
+  font-weight: bold;
+  font-size: 120%;
+  left: 25px;
+  color: var(--rota-red);
+  position: relative;
+  bottom: 23px;
+}
+
+footer ul li a {
+  color: var(--rota-gray);
+  font-size: 120%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+footer img {
+  width: 250px;
+}
+
+footer p {
+  font-size: 90%;
+  margin-top: 0em;
+  padding-top: 0em;
+}
+
+.footer-right {
+  padding-left: 2em;
+}
+
 .homepage-form h3, .homepage-form form label {
   font-family: 'Quicksand', sans-serif;
   color: white;
