@@ -63,7 +63,7 @@ body {
 .abbr-word {
   font-family: 'Nunito Sans', sans-serif;
   text-align: left;
-  margin-top: -0.5em;
+  margin-top: 4.5em;
   padding-top: 0em;
   color: white;
 }
@@ -204,6 +204,21 @@ footer p {
   font-size: 120%;
   text-align: center;
 }
+
+.homepage-form ul {
+  margin: 1em 0em 0em;
+}
+.homepage-form ul li {
+  list-style-type: none;
+  padding: 0.5em 0.5em 0.5em 0em;
+}
+.homepage-form ul li a {
+  color: white;
+}
+.homepage-form ul li a i {
+  color: var(--rota-red);
+  padding-right: 0.5em;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -252,7 +267,7 @@ h2 {
   font-size: 200%;
 }
 
-a[href^=tel] {
+.navbar a[href^=tel] {
   color: var(--rota-red) !important;
 }
 
