@@ -1,0 +1,381 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+  color: #5a5a5a;
+  margin: 0em;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 5px #aaa;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  top: 3rem;
+  z-index: 10;
+}
+
+.nudge {
+  top: 1.5rem !important;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+.card-img-overlay {
+  padding: 0px; 
+  margin: 0em auto;
+  width: 100%;
+  /*background-color: rgb(64,64,64,0.3);
+  border-radius: 0px 0 10px 10px;*/
+}
+.low-grad {
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0) 35%);
+}
+.abbr-div {
+  padding: 0em 0.5em;
+}
+
+.abbr-letter {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 315%;
+  color: white;
+  /* text-shadow: 0 5px 1px var(--rota-gray); */
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+.abbr-word {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: left;
+  margin-top: 4.5em;
+  padding-top: 0em;
+  color: white;
+}
+.abbr-word a:hover {
+  color: black;
+}
+.abbr-word span {
+  border: 1px solid black;
+  padding: 0.2em 0.5em;
+}
+.abbr-div div ul {
+  margin-left: 0em;
+  padding-left: 0em;
+}
+.abbr-div div ul li {
+  list-style-type: none;
+}
+#listRail ,
+#listOcean li,
+#listTruck li,
+#listAir li {
+  margin-left: 0.5em;
+}
+
+.popover {
+  opacity: 0.95;
+}
+.popover-body {
+  box-shadow: 0px 2px 5px var(--rota-gray);
+}
+
+.popover-body ul {
+  margin: 0em;
+  padding-left: 0.5em;
+}
+
+.popover-body ul li {
+  list-style-type: none;
+}
+
+.popover-body ul li:before { 
+  content: "\2022";
+  font-weight: bold;
+  font-size: 120%;
+  margin-left: -10px; 
+  margin-right: 5px; 
+  color: var(--rota-red);
+}
+
+.head-lead {
+  text-align: left;
+}
+.homepage-title {
+  font-size: 150%;
+  margin-left: 4rem;
+}
+
+.card-shadow {
+  margin-bottom: 1em;
+  box-shadow: 0px 2px 5px rgb(200,200,200);
+  background: rgb(240,240,240);
+}
+
+.card-border {
+  border: 1px solid rgb(140,140,140); 
+}
+.homepage-icons {
+  color: var(--rota-red);
+  font-size: 250%;
+  position: absolute;
+  top: 0.15em;
+}
+
+.navbar {
+  box-shadow: 0px 0px 15px rgb(190,190,190);
+} 
+
+.marketing .row .lead {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 110%;
+}
+
+.homepage-form {
+  background: var(--rota-gray); 
+  margin: 1em 0em 0em;
+  width: 100%; 
+  padding: 2em 0.8em;
+}
+
+.carriers {
+  margin: auto 0em;
+}
+.carriers picture source, 
+.carriers picture img {
+  height: 200px;
+}
+.carriers .card-text {
+  margin: auto 2em;
+}
+.carriers .card-title {
+  font-size: 230%; 
+  font-family: 'Quicksand', sans-serif; 
+  text-shadow: 0 3px 4px rgb(80,80,80); 
+  /*margin-bottom: 2.4em;*/
+}
+.carriers .card-text a{
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 15em;
+}
+
+footer {
+  margin: 0em;
+  width: 100%; 
+  padding: 2em 0.8em;
+}
+
+
+footer ul {
+  margin: 0em 0em 1em;
+  padding-left: 0.2em;
+}
+
+footer ul li {
+  list-style-type: none;
+  padding: 0.5em 0.5em 0.5em 0em;
+}
+
+footer ul li:before { 
+  content: "\2583";
+  font-weight: bold;
+  font-size: 120%;
+  left: 25px;
+  color: var(--rota-red);
+  position: relative;
+  bottom: 23px;
+}
+
+footer ul li a {
+  color: var(--rota-gray);
+  font-size: 120%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+footer img {
+  width: 250px;
+}
+
+footer p {
+  font-size: 90%;
+  margin-top: 0em;
+  padding-top: 0em;
+}
+
+.footer-right {
+  padding-left: 2em;
+}
+
+
+.homepage-form h3, .homepage-form form label {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.homepage-form h3 {
+  font-size: 120%;
+  text-align: center;
+}
+
+.homepage-form ul {
+  margin: 1em 0em 0em;
+}
+.homepage-form ul li {
+  list-style-type: none;
+  padding: 0.5em 0.5em 0.5em 0em;
+}
+.homepage-form ul li a {
+  color: white;
+}
+.homepage-form ul li a i {
+  color: var(--rota-red);
+  padding-right: 0.5em;
+}
+.form-submit {
+  width: 100%;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .btn-nudge {
+    margin-top: 0em;
+  }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3) {
+  .card-img-overlay {
+    width: 100%;
+    background-color: rgb(64,64,64,0.3);
+  }
+  .col-2 {
+    margin-right: 1.5em;
+  }
+}
+
+/* desktop styles go here */
+@media only screen
+and (min-width: 800px) {
+  nav .form-inline a {
+    position: absolute;
+    right: 1em;
+  }
+  .abbr-div {
+    width: 40rem;
+  }
+  .row-abbr {
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+  }
+  .row-abbr .col-3 {
+    padding-left: 5em;
+  }
+  .abbr-word {
+    padding-top: 0em;
+  }
+  .row h2 {
+    font-size: 400%;
+  }
+  .lead-row{
+    margin: 2em auto 4em;
+  }
+  .head-lead {
+    text-align: right;
+    font-size: 170%;
+  }
+  .carriers {
+    max-width: 444px;
+    max-height: 250px;
+  }
+  .carriers .card-text a{
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 15em;
+  }
+  .homepage-form {
+    padding: 4em 5em;
+  }
+  .form-contact {
+    width: 85%;
+    margin: 0em auto;
+  }
+  .form-submit {
+    width: 50%;
+  }
+  footer .row {
+    padding: 0em 5em;
+  }
+}
+
+:root {
+  --rota-black: #1e1e1e;
+  --rota-gray: #404040;
+  --rota-red: #eb3f3f;
+}
+
+h2 {
+  color: var(--rota-red);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 200%;
+}
+
+.navbar a[href^=tel] {
+  color: var(--rota-red) !important;
+}
+
+h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 315%;
+  text-shadow: 0 0 20px var(--rota-gray);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--rota-red);
+}
+
+.btn-outline-danger {
+  color: var(--rota-red);
+}
+
+/* Dev backgrounds for rota buttons in homepage 
+   used to style individual columns
+   
+   background: rgb(0,200,0,0.5);
+   background: rgb(200,0,0,0.5);
+   background: rgb(0,0,200,0.5); 
+   background: rgb(200,0,200,0.5);
+   */
