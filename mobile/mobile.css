@@ -253,6 +253,13 @@ footer p {
 .form-submit {
   width: 100%;
 }
+.form-contact div,
+.form-contact div ul,
+.form-contact div ul li,
+.form-contact div ul li a {
+  margin-left: 0em;
+  padding-left: 0em;
+}
 
 
 /* RESPONSIVE CSS
@@ -331,6 +338,7 @@ and (min-width: 800px) {
   .form-contact {
     width: 85%;
     margin: 0em auto;
+    padding: auto 0em;
   }
   .form-submit {
     width: 50%;
