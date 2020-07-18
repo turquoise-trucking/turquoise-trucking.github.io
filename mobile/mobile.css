@@ -350,7 +350,7 @@ and (min-width: 800px) {
     padding-top: 0em;
   }
   h2.home {
-    font-size: 400%;
+    font-size: 400% !important;
   }
   .lead-row{
     margin: 2em auto 4em;
