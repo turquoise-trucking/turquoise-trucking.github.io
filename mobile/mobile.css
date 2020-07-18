@@ -3,8 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 3rem;
-  padding-bottom: 0rem;
+  padding: 3rem 0em 0em;
   color: #5a5a5a;
   margin: 0em;
 }
