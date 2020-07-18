@@ -64,9 +64,14 @@ body {
 .abbr-word {
   font-family: 'Nunito Sans', sans-serif;
   text-align: left;
-  margin-top: 4.5em;
+  /* margin-top: 3.5em; */
   padding-top: 0em;
+  padding-bottom: 0em;
   color: white;
+}
+.row-abbr {
+  position: absolute;
+  bottom: -0.5em;
 }
 .abbr-word a:hover {
   color: black;
@@ -165,7 +170,7 @@ body {
   margin: auto 2em;
 }
 .carriers .card-title {
-  font-size: 230%; 
+  font-size: 200%; 
   font-family: 'Quicksand', sans-serif; 
   text-shadow: 0 3px 4px rgb(80,80,80); 
   /*margin-bottom: 2.4em;*/
@@ -260,8 +265,41 @@ footer p {
   margin-left: 0em;
   padding-left: 0em;
 }
-
-
+a.external-link:hover::after {
+  margin-left: 5px;
+  opacity: 1;
+  visibility: visible;
+}
+a.external-link:after  {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 900;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -20px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .22s ease;
+}
+a.external-link:after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+address {
+  font-weight: bold;
+  color: var(--rota-gray)
+}
+.contacts li a {
+  color: var(--rota-gray);
+}
+.contacts li a i {
+  color: var(--rota-red);
+}
+.card {
+  margin-bottom: 1em;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -311,7 +349,7 @@ and (min-width: 800px) {
   .abbr-word {
     padding-top: 0em;
   }
-  .row h2 {
+  h2.home {
     font-size: 400%;
   }
   .lead-row{
@@ -344,7 +382,13 @@ and (min-width: 800px) {
     width: 50%;
   }
   footer .row {
-    padding: 0em 5em;
+    padding: 0em 7em;
+  }
+  .card-narrow {
+    width: 18rem;
+  }
+  .card-margin-bottom {
+    margin-bottom: 2.1em;
   }
 }
 
@@ -354,12 +398,17 @@ and (min-width: 800px) {
   --rota-red: #eb3f3f;
 }
 
-h2 {
+h2.home {
   color: var(--rota-red);
   font-family: 'Nunito Sans', sans-serif;
   font-size: 200%;
 }
 
+h2.contact {
+  color: var(--rota-red);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 150%;
+}
 .navbar a[href^=tel] {
   color: var(--rota-red) !important;
 }
@@ -369,6 +418,10 @@ h1 {
   font-size: 315%;
   text-shadow: 0 0 20px var(--rota-gray);
   color: white;
+}
+h1.page-title {
+  text-shadow: 0 2px 2px #999 !important;
+    color: #eb3f3f;
 }
 
 .btn-danger {

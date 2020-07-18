@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Get a quote Us &bull; Rota</title>
+    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&family=Quicksand&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/74abbf3163.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    
+    <!-- styling -->
+    <link href="mobile.css" rel="stylesheet">
+    <style>
+      h1.nocarousel {
+        text-shadow: 0 2px 2px #999 !important;
+        color: #eb3f3f;
+      }
+      .input-hidden {
+        position: absolute;
+        left: -9999px;
+      }
+      label p {
+        position: absolute;
+        bottom: 2.25em;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 175%;
+        text-shadow: 0 0 5px var(--rota-gray);
+        color: white;
+        text-align: right;
+        z-index: 5;
+        transition: 450ms all;
+      }
+      p.btn-title-1 {
+        left: 5em;
+      }
+      p.btn-title-2 {
+        left: 3.8em;
+      }
+      p.btn-title-3 {
+        left: 4em;
+      }
+      p.btn-title-4 {
+        left: 5.2em;
+      }
+      input[type=radio]:checked + label>img {
+        /*border: 1px solid #eb3f3f;*/
+        box-shadow: 0 5px 5px 0px #404040;
+      }
+      input[type=radio]:checked + label p {
+        color: #eb3f3f;
+        text-shadow: 0 2px 2px black;
+        font-size: 200%;
+        bottom: 2em;
+      }
+      input[type=radio] + label>img {
+        border: 1px solid #404040;
+        width: 200px;
+        transition: 600ms all;
+      }
+
+      input[type=radio]:checked + label>img,
+      input[type=radio]:checked + label p {
+        transform: 
+          scale(1.15)
+      }
+      input[type=radio]:checked + label p.btn-title-1 {
+        left: 2.5em;
+        text-align: center;
+      }
+      input[type=radio]:checked + label p.btn-title-2 {
+        left: 1.85em;
+        text-align: center;
+      }
+      input[type=radio]:checked + label p.btn-title-3 {
+        left: 2em;
+        text-align: center;
+      }
+      input[type=radio]:checked + label p.btn-title-4 {
+        left: 2.5em;
+        text-align: center;
+      }
+
+      input[type=radio]:checked + label>img {
+        /*filter: blur(0.1rem);*/
+        opacity: 0.5;
+      }
+      
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="/mobile/"><img style="width: 4rem;" src="images/brand-rota.png" alt="Rota."></a> <span class="sr-only">(current)</span>
+
+      <!--
+      <form class="form-inline my-2 my-md-0">
+        <a href="quote.html" class="btn btn-outline-danger" type="button"><i class="fas fa-file-alt"></i> Get a quote</a>
+      </form>
+      -->
+
+      <form class="form-inline my-2 my-md-0">
+        <a href="quote.html" class="btn btn-outline-danger"><i class="far fa-comments"></i> Get a quote</a>
+      </form>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mr-auto">
+          <!-- 
+          <li class="nav-item active">
+            <a class="nav-link" href="/rota/">Home </a>
+          </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link" href="carriers.html">Carriers</a>
+          </li>
+          <!--
+            <li class="nav-item">
+            <a class="nav-link" href="#">Careers</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tel:+15551234567"><i class="fas fa-phone"></i> 555-123-4567</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+
+<main class="container-lg" role="main">
+  <div class="" style="margin-top: 2em;">
+    <h1 class="page-title">Get a quote</h1>
+    <p class="lead">Fill out a form and let us know what you need.</p>
+  </div>
+  <form class="needs-validation" novalidate>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Name</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="John Smith" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom02">Company</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Sample Company LLC" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Email</label>
+        <input type="email" class="form-control" id="validationCustom03" placeholder="jsmith@samplellc.com" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom04">Phone</label>
+        <input type="tel" class="form-control" id="validationCustom04" placeholder="123-456-7890" 
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom04">How'd you hear about us?</label>
+        <select class="custom-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>Our website</option>
+          <option>Web search</option>
+          <option>Social media</option>
+          <option>Recommended by a friend</option>
+          <option>Other</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Origin Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Destination Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight" 
+        id="rail" value="rail" class="input-hidden" />
+        <label for="rail"><p class="btn-title-1">Rail</p>
+        <img 
+          src="images/button-rail.jpg" 
+          alt="Rail.">
+        </label>
+      </div>
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight"
+        id="ocean" value="ocean" class="input-hidden" />
+        <label for="ocean"><p class="btn-title-2">Ocean</p>
+        <img 
+          src="images/button-ocean.jpg" 
+          alt="Ocean.">
+        </label>
+      </div>
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight" 
+        id="truck" value="truck" class="input-hidden" />
+        <label for="truck"><p class="btn-title-3">Truck</p>
+        <img 
+          src="images/button-truck.jpg" 
+          alt="Truck.">
+        </label>
+      </div>
+      <div class="col-md-3 mb-3">
+        <input type="radio" name="freight"
+        id="air" value="air" class="input-hidden" />
+        <label for="air"><p class="btn-title-4">Air</p>
+        <img 
+          src="images/button-air.jpg" 
+          alt="Air.">
+        </label>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Pieces and Sizes</legend>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="pieceCount">Number of pieces</label>
+          <input type="text" class="form-control" id="pieceCount" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="form-check form-check-inline btn-nudge">
+            <input class="form-check-input" type="radio" name="pieceUnits" id="inlineRadio1" value="imperial">
+            <label class="form-check-label" for="inlineRadio1">Inches and Pounds</label>
+          </div>
+          <div class="form-check form-check-inline btn-nudge">
+            <input class="form-check-input" type="radio" name="pieceUnits" id="inlineRadio2" value="metric">
+            <label class="form-check-label" for="inlineRadio2">Centimeters and Kilograms</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-2 mb-3">
+          <label for="pieceNumber01">Pieces</label>
+          <input type="number" class="form-control" id="pieceNumber01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceLength01">Length</label>
+          <input type="text" class="form-control" id="pieceLength01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceWidth01">Width</label>
+          <input type="text" class="form-control" id="pieceWidth01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceHeight01">Height</label>
+          <input type="text" class="form-control" id="pieceHeight01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="pieceWeight01">Weight</label>
+          <input type="text" class="form-control" id="pieceWeight01" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <a href="#" class="btn btn-danger btn-nudge addPieces"><i class="fas fa-plus-square"></i> More</a>
+        </div>
+      </div>
+      <div id="appendPieces"></div>
+    </fieldset>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-danger" type="submit">Submit form</button>
+  </form>
+  </main>
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
+
+
+<!-- FOOTER -->
+<footer class="container-flex bg-light " style="margin-top: 1em;">
+  <div class="row">
+    <div class="col-sm-4">
+      <ul>
+        <!--
+          <li>
+          <a href="/rota/">Home </a>
+        </li>
+        -->
+        <li>
+          <a href="quote.html">Get a quote</a>
+        </li>
+        <li>
+          <a href="carriers.html">Become a carrier</a>
+        </li>
+        <li>
+          <a href="#">Learn more about us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <ul>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">Privacy policy</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4 footer-right">
+      <a href="mobile.html"><img src="images/brand-rota.png"></a>
+      <p>&copy; 2020 Rota LLC. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- jquery required by bootstrap -->
+      <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+      $('.popover-dismiss').popover({
+        trigger: 'focus'
+      })
+      $('#ListRail').popover({
+        toggle: 'popover',
+        placement: 'bottom',
+        trigger: 'focus',
+        html: true,
+        content: "<ul><li>Pallets</li><li>US, Canada, and Mexico</li></ul>",
+      })
+      $('#ListOcean').popover({
+        toggle: 'popover',
+        placement: 'bottom',
+        trigger: 'focus',
+        html: true,
+        content: "<ul><li>Pallet</li><li>Customs Brokerage</li></ul>",
+      })
+      $('#ListTruck').popover({
+        toggle: 'popover',
+        placement: 'bottom',
+        trigger: 'focus',
+        html: true,
+        content: "<ul><li>Truckload (TL)</li><li>Less-than Truckload (LTL)</li><li>Intermodal</li><li>Team</li><li>Refrigerated</li><li>Flatbed</li><li>Oversized</li></ul>",
+      })
+      $('#ListAir').popover({
+        toggle: 'popover',
+        placement: 'bottom',
+        trigger: 'focus',
+        html: true,
+        content: "<ul><li>Air Cargo</li><li>Customs Brokerage</li></ul>",
+      })
+    </script>
+    </body>
+</html>
