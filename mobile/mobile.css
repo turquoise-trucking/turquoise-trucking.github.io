@@ -329,7 +329,7 @@ and (-webkit-device-pixel-ratio : 3) {
 
 /* desktop styles go here */
 @media only screen
-and (min-width: 800px) {
+and (min-width: 900px) {
   nav .form-inline a {
     position: absolute;
     right: 1em;
