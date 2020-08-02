@@ -156,7 +156,7 @@ body {
 .homepage-form {
   background: var(--rota-gray); 
   margin: 1em 0em 0em;
-  width: 100%; 
+  /*width: 100%;*/ 
   padding: 2em 0.8em;
 }
 
@@ -186,7 +186,7 @@ body {
 
 footer {
   margin: 0em;
-  width: 100%; 
+  /*width: 100%; */
   padding: 2em 0.8em;
 }
 
@@ -257,7 +257,7 @@ footer p {
   padding-right: 0.5em;
 }
 .form-submit {
-  width: 100%;
+  /*width: 100%;*/
 }
 .form-contact div,
 .form-contact div ul,
