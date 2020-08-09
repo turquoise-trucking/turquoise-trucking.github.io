@@ -24,24 +24,10 @@ body {
 .navbar {
     box-shadow: 0px 0px 15px rgb(190,190,190);
 }
-/*
-.nav-item,
-.nav-link {
-  margin: 0em auto;
+.navbar a[href^=tel] {
+  color: var(--rota-red) !important;
 }
-.nav-item .active::before,
-.nav-item .active::after {
-  color: var(--rota-red);
-  font-size: 100%;
-}
-.nav-item .active::before {
-  content: "»";
-  padding-right: 0.2em;
-}
-.nav-item .active::after {
-  content: "«";
-  padding-left: 0.2em;
-} */
+
 
 /* footer ----------------------------------------------------------- */
 footer {
@@ -65,10 +51,12 @@ footer ul li:before {
     position: relative;
     bottom: 23px;
 }
-footer ul li a {
+footer ul li a,
+footer ul li a:hover {
     color: var(--rota-gray);
     font-size: 120%;
     font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
 }
 footer img {
     width: 260px;
@@ -81,13 +69,35 @@ footer p {
     padding-top: 0em;
     padding-left: 0.3em;
 }
-/* desktop-specific footer -------------------------------- */
 .footer-right {
     padding-left: 2em;
 }
 
 /* headings --------------------------------------------------------- */
-
+h2.home {
+  color: var(--rota-red);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 200%;
+}
+h2.contact {
+  color: var(--rota-red);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 150%;
+}
+h2.home-carriers {
+  display: none;
+  text-align: center;
+}
+h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 315%;
+  text-shadow: 0 0 20px var(--rota-gray);
+  color: white;
+}
+h1.page-title {
+  text-shadow: 0 2px 2px #999 !important;
+    color: #eb3f3f;
+}
 
 /* homepage --------------------------------------------------------- */
 /* masthead ----------------------------------------------- */
@@ -179,9 +189,6 @@ footer p {
     font-size: 110%;
 }
 /* carrier and shipper ------------------------------------ */
-.carriers {
-    margin: auto 0em;
-}
 .carriers picture source, 
 .carriers picture img {
     height: 200px;
@@ -206,7 +213,6 @@ footer p {
 .homepage-form {
     background: var(--rota-gray); 
     margin: 1em 0em 0em;
-    /*width: 100%;*/ 
     padding: 2em 0.8em;
 }
 .homepage-form h3, .homepage-form form label {
@@ -238,13 +244,40 @@ footer p {
     margin-left: 0em;
     padding-left: 0em;
 }
+.form-submit {
+  width: 50%;
+}
 
-a.external-link:hover::after {
+
+/* multi-page ------------------------------------------------------- */
+.homepage-icons {
+    color: var(--rota-red);
+    font-size: 250%;
+    position: absolute;
+    top: 0.15em;
+}
+.card {
+    margin-bottom: 1em;
+}
+.card-shadow {
+    margin-bottom: 1em;
+    box-shadow: 0px 2px 5px rgb(200,200,200);
+    background: rgb(240,240,240);
+}
+.btn-danger {
+  background: var(--rota-red);
+}
+.btn-outline-danger {
+  color: var(--rota-red);
+}
+a.external-link:hover::after,
+footer div div ul li a:hover::after {
   margin-left: 5px;
   opacity: 1;
   visibility: visible;
 }
-a.external-link:after  {
+a.external-link:after,
+footer div div ul li a:after  {
   font-family: "Font Awesome 5 Free";
   content: "\f054";
   font-weight: 900;
@@ -271,33 +304,23 @@ address {
 .contacts li a i {
     color: var(--rota-red);
 }
-
-
-/* multi-page ------------------------------------------------------- */
-.homepage-icons {
-    color: var(--rota-red);
-    font-size: 250%;
-    position: absolute;
-    top: 0.15em;
+.hidden { /* hides headings but allows screenreaders to use them */
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
 }
-.card {
-    margin-bottom: 1em;
-}
-.card-shadow {
-    margin-bottom: 1em;
-    box-shadow: 0px 2px 5px rgb(200,200,200);
-    background: rgb(240,240,240);
-}
-.btn-danger {
-  background: var(--rota-red);
+.col-auto {
+  flex-basis: 100%;
+  width: 50%;
 }
 
-.btn-outline-danger {
-  color: var(--rota-red);
-}
 
 /* tablet styling --------------------------------------------------- */
-
 @media only screen
 and (min-width: 750px) {
   .homepage-icons {
@@ -313,6 +336,9 @@ and (min-width: 750px) {
     margin: 2.5em 0em 0em;
     padding-bottom: 0em;
   }
+  h2.home-carriers {
+    display: none;
+  }
   footer .justify-content-center {
     justify-content: left !important;
   }
@@ -327,7 +353,11 @@ and (min-width: 750px) {
   .row-abbr .col-3 {
     padding-left: 5em;
   }
+  .col-auto {
+    flex-basis: auto;
+  }
 }
+
 
 /* large display styling -------------------------------------------- */
 @media only screen
@@ -352,6 +382,10 @@ and (min-width: 850px) {
     text-align: right;
     font-size: 170%;
   }
+  h2.home-carriers {
+    display: block;
+    text-align: center;
+  }
   .carriers {
     max-width: 444px;
     max-height: 250px;
@@ -364,7 +398,7 @@ and (min-width: 850px) {
     width: 15em;
   }
   .homepage-form {
-    padding: 4em 5em;
+    padding: 2em 5em;
   }
   .form-contact {
     width: 85%;
@@ -372,7 +406,7 @@ and (min-width: 850px) {
     padding: auto 0em;
   }
   .form-submit {
-    width: 50%;
+    width: 25%;
   }
   footer {
     padding: 2em 1em 0.5em;
@@ -381,7 +415,7 @@ and (min-width: 850px) {
     padding-left: 0em;
   }
   .footer-right {
-    margin-right: 0em;
+    padding-left: 1em;
   }
   .card-narrow {
     width: 18rem;
@@ -392,35 +426,11 @@ and (min-width: 850px) {
   footer .justify-content-center {
     justify-content: center !important;
   }
+  .col-auto {
+    flex-basis: auto;
+    width: auto;
+  }
 }
-
-
-h2.home {
-  color: var(--rota-red);
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 200%;
-}
-
-h2.contact {
-  color: var(--rota-red);
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 150%;
-}
-.navbar a[href^=tel] {
-  color: var(--rota-red) !important;
-}
-
-h1 {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 315%;
-  text-shadow: 0 0 20px var(--rota-gray);
-  color: white;
-}
-h1.page-title {
-  text-shadow: 0 2px 2px #999 !important;
-    color: #eb3f3f;
-}
-
 
 
 /* Dev backgrounds for rota buttons in homepage 
