@@ -82,7 +82,7 @@ footer p {
   margin: 1em auto 0.5em;
 }
 .footer-legal .row div+div {
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 .footer-legal a {
   text-decoration: none;
@@ -370,6 +370,7 @@ and (min-width: 750px) {
   }
   .footer-legal .row div+div {
     text-align: right;
+    margin-bottom: 2em;
   }
   footer .container-lg .row *:first-child {
     padding-left: 0em;
