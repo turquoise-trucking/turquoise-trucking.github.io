@@ -342,7 +342,7 @@ address {
 and (min-width: 750px) {
   .homepage-icons {
     position: absolute;
-    top: -0.1em;
+    top: -0.05em;
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 400%;
