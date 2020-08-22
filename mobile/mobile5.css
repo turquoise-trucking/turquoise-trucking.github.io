@@ -353,6 +353,16 @@ and (min-width: 750px) {
     margin: 2.5em 0em 0em;
     padding-bottom: 0em;
   }
+  h2.home {
+    font-size: 300% !important;
+  }
+  .lead-row{
+    margin: 2em auto 4em;
+  }
+  .head-lead {
+    text-align: right;
+    font-size: 150%;
+  }
   .homepage-form {
     padding: 2em 2em;
   }
@@ -412,15 +422,11 @@ and (min-width: 850px) {
   .abbr-word {
     padding-top: 0em;
   }
+  .head-lead {
+    font-size: 240%;
+  }
   h2.home {
     font-size: 400% !important;
-  }
-  .lead-row{
-    margin: 2em auto 4em;
-  }
-  .head-lead {
-    text-align: right;
-    font-size: 170%;
   }
   h2.home-carriers {
     display: block;
