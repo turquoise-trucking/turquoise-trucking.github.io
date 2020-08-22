@@ -387,6 +387,12 @@ and (min-width: 750px) {
   .col-auto {
     flex-basis: auto;
   }
+  .card-narrow {
+    width: 16rem;
+  }
+  .card-margin-bottom {
+    margin-bottom: 1.1em;
+  }
 }
 
 
@@ -449,12 +455,6 @@ and (min-width: 850px) {
     padding-left: 1em;
     /* shift col over without flexing */
     text-align: right; 
-  }
-  .card-narrow {
-    width: 18rem;
-  }
-  .card-margin-bottom {
-    margin-bottom: 1.1em;
   }
   .col-auto {
     flex-basis: auto;
