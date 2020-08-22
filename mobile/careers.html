@@ -17,14 +17,23 @@
     
     <!-- styling -->
     <link href="mobile4.css" rel="stylesheet">
+    <style>
+      h2 {
+        font-size: 160%;
+        color: var(--rota-red);
+      }
+      h3 {
+        font-size: 130%;
+      }
+      @media only screen
+      and (min-width: 750px) {
+        .card-body {
+          padding-top: 0.3em;
+        }
+    </style>
   </head>
   
   <body>
-  <!-- facebook jobs -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" 
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=508228719780205&autoLogAppEvents=1" 
-    nonce="mjkLgXHi"></script>
   <header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/mobile/"><img style="width: 4rem;" src="images/brand-rota.png" alt="Rota."></a> <span class="sr-only">(current)</span>
@@ -76,11 +85,29 @@
 <main class="container-lg" role="main">
   <div class="" style="margin-top: 2em;">
     <h1 class="page-title">Careers</h1>
-    <p class="lead">Work for Rota.</p>
+    <p class="lead">Join the team and work for Rota.</p>
   </div>
   <br>
-  <div class="fb-page" data-href="https://www.facebook.com/TurquoiseTrucking/jobs" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-</main>
+  <div class="card mb-3" style="  ">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <picture>
+          <source srcset="images/careers-desktop.jpg" class="card-img" media="(min-width: 750px)" alt="Tablet and analytics papers on a desk.">
+          <img srcset="images/careers-mobile.jpg" class="card-img" alt="Tablet and analytics papers on a desk.">
+        </picture>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">Logistics Coordinators</h2>
+          <h3 class="card-subtitle mb-2 text-muted">Cedar Rapids, Iowa</h3>
+          <p class="card-text">For full details on this position visit our Facebook jobs board.</p>
+          <a href="https://www.facebook.com/TurquoiseTrucking/jobs" class="btn btn-danger external-link"><i class="fab fa-facebook"></i> Jobs at Rota</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
 
 
 <!-- FOOTER -->
@@ -124,6 +151,15 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
+      <script>
+        $(document).ready(function(){
+            $('.openPopup').on('click',function(){
+                var dataURL = $(this).attr('data-href');
+                $('.modal-body').load(dataURL,function(){
+                    $('#myModal').modal({show:true});
+                });
+            }); 
+        });
+      </script>
     </body>
 </html>
