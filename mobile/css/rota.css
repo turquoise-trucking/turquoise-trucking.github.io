@@ -27,7 +27,7 @@ body {
 .navbar a[href^=tel] {
   color: var(--rota-red) !important;
 }
-.nav-brand img {
+.navbar-brand img {
   width: 4rem;
 }
 
