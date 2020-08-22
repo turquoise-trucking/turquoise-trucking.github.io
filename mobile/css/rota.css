@@ -20,14 +20,16 @@ body {
 }
 
 
-/* navbar ----------------------------------------------------------- */
+/* masthead --------------------------------------------------------- */
 .navbar {
   box-shadow: 0px 0px 15px rgb(190,190,190);
 }
 .navbar a[href^=tel] {
   color: var(--rota-red) !important;
 }
-
+.nav-brand img {
+  width: 4rem;
+}
 
 /* footer ----------------------------------------------------------- */
 footer {
