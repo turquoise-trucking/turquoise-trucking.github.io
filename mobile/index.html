@@ -254,6 +254,10 @@
         /* includes */
         $("#header").load("includes/masthead.html");
         $("#footer").load("includes/footer.html");
+        $("#copyright-year").load(function() {
+          var d = new Date();
+          $("#copyright-year").text(d.getFullYear())
+        });
         $('[data-toggle="popover"]').popover();
       })
       $('.popover-dismiss').popover({
