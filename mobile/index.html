@@ -20,11 +20,10 @@
 </head>
   
 <body>
-<div id='header'>Our website requires JavaScript, please <a href="https://duckduckgo.com/?q=enable+javascript">enable javascript</a> for the best user experience.</div>
+  <!-- header -->
+  <div id='header'></div>
 
 <main class="container-lg">
-  
-  <br>
   <div class="card card-shadow" style="margin-bottom: 1em;">
     <picture>
       <source srcset="images/cargo-desktop-wide.jpg" class="card-img" media="(min-width: 750px)">
@@ -228,58 +227,8 @@
   </div>
 </div>
 
-  <!-- footer -->
-  <footer class="bg-light" style="margin-top: 0em !important;">
-    <div class="container-lg">
-      <div class="row">
-        <div class="col-md-4">
-          <ul>
-              <li>
-              <a href="/mobile/">Home</a>
-            </li>
-            <li>
-              <a href="quote.html">Get a quote</a>
-            </li>
-            <li>
-              <a href="carriers.html">Become a Carrier</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <ul>
-            <li>
-              <a href="careers.html">Careers</a>
-            </li>
-            <li>
-              <a href="about.html">About Us</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 footer-right">
-          <a href="index.html"><img src="images/brand-rota.png" alt="Rota."></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- legal footer -->
-  <div class="container-fluid footer-legal small">
-    <div class="row">
-      <div class="col-md-6">
-        Copyright &copy; 
-        <script>
-          var d = new Date()
-          document.write(d.getFullYear())
-          </script>
-        Rota LLC. All Rights Reserved.</div>
-      <div class="col-md-6"><a href="privacy.html">Privacy Policy</a> &amp; 
-        <a href="terms.html">Terms of Service</a>
-      </div>
-    </div>
-  </div>
+<!-- footer -->
+<div id='footer'></div>
 
   <!-- bootstrap scripts -->
   <script
@@ -304,6 +253,7 @@
       $(function () {
         /* includes */
         $("#header").load("includes/masthead.html");
+        $("#footer").load("includes/footer.html");
         $('[data-toggle="popover"]').popover();
       })
       $('.popover-dismiss').popover({
