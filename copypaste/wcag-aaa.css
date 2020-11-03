@@ -43,9 +43,9 @@ Version: 1.0
 .card-title a:link,
 .card-title a:visited,
 .card-title a:active,
-a:link,
-a:visited,
-a:active {
+p a:link,
+p a:visited,
+p a:active {
     color: #0056b3;
     text-decoration: underline;
 }
