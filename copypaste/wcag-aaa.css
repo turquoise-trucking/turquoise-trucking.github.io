@@ -23,8 +23,8 @@ Version: 1.0
 
 /* aria checked via switch for toggle button */
 [aria-checked="true"] {
-    -webkit-filter: invert(1);
-    filter: invert(1);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
 }
 [aria-checked="false"] {
     -webkit-filter: brightness(0.25);
