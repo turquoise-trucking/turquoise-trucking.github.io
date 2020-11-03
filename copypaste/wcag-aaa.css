@@ -37,7 +37,10 @@ Version: 1.0
 /* page content --------------------------------------------------------------- */
 .card-title a:link,
 .card-title a:visited,
-.card-title a:active {
+.card-title a:active,
+a:link,
+a:visited,
+a:active {
     color: #0056b3; 
 }
 .card-title a:hover {
