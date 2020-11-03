@@ -12,7 +12,10 @@ Version: 1.0
     background: #14615b; 
     border: 1px solid #0b5d56;
 }
-
+.nav-item .active {
+    border-bottom: 4px solid #30d5c8;
+    color: #0E5D56 !important;
+}
 /* increased contrast */
 .masthead-btn .btn-success{
     background-color: #175e28;
