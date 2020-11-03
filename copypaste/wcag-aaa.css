@@ -21,7 +21,15 @@ Version: 1.0
     background-color: #0056b3;
 }
 
-
+/* aria checked via switch for toggle button */
+[aria-checked="true"] {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+[aria-checked="false"] {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
 
 /* page content --------------------------------------------------------------- */
 .card-title a:link,

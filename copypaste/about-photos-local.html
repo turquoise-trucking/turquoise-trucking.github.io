@@ -83,9 +83,13 @@
 <nav class="navbar navbar-expand-md bg-light navbar-light">
 <!-- Brand -->
 <a class="navbar-brand" href="/">
-<img src="/static-assets/tt-nav.png" alt="">
+<img src="/static-assets/tt-nav.png" alt="Menu">
 </a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<button class="navbar-toggler" 
+  type="switch" 
+  aria-label="menu" 
+  aria-checked="false"
+  data-toggle="collapse" data-target="#collapsibleNavbar">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- navbar links-->
@@ -458,5 +462,17 @@ var ccfm = {"ajax_url":"https:\/\/turquoisetruck.com\/wp-admin\/admin-ajax.php",
 <script type='text/javascript' src='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-content/plugins/clear-cache-for-widgets/js/admin-bar.js?ver=1.5&#038;time=1600032528' id='ccfm-admin-bar-js'></script>
 <script type='text/javascript' src='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-includes/js/wp-embed.min.js?ver=5.5.1&#038;time=1600032528' id='wp-embed-js'></script>
 
+
+<script>
+  $( document ).ready(function() {
+    console.log( "ready!" );
+    const toggle = document.querySelector('[aria-checked]');
+
+    toggle.addEventListener('click', (e) => {  
+    let checked = e.target.getAttribute('aria-checked') === 'true';
+    e.target.setAttribute('aria-checked', String(!checked));
+    });
+  });
+</script>
 </body>
 </html>
