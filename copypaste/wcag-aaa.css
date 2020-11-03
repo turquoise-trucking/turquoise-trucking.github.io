@@ -19,9 +19,11 @@ Version: 1.0
 /* increased contrast */
 .masthead-btn .btn-success{
     background-color: #175e28;
+    color: white;
 }
 .masthead-btn .btn-primary {
     background-color: #0056b3;
+    color: white;
 }
 
 /* aria checked via switch for toggle button */
