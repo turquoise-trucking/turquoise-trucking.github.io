@@ -66,7 +66,12 @@ abbr[title]:after {
     border-top: 2px solid #10b5a8;
 }
 .footer h3 {
-	font-size: 130%;
+    font-size: 130%;
+    color: white;
+}
+.footer p,
+.footer dt {
+    color: black;
 }
 .footer div div div,
 .footer-dark {
@@ -145,14 +150,18 @@ a.external-link:after {
 .nav-about a:hover i,
 .nav-contact a:hover i,
 .nav-drivers a:hover i,
-.nav-customers a:hover i {
-	color: #128A80;
-}
+.nav-customers a:hover i,
 .contact-list a:hover i.fa-phone,
 .contact-list a:hover i.fa-map-marker-alt,
 .contact-list a:hover i.fa-envelope,
 .contact-list a:hover i.fa-fax {
-	color: #568A80;
+    color: #10b5a8  
+}
+
+.nav-list a:hover,
+.contact-list a:hover {
+    color: white;
+    text-decoration: none;
 }
 .footer-dark {
     background: #06322f;
