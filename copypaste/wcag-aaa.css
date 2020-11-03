@@ -192,10 +192,10 @@ a.external-link:after {
     margin-bottom: 0em;
 }
 .footer-dark a   {
-    color: #31D6C8;
+    color: #31D6C8 !important;
 }
 .footer-dark a:hover {
-    color: white;
+    color: white !important;
 }
 
 
