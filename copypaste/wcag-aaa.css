@@ -83,11 +83,12 @@ abbr[title]:after {
 /* footer (bottom of page) ---------------------------------------------------- */
 .footer {
     padding-top: 0.5em;
-    border-top: 2px solid #10b5a8;
+    border-top: 5px solid #70CCC6;
+    background-color: #8dfff7;
 }
 .footer h3 {
     font-size: 130%;
-    color: white;
+    color: #06322f;
 }
 .footer p,
 .footer dt {
@@ -100,7 +101,7 @@ abbr[title]:after {
 .footer-classic a, 
 .footer-classic a:focus, 
 .footer-classic a:active {
-    color: #ffffff;
+    color: black;
     text-decoration: none;
     padding-top: 0.5em;
 }
@@ -175,12 +176,13 @@ a.external-link:after {
 .contact-list a:hover i.fa-map-marker-alt,
 .contact-list a:hover i.fa-envelope,
 .contact-list a:hover i.fa-fax {
-    color: #10b5a8  
+    -webkit-filter: invert(0.15);
+    filter: invert(0.15);
 }
 
 .nav-list a:hover,
 .contact-list a:hover {
-    color: white;
+    color: #06322f;
     text-decoration: none;
 }
 .footer-dark {
