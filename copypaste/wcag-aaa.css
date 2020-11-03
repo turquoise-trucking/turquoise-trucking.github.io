@@ -31,7 +31,7 @@ Version: 1.0
 }
 [aria-checked="false"] {
     -webkit-filter: brightness(0.15);
-    filter: invert(0.15);
+    filter: brightness(0.15);
 }
 
 /* page content --------------------------------------------------------------- */
@@ -41,7 +41,8 @@ Version: 1.0
 a:link,
 a:visited,
 a:active {
-    color: #0056b3; 
+    color: #0056b3;
+    text-decoration: underline;
 }
 .card-title a:hover {
     color: #0056b3;
