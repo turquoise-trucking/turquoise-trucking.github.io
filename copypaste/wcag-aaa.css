@@ -172,6 +172,8 @@ a.external-link:after {
     margin-right: 0.4em;
     margin-top: 0.4em;
 }
+
+/* THIS NOT WCAG RELATED but used https://color.adobe.com/create/color-wheel  */
 .nav-home a i,
 .nav-about a i,
 .nav-contact a i,
@@ -185,8 +187,8 @@ a.external-link:after {
     -webkit-filter: invert(0.15);
     filter: invert(0.15);*/
     -webkit-filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
-  filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
-  transition: transform 0.25s;
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
+    transition: transform 0.25s;
 }
 
 .nav-home a:hover i,
