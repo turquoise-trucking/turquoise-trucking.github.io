@@ -84,7 +84,23 @@ img.emoji {
     font-size: small;
     text-align: center;
 }
-
+/* footer color changes to meet WCAG-AA */
+.bg-turquoise {
+    background: #198077 !important;
+}
+.footer-dark {
+    background: #0A4843 !important;
+    color: #D8F8F5 !important;
+}
+.footer-dark a   {
+    color: #31D6C8 !important;
+}
+.btn-group {
+    filter: drop-shadow(0px 5px 3px rgb(40,80,80));
+}
+.btn-group a {
+    padding: 0.25em 2em;
+}
 </style>
 <link rel='stylesheet' id='bootstrap-css'  href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css?ver=5.6.2' type='text/css' media='all' />
 <link rel='stylesheet' id='fontawesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css?ver=5.6.2' type='text/css' media='all' />
@@ -148,7 +164,8 @@ img.emoji {
 <h1 class="h2 display-4">Contact Us</h1>
 <p class="lead">Turquoise Trucking would love to hear from you. Give us a call, send us an email, and connect with us on social media. You can also drop by our office here in Cedar Rapids.</p>
 
-<div class="card-deck">
+<div class="row">
+    <div class="col-sm-6">
 <div class="card"><img class="card-img-top" src="https://turquoise-trucking.github.io/static-assets/contact-phone.jpg" alt="Closeup of a telephone keypad.">
 <div class="card-body">
 <h2 class="h4 card-title">Call Us</h2>
@@ -179,6 +196,8 @@ img.emoji {
 </div>
 </div>
 </div>
+    </div>
+    <div class="col-sm-6">
 <div class="card"><img class="card-img-top" src="https://turquoise-trucking.github.io/static-assets/contact-google-map.png" alt="Map with Turquoise Trucking location pinned.">
 <div class="card-body">
 <h2 class="h4 card-title">Drop By</h2>
@@ -201,6 +220,7 @@ img.emoji {
 </div>
 
 
+</div>
 </div>
 </div>
 </div>
@@ -265,9 +285,17 @@ img.emoji {
                 <div class="col-md-4 col-xl-5">
                     <div class="pr-xl-4"><a class="brand" href="/"><img class="brand-logo-light" src="/static-assets/turquoise-badge.png" alt="Turquoise Trucking" width="181" height="50"></a>
                         <p>With over 20 years of experience in the trucking business, we provide companies with safe, efficient, and reliable transportation solutions across the United States.</p>
-                        <ul class="nav-list">
+                        <div class="btn-group" role="group" aria-label="Social media">
+                            <a role="button" class="btn btn-light text-dark" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i><span class="hidden"> Facebook</span></a>
+                            <a role="button" class="btn btn-light text-dark" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i><span class="hidden"> Instagram</span></a>
+                            <a role="button" class="btn btn-light text-dark"  href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i><span class="hidden"> LinkedIn</span></a>
+                          </div>
+                        <ul class="nav-list">   
+                            <!--
                             <li class="nav-fb"><a href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer" class="external-link"><i class="fab fa-facebook-square fa-lg"></i> Follow us on Facebook</a></li>
 							<li class="nav-ig"><a href="https://www.instagram.com/turquoisetruckusa/" target="_blank" class="external-link"><i class="fab fa-instagram-square fa-lg"></i> #TurquoiseTruckUSA</a></li>
+                            -->
+                            <br>
                             <li class="nav-fb"><a href="https://www.redcross.org/" target="_blank" rel="noreferrer" class="external-link"><img src="/static-assets/footer-red-cross.png" alt="" class="redcross"> We support the Red&nbsp;Cross</a></li>
                         </ul>
                     </div>
