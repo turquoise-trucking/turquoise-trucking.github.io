@@ -1,0 +1,255 @@
+/*   
+Theme Name: 2019 Turquoise Theme - WCAG Accessibility Update
+Description: Changes to meet WCAG AAA
+Website: https://www.w3.org/WAI/WCAG21/quickref/
+Author: John Earl Hardesty
+Author URI: https://github.com/Heardwulf
+Version: 1.0
+*/
+
+/* increased contrast */
+.bg-turquoise {
+    background: #14615b; 
+    border: 1px solid #0b5d56;
+}
+.nav-item .active {
+    border-bottom: 4px solid #30d5c8;
+    color: #0E5D56 !important;
+}
+.nav-link {
+    text-decoration: none;
+}
+/* increased contrast */
+.masthead-btn .btn-success{
+    background-color: #175e28;
+    color: white;
+}
+.masthead-btn .btn-primary {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* aria checked via switch for toggle button */
+[aria-checked="true"] {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+}
+[aria-checked="false"] {
+    -webkit-filter: brightness(0.15);
+    filter: brightness(0.15);
+}
+
+/* page content --------------------------------------------------------------- */
+.card-title a:link,
+.card-title a:visited,
+.card-title a:active,
+p a:link,
+p a:visited,
+p a:active {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.card-title a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.carousel-inner {
+	box-shadow: 0px 3px 4px #999; 
+	/* border: 1px solid #aaa;
+	border-color: #aaa #999 #888; */
+	border-radius: 8px;
+}
+/* expand abbreviations on mobile */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: none;
+}
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+@media screen and (min-width: 600px) {
+	abbr[title] {
+		border-bottom: 2px dotted #0056b3;
+		text-decoration: none;
+		cursor:help;
+	}
+	abbr[title]:after {
+		content: "";
+	}
+}
+
+
+/* footer (bottom of page) ---------------------------------------------------- */
+.footer {
+    padding-top: 0.5em;
+    border-top: 5px solid #70CCC6;
+    background-color: #8dfff7;
+}
+.footer h3 {
+    font-size: 130%;
+    color: #06322f;
+}
+.footer p,
+.footer dt {
+    color: black;
+}
+.footer div div div,
+.footer-dark {
+    padding-top: 0.5em;
+}
+.footer-classic a, 
+.footer-classic a:focus, 
+.footer-classic a:active {
+    color: black;
+    text-decoration: none;
+    padding-top: 0.5em;
+}
+.nav-list li a:hover:after, 
+a.external-link:hover::after {
+    margin-left: 5px;
+    opacity: 1;
+    visibility: visible;
+}
+.nav-list {
+    padding: 0;
+    margin: 0;
+}
+.nav-list li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.nav-list li a:after, 
+a.external-link:after  {
+    font-family: "Font Awesome 5 Free";
+    content: "\f054";
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -20px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+a.external-link:after {
+    content: "\f35d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.valign-middle {
+    vertical-align: middle;
+}
+.membership {
+    margin-bottom: 1.5em;
+    
+}
+.membership col {
+    margin-left: 0em;
+    padding-left: 0em;
+}
+.membership ul {
+    padding-left: 0.8em;
+}
+.membership ul li {
+    list-style-type: none;
+    float: left;
+    vertical-align: middle;
+}
+.membership img {
+    max-height: 64px;
+    margin: 0.1em 0.5em 0.8em;
+}
+.nav-fb a:hover i {
+	color: #46b;
+}
+.nav-fb {
+	font-size: 110%;
+}
+
+.footer i {
+    margin-right: 0.4em;
+    margin-top: 0.4em;
+}
+
+/* THIS NOT WCAG RELATED but used https://color.adobe.com/create/color-wheel  */
+.nav-home a i,
+.nav-about a i,
+.nav-contact a i,
+.nav-drivers a i,
+.nav-customers a i,
+.contact-list a i.fa-phone,
+.contact-list a i.fa-map-marker-alt,
+.contact-list a i.fa-envelope,
+.contact-list a i.fa-fax {
+    /* this passes WAVE but find actual colors
+    -webkit-filter: invert(0.15);
+    filter: invert(0.15);*/
+    -webkit-filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
+    transition: transform 0.25s;
+}
+
+.nav-home a:hover i,
+.nav-about a:hover i,
+.nav-contact a:hover i,
+.nav-drivers a:hover i,
+.nav-customers a:hover i,
+.contact-list a:hover i.fa-phone,
+.contact-list a:hover i.fa-map-marker-alt,
+.contact-list a:hover i.fa-envelope,
+.contact-list a:hover i.fa-fax {
+    /* this passes WAVE but find actual colors
+    -webkit-filter: invert(0.15);
+    filter: invert(0.15);*/
+    -webkit-filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.9));
+  filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.9));
+  transform: scale(1.4);
+  color: white;
+}
+
+.nav-list a:hover,
+.contact-list a:hover {
+    color: #06322f;
+    text-decoration: none;
+}
+.footer-dark {
+    background: #06322f;
+    color: #31D6C8;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-bottom: 0em;
+}
+.footer-dark a   {
+    color: #31D6C8 !important;
+}
+.footer-dark a:hover {
+    color: white !important;
+}
+
+
+
+/* WordPress fixes ------------------------------------------------------------ */
+body, html {
+    /* ensures no gaps in vertical screen edges */
+    margin-top: 0em;
+    margin-bottom: 0em;
+	padding-bottom: 0em;
+}
+nav,
+div.card, 
+div.card-deck, 
+div#carouselExampleIndicators {
+    /* vertical space between block level objects */
+    /* add selectors as needed */
+    margin-bottom: 1.0em !important; 
+}
+.btn-block {
+	margin-bottom: 1.5em !important; 
+}
+p.wps {
+	/* prevent wautop function from removing paragraph tags */
+    color: black;
+}
