@@ -83,7 +83,7 @@ abbr[title]:after {
 /* footer (bottom of page) ---------------------------------------------------- */
 .footer {
     padding-top: 0.5em;
-    border-top: 5px solid #70CCC6;
+    border-top: 2px solid #70CCC6;
     background-color: #8dfff7;
 }
 .footer h3 {
