@@ -75,13 +75,14 @@ img.emoji {
     filter: drop-shadow(0px 2px 1px rgb(110,110,110));
 }
 #fax {
-    margin-bottom: 0em;
-    padding-bottom: 0em;
+    /* zero the margin from Bootstrap 4.x btn-block class */
+    margin-bottom: 0em !important;
 }
-#fax p {
+#fax+p {
     margin-top: 0em;
     padding-top: 0em;
     font-size: small;
+    text-align: center;
 }
 
 </style>
