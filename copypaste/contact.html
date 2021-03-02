@@ -87,15 +87,19 @@ img.emoji {
 /* footer color changes to meet WCAG-AA */
 .bg-turquoise {
     /*background: #198077 !important;*/
-    background: rgb(48,213,200);
-background: linear-gradient(0deg, rgba(48,213,200,1) 0%, rgba(255,255,255,0.9) 100%) !important;
-border: none !important;
+    color: black;
+    background: #BCF0EE !important;
+    border: 1px solid rgb(0,0,0,0) !important;
 }
 .footer {
     /* color: white !important;*/
+    border-top: 1px solid #68F1E6 !important;
+}
+.footer a {
+    color: #17726B !important;
 }
 .footer-dark {
-    background: #0A4843 !important;
+    background: #111 !important;
     color: #D8F8F5 !important;
 }
 .footer-dark a   {
@@ -106,6 +110,19 @@ border: none !important;
 }
 .btn-group a {
     padding: 0.25em 2em;
+}
+.nav-home a:hover i,
+.nav-about a:hover i,
+.nav-contact a:hover i,
+.nav-drivers a:hover i,
+.nav-customers a:hover i {
+	color: black !important;
+}
+.contact-list a:hover i.fa-phone,
+.contact-list a:hover i.fa-map-marker-alt,
+.contact-list a:hover i.fa-envelope,
+.contact-list a:hover i.fa-fax {
+	color: black !important;
 }
 </style>
 <link rel='stylesheet' id='bootstrap-css'  href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css?ver=5.6.2' type='text/css' media='all' />
