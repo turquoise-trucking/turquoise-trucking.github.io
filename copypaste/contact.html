@@ -50,7 +50,7 @@ img.emoji {
 .fb-btn {
     /* top to bottom gradient, #17A9FC to #0269E3 */
     background: rgb(23,169,252);
-    background: linear-gradient(180deg, rgba(23,169,252,1) 0%, rgba(2,105,227,1) 100%);
+    background: linear-gradient(180deg, rgba(23,169,252,1) 0%, rgba(2,105,227,1) 100%) !important;
 }
 .ig-btn {
     background: rgb(74,105,213);
@@ -60,6 +60,16 @@ img.emoji {
 .linkedin-btn {
     background: #0A66C2;
 
+}
+.linkedin-btn, .fb-btn, .ig-btn {
+    margin: 0em;
+    padding: 0.15em;
+}
+.socialmedia {
+    justify-content: center;
+}
+.socialmedia div a {
+    font-size: large;
 }
 
 
@@ -161,15 +171,19 @@ img.emoji {
 <h2 class="h4 card-title">Social Media</h2>
 <div class="card-text">
 <p class="wps">Connect and follow us on these platforms.</p>
-<div class="row">
-    <div class="col">
-        <a class="btn btn-primary external-link fb-btn" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i> Facebook</a>
+<div class="row socialmedia">
+    <div class="col-sm-8">
+        <a class="btn btn-primary external-link fb-btn btn-block" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i> Facebook</a>
     </div>
-    <div class="col">
-        <a class="btn btn-primary external-link ig-btn" role="button" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+</div>
+<div class="row socialmedia">
+    <div class="col-sm-8">
+        <a class="btn btn-primary external-link ig-btn btn-block" role="button" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
     </div>
-    <div class="col">
-        <a class="btn btn-primary external-link linkedin-btn" role="button" href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i> LinkedIn</a>
+</div>
+<div class="row socialmedia">
+    <div class="col-sm-8">
+        <a class="btn btn-primary external-link linkedin-btn btn-block" role="button" href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i> LinkedIn</a>
     </div>
 </div>
 </div>
