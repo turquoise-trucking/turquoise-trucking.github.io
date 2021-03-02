@@ -135,7 +135,7 @@ img.emoji {
 <!-- page contents -->
 <div id="main-content" class="container" role="main">
 <h1 class="h2 display-4">Contact Us</h1>
-<p class="lead">Turquoise Trucking would love to hear from you. Give us a call, send us an email, and connect with us on Facebook. In addition, you can drop by our office here in Cedar Rapids.</p>
+<p class="lead">Turquoise Trucking would love to hear from you. Give us a call, send us an email, and connect with us on social media. You can also drop by our office here in Cedar Rapids.</p>
 
 <div class="card-deck">
 <div class="card"><img class="card-img-top" src="/static-assets/contact-phone.jpg" alt="">
@@ -143,8 +143,27 @@ img.emoji {
 <h2 class="h4 card-title">Call Us</h2>
 <div class="card-text">
 <p class="wps">Speak with us directly and let us know how we can help you.</p>
-<p class="wps"><a class="btn btn-success" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a></p>
-<p class="wps"><i class="fas fa-fax"></i> Fax 844-205-7353</p>
+<div class="row">
+    <div class="col">
+        <p class="wps"><a class="btn btn-success" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a></p>
+    </div>
+    <div class="col">
+        <p class="wps"><i class="fas fa-fax"></i> Fax <span id="fax-number">844-205-7353</span> <button type="button" class="btn btn-light" id="copyFax" title="Copy fax number to clipboard"> <i class="fas fa-copy"></i> Copy</button></p>
+        <script>
+            /* return content of input field to variable text */
+            var fax = document.getElementById("fax-number");
+
+            /* return button to variable btn */
+            var btnCP = document.getElementById("copyFax");
+
+            /* call function on button click */
+            btnCP.onclick = function() {
+            fax.select();    
+            document.execCommand("copy");
+            }
+        </script>
+    </div>
+</div>
 
 <ul class="list-group list-group-flush">
  	<li class="list-group-item">Weekdays: <strong>6 AM</strong> to <strong>6 PM</strong> Central</li>
