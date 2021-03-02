@@ -65,10 +65,10 @@ img.emoji {
     margin: 0em;
     padding: 0.15em;
 }
-.socialmedia {
+.contact-buttons {
     justify-content: center;
 }
-.socialmedia div a {
+.contact-buttons div a, .contact-buttons div button {
     font-size: large;
 }
 .contact-head {
@@ -84,6 +84,8 @@ img.emoji {
 <script type='text/javascript' src='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2&#038;time=1614375196' id='jquery-migrate-js'></script>
 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js?ver=5.6.2' id='bootstrap-js'></script>
 <script type='text/javascript' src='https:/kit.fontawesome.com/74abbf3163.js?ver=5.6.2' id='fontawesome-js'></script>
+<!-- Used to copy the fax number -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 
 </head>
 
@@ -143,25 +145,26 @@ img.emoji {
 <h2 class="h4 card-title">Call Us</h2>
 <div class="card-text">
 <p class="wps">Speak with us directly and let us know how we can help you.</p>
-<div class="row">
-    <div class="col">
-        <p class="wps"><a class="btn btn-success" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a></p>
+<div class="row contact-buttons">
+    <div class="col-sm-8">
+        <a class="btn btn-success btn-block" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a>
     </div>
-    <div class="col">
-        <p class="wps"><i class="fas fa-fax"></i> Fax <span id="fax-number">844-205-7353</span> <button type="button" class="btn btn-light" id="copyFax" title="Copy fax number to clipboard"> <i class="fas fa-copy"></i> Copy</button></p>
+</div>
+<div class="row contact-buttons">
+    <div class="col-sm-8">
         <script>
-            /* return content of input field to variable text */
-            var fax = document.getElementById("fax-number");
-
-            /* return button to variable btn */
-            var btnCP = document.getElementById("copyFax");
-
-            /* call function on button click */
-            btnCP.onclick = function() {
-            fax.select();    
-            document.execCommand("copy");
-            }
+            new ClipboardJS('#fax');
         </script>
+        <button type="button" id="fax" class="btn btn btn-secondary btn-block" 
+        data-clipboard-text="844-205-7353"
+        title="Copy fax number to clipboard><i class="fas fa-fax"></i> Fax 844-205-7353</button>
+        <!-- <p class="wps"><i class="fas fa-fax"></i> Fax: <span id="Fax">844-205-7353</span>
+            <button type="button" 
+            class="btn btn-light copyFax" 
+            data-clipboard-target="#Fax" 
+            title="Copy fax number to clipboard"><i class="fas fa-copy"></i></button> </p>  
+        -->
+        
     </div>
 </div>
 
@@ -193,17 +196,17 @@ img.emoji {
 <h2 class="h4 card-title">Social Media</h2>
 <div class="card-text">
 <p class="wps">Connect and follow us on these platforms.</p>
-<div class="row socialmedia">
+<div class="row contact-buttons">
     <div class="col-sm-8">
         <a class="btn btn-primary external-link fb-btn btn-block" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i> Facebook</a>
     </div>
 </div>
-<div class="row socialmedia">
+<div class="row contact-buttons">
     <div class="col-sm-8">
         <a class="btn btn-primary external-link ig-btn btn-block" role="button" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
     </div>
 </div>
-<div class="row socialmedia">
+<div class="row contact-buttons">
     <div class="col-sm-8">
         <a class="btn btn-primary external-link linkedin-btn btn-block" role="button" href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i> LinkedIn</a>
     </div>
