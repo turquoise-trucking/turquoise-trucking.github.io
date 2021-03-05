@@ -141,6 +141,7 @@ a.external-link:after {
 .valign-middle {
     vertical-align: middle;
 }
+/*
 .membership {
     margin-bottom: 1.5em;
     
@@ -161,6 +162,7 @@ a.external-link:after {
     max-height: 64px;
     margin: 0.1em 0.5em 0.8em;
 }
+*/
 .nav-fb a:hover i {
 	color: #46b;
 }
