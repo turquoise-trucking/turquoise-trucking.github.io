@@ -40,9 +40,7 @@
 <script type='text/javascript' src='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2&#038;time=1614375196' id='jquery-migrate-js'></script>
 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js?ver=5.6.2' id='bootstrap-js'></script>
 <script src="https://kit.fontawesome.com/74abbf3163.js" crossorigin="anonymous"></script>
-<!-- Used to copy the fax number -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
-<link rel="stylesheet" href="wcag-aaa.css">
+<!-- <link rel="stylesheet" href="wcag-aaa.css"> -->
 
 		<style type="text/css">
 img.wp-smiley,
@@ -57,25 +55,38 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+
+/* 2021 Contact page styles  */
 .fb-btn {
     /* top to bottom gradient, #17A9FC to #0269E3 */
     background: rgb(23,169,252);
     background: linear-gradient(180deg, rgba(23,169,252,1) 0%, rgba(2,105,227,1) 100%) !important;
 }
 .ig-btn {
+    /* top left to bottom right, #4A69D5 to #E02D6F */
     background: rgb(74,105,213);
     background: linear-gradient(180deg, rgba(74,105,213,1) 0%, rgba(224,45,111,1) 100%);
-    /* top left to bottom right, #4A69D5 to #E02D6F */
 }
 .linkedin-btn {
     background: #0A66C2;
-
 }
-.linkedin-btn, .fb-btn, .ig-btn {
+.yt-btn {
+  color: white;
+  background: #FF0000;
+}
+.yt-btn:hover {
+  background: white;
+  color: black;
+}
+.yt-btn:hover i {
+    color: #FF0000;
+}
+.linkedin-btn, .fb-btn, .ig-btn, .yt-btn {
     margin: 0em;
     padding: 0.15em;
 }
 .contact-buttons {
+    /* must go with row NOT col */
     justify-content: center;
 }
 .contact-buttons div a, .contact-buttons div button {
@@ -94,6 +105,15 @@ img.emoji {
     font-size: small;
     text-align: center;
 }
+
+footer {
+  /* testing, remove footer, masthead */
+  display: none;
+}
+
+/* footer color changes to meet WCAG-AA 
+   footer work has moved to the driver verification page but should be in its own new-footer page */
+/*
 .btn-group {
     filter: drop-shadow(0px 2px 3px rgb(120,170,170));
 }
@@ -103,8 +123,6 @@ img.emoji {
 .btn-group a i {
     margin: 0 auto;
 }
-/* footer color changes to meet WCAG-AA */
-/*
 .bg-turquoise {
     color: black;
     background: #BCF0EE !important;
@@ -173,9 +191,9 @@ img.emoji {
 <div id="collapsibleNavbar" class="collapse navbar-collapse">
 <ul class="navbar-nav">
  	<li class="nav-item"><a class="nav-link" href="/about/">
-<i class="fas fa-user-friends"></i> About Turquoise</a></li>
+<i class="fas fa-user-friends"></i> About</a></li>
  	<li class="nav-item"><a class="nav-link active" href="/contact/">
-<i class="far fa-comment-dots"></i> Contact Us</a></li>
+<i class="far fa-comment-dots"></i> Contact</a></li>
  	<li class="nav-item"><a class="nav-link" href="/drivers/">
 <i class="fas fa-truck-moving"></i> Drivers</a></li>
  	<li class="nav-item"><a class="nav-link" href="/customers/">
@@ -186,125 +204,147 @@ img.emoji {
 </div>
 <!-- page contents -->
 <div id="main-content" class="container" role="main">
-<h1 class="h2 display-4">Contact Us</h1>
-<p class="lead">Turquoise Trucking would love to hear from you. Give us a call, send us an email, and connect with us on social media. You can also drop by our office here in Cedar Rapids.</p>
+  <h1 class="h2 display-4">Contact Us</h1>
+  <p class="lead">Turquoise Trucking would love to hear from you. Give us a call, send us an email, and connect with us on social media. You can also drop by our office here in Cedar Rapids.</p>
 
-<div class="row">
+
+  <!-- begin: Call us and Drop by-->
+  <div class="row">
     <div class="col-sm-6">
-<div class="card"><img class="card-img-top" src="https://turquoise-trucking.github.io/static-assets/contact-phone.jpg" alt="Closeup of a telephone keypad.">
-<div class="card-body">
-<h2 class="h4 card-title">Call Us</h2>
-<div class="card-text">
-<p class="wps">Speak with us directly and let us know how we can help you.</p>
-<div class="row contact-buttons">
-    <div class="col-md-10">
-        <a class="btn btn-success btn-block" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a>
-    </div>
-</div>
-<div class="row contact-buttons">
-    <div class="col-md-10">
-        <script>
-            new ClipboardJS('#fax');
-        </script>
-        <button type="button" id="fax" class="btn btn btn-secondary btn-block" 
-        data-clipboard-text="844-205-7353"
-        title="Copy fax number to clipboard"><i class="fas fa-fax"></i> Fax 844-205-7353</button>
-        <p>Copy fax number to the clipboard</p>
-    </div>
-</div>
-
-<ul class="list-group list-group-flush">
- 	<li class="list-group-item">Weekdays: <strong>6 AM</strong> to <strong>6 PM</strong> Central</li>
- 	<li class="list-group-item">Saturdays: <strong>7 AM</strong> to <strong>12 PM</strong> Central</li>
- 	<li class="list-group-item">Closed Sundays</li>
-</ul>
-</div>
-</div>
-</div>
-    </div>
-    <div class="col-sm-6">
-<div class="card"><img class="card-img-top" src="https://turquoise-trucking.github.io/static-assets/contact-google-map.png" alt="Map with Turquoise Trucking location pinned.">
-<div class="card-body">
-<h2 class="h4 card-title">Drop By</h2>
-<div class="card-text">
-<div class="alert alert-danger" role="alert">
-  <a href="/covid-19/" class="alert-link">Due to COVID-19</a> please call ahead if visiting.</div>
-<p class="wps">Visit our office in Cedar Rapids, Iowa. We are right off I-380 near US 30.</p>
-<div class="row contact-buttons">
-    <div class="col-md-10">
-        <a class="btn btn-outline-danger external-link btn-block" href="https://g.page/TurquoiseTrucking?share" target="_blank" rel="noreferrer noopener"><i class="fas fa-map-marker-alt"></i> Directions</a></p>
-    </div>
-</div>
-<div class="row contact-buttons">
-    <div class="col-md-10">
-        <address>
-            <p class="lead">3330 Southgate Ct SW Ste&nbsp;222<br>
-            Cedar Rapids IA 52404</p>
-        </address>
-    </div>
-</div>
-
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card">
+      <div class="card"><img class="card-img-top" src="/static-assets/contact-phone.jpg" alt="Closeup of a telephone keypad.">
         <div class="card-body">
-        <h2 class="h4 card-title">Social Media</h2>
-        <div class="card-text">
-        <p class="wps">Connect and follow us on these platforms.</p>
-        <div class="row contact-buttons">
-            <div class="col-md-10">
-                <a class="btn btn-primary external-link fb-btn btn-block" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i> Facebook</a>
+
+          <!-- call us -->
+          <h2 class="h4 card-title">Call Us</h2>
+          <div class="card-text">
+            <p class="wps">Speak with us directly and let us know how we can help you.</p>
+            <div class="row contact-buttons">
+              <div class="col-md-10 col-lg-8">
+                <a class="btn btn-success btn-block" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a>
+              </div>
             </div>
-        </div>
-        <div class="row contact-buttons">
-            <div class="col-md-10">
-                <a class="btn btn-primary external-link ig-btn btn-block" role="button" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+            <div class="row contact-buttons">
+              <div class="col-md-10 col-lg-8">
+                <!-- https://clipboardjs.com/ -->
+                <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script> 
+                <script>
+                  new ClipboardJS('#fax');
+                </script>
+                <button type="button" id="fax" 
+                  class="btn btn btn-secondary btn-block" 
+                  data-clipboard-text="844-205-7353"
+                  title="Copy fax number to clipboard">
+                  <i class="fas fa-fax"></i> Fax 844-205-7353
+                </button>
+                <p>Copy fax number to the clipboard</p>
+              </div>
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Weekdays: <strong>6 AM</strong> to <strong>6 PM</strong> Central</li>
+              <li class="list-group-item">Saturdays: <strong>7 AM</strong> to <strong>12 PM</strong> Central</li>
+              <li class="list-group-item">Closed Sundays</li>
+            </ul>
+          </div>
+
         </div>
-        <div class="row contact-buttons">
-            <div class="col-md-10">
-                <a class="btn btn-primary external-link linkedin-btn btn-block" role="button" href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i> LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card"><img class="card-img-top" src="/static-assets/contact-google-map.png" alt="Map with Turquoise Trucking location pinned.">
+        <div class="card-body">
+
+          <!-- drop by -->
+          <h2 class="h4 card-title">Drop By</h2>
+          <div class="card-text">
+            <div class="alert alert-danger" role="alert">
+              <a href="/covid-19/" class="alert-link">Due to COVID-19</a> please call ahead if visiting.
             </div>
+            <p class="wps">Visit our office in Cedar Rapids, Iowa. We are right off I-380 near US 30.</p>
+            <div class="row contact-buttons">
+              <div class="col-md-10 col-lg-8">
+                <a class="btn btn-outline-danger external-link btn-block" href="https://g.page/TurquoiseTrucking?share" target="_blank" rel="noreferrer noopener"><i class="fas fa-map-marker-alt"></i> Directions</a></p>
+              </div>
+            </div>
+            <div class="row contact-buttons">
+              <div class="col-md-10 col-lg-8">
+                <address>
+                  <p class="lead">3330 Southgate Ct SW Ste&nbsp;222<br>
+                  Cedar Rapids IA 52404</p>
+                </address>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Call us and Drop by -->
+
+  <!-- begin: social media and email us -->
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- social media -->
+          <h2 class="h4 card-title">Social Media</h2>
+          <div class="card-text">
+            <p class="wps">Connect and follow us on these platforms.</p>
+            <div class="row contact-buttons">
+              <div class="col-md-10 col-lg-8">
+                  <!-- add further social media networks here -->
+                  <a class="btn btn-primary external-link fb-btn btn-block" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
+                  <a class="btn btn-primary external-link ig-btn btn-block" role="button" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+                  <a class="btn btn-primary external-link linkedin-btn btn-block" role="button" href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i> LinkedIn</a>
+                  <a class="btn btn-danger external-link yt-btn btn-block" role="button" href="https://www.youtube.com/channel/UCFuaGJd23Of_bGWgfVyzPIA" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube fa-lg"></i> YouTube</a>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </div>
     <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="h4 card-title">Email Us</h2>
-                <div class="card-text">  
-                    <div class="row" style="margin-bottom: 1em;">
-                        <div class="col-4">
-                            <img class="img-fluid contact-head" src="https://turquoisetruck.com/static-assets/email/matt.png" alt="Matt, staring with full beard and unbuttoned shirt.">
-                        </div>
-                        <div class="col-8">
-                            <p class="lead"><strong>Drivers</strong>, do you have questions about pay or equipment? </p>
-                            <a class="btn btn-primary" role="button" href="mailto:matt@turquoisetruck.com"><i class="fas fa-envelope"></i> Email Matt</a>
-                        </div>
+      <div class="card">
+        <div class="card-body">
+
+          <!-- email us -->
+          <h2 class="h4 card-title">Email Us</h2>
+          <div class="card-text">  
+            <div class="row" style="margin-bottom: 1em;">
+              <div class="col-sm-4">
+                <img class="img-fluid contact-head" src="/static-assets/about-face-matt.png" alt="Matt, staring with full beard and unbuttoned shirt.">
+              </div>
+              <div class="col-sm-8">
+                <p class="lead"><strong>Drivers</strong>, do you have questions about pay or equipment? </p>
+                  <div class="row contact-buttons">
+                    <div class="col-md-10 col-lg-8">
+                      <a class="btn btn-primary btn-block" role="button" href="mailto:matt@turquoisetruck.com"><i class="fas fa-envelope"></i> Email Matt</a>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <img class="img-fluid contact-head" src="https://turquoisetruck.com/static-assets/email/rashad.png" alt="Rashad, smiling with stubble beard and unbuttoned shirt.">
-                        </div>
-                        <div class="col-8">
-                            <p class="lead">Do you have <strong>corporate or customer relation</strong> questions? </p>
-                            <a class="btn btn-primary" role="button" href="mailto:contact@turquoisetruck.com"><i class="fas fa-envelope"></i> Email Rashad</a>
-                        </div>
-                    </div>
-                </div>
+                  </div>
+              </div>
             </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <img class="img-fluid contact-head" src="/static-assets/about-face-rashad.png" alt="Rashad, smiling with stubble beard and unbuttoned shirt.">
+              </div>
+              <div class="col-sm-8">
+                <p class="lead">Do you have <strong>corporate or customer relation</strong> questions? </p>
+                <div class="row contact-buttons">
+                  <div class="col-md-10 col-lg-8">
+                    <a class="btn btn-primary btn-block" role="button" href="mailto:contact@turquoisetruck.com"><i class="fas fa-envelope"></i> Email Rashad</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <!-- end: social media and email us -->
 </div>
-</div>
+
 <!-- primary footer -->
 <footer>
     <div class="section footer-classic footer context-light bg-turquoise">
