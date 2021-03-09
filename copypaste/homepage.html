@@ -125,8 +125,23 @@ Checklist to publish
     font-size: small;
     text-align: center;
 }
+.home-card i {
+  position: absolute;
+  top: -0.15em;
+  left: -0.15em;
+  font-size: 280%;
+  text-shadow: 0px 2px 2px rgb(50,150,150);
+  color: turquoise;
+}
+.home-card {
+  text-align: center;
+}
 
-
+@media (min-width: 576px) and (max-width: 992px) {
+  .home-card i {
+    font-size: 150%;
+  }
+}
 
 
 footer {
@@ -236,7 +251,7 @@ footer {
   <div class="card-deck">
   <div class="card">
   <div class="card-body">
-  <h2 class="h5 card-title"><a href="/drivers/"><i class="fas fa-truck-moving"></i> Drive For Us</a></h2>
+  <h2 class="home-card h5 card-title"><a href="/drivers/"><i class="fas fa-truck-moving"></i> Drive For Us</a></h2>
   <p class="card-text">Company drivers and owner operators, your journey starts here.</p>
   <!-- old typeform turquoisetruck.typeform.com/to/v2ha6H -->
   <a href="http://www.driver-reach.com/l/4rpbv" role="button" class="btn btn-info btn-block bg-turquoise" target="_blank" rel="noopener noreferrer">Apply&nbsp;Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
@@ -245,14 +260,14 @@ footer {
   </div>
   <div class="card">
   <div class="card-body">
-  <h2 class="h5 card-title"><a href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></h2>
+  <h2 class="home-card h5 card-title"><a href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></h2>
   <p class="card-text">Your freight delivered safely and on-time using dry van and reefer trailers.</p>
   
   </div>
   </div>
   <div class="card">
   <div class="card-body">
-  <h2 class="h5 card-title"><a href="/about/"><i class="fas fa-user-friends"></i> About Turquoise</a></h2>
+  <h2 class="home-card h5 card-title"><a href="/about/"><i class="fas fa-user-friends"></i> About Turquoise</a></h2>
   <p class="card-text">Learn more about Turquoise Trucking and our commitment to you.</p>
   
   </div>
@@ -260,12 +275,15 @@ footer {
   </div>
 
   <div class="row">
-    <div class="col-sm-8">
-      <a class="btn btn-primary btn-block" href="driver-verification.html">
-        <i class="fas fa-user-check"></i> Driver verification</a>
+    <div class="col-sm-4">
+      <a class="btn btn-outline-secondary btn-block" href="/driver-verification/">
+        <i class="fas fa-user-check"></i> Driver Verification</a>
     </div>
     <div class="col-sm-4">
-      <a class="btn btn-primary btn-block" href="/covid-19/"><i class="fas fa-people-arrows"></i> COVID-19 Statement</a>
+      <a class="btn btn-outline-info btn-block" href="/covid-19/"><i class="fas fa-people-arrows"></i> COVID-19 Statement</a>
+    </div>
+    <div class="col-sm-4">
+      <a class="btn btn-outline-primary btn-block" href="/contact/"><i class="far fa-comment-dots"></i> Contact Us</a>
     </div>
   </div>
 
