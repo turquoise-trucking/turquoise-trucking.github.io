@@ -209,18 +209,22 @@ Checklist to publish
 .navbar {
   padding: 0.3em 0.2em;
 }
-@media (max-width: 400px) {
-  .nav-link {
-    font-size: 115%;
-    padding-bottom: 1.2em;
-  }
-}
 footer {
   /* testing, remove footer, masthead */
   display: none;
 }
 iframe {
   margin: 2em auto 1em;
+  float: right;
+}
+@media (max-width: 400px) {
+  .nav-link {
+    font-size: 115%;
+    padding-bottom: 1.2em;
+  }
+  iframe {
+    float: none;
+  }
 }
 
 /* footer color changes to meet WCAG-AA 
@@ -280,7 +284,7 @@ iframe {
           <a href="/"><img class="logo" src="/static-assets/turquoise-logo.png" alt="Turquoise Trucking"></a>
         </div>
         <div class="col-sm-6 align-middle">
-          <iframe class="float-right" src="https://duckduckgo.com/search.html?width=250&site=turquoisetruck.com&prefill=Search Turquoise" style="overflow:hidden;width:308px;height:40px;" frameborder="0"></iframe>
+          <iframe src="https://duckduckgo.com/search.html?width=250&site=turquoisetruck.com&prefill=Search Turquoise" style="overflow:hidden;width:308px;height:40px;" frameborder="0"></iframe>
           <div class="btn-group float-right masthead-btn hidden">
             <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i>&nbsp;Call 844-799-7900</a>
             <a class="btn btn-primary" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i>&nbsp;Email&nbsp;us</a>
