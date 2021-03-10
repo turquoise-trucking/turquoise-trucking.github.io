@@ -4,10 +4,14 @@ Theme URI: https://github.com/turquoise-trucking/2019-turquoise-theme
 Description: Theme for WordPress with Bootstrap for styling.
 Author: John Earl Hardesty
 Author URI: https://github.com/Heardwulf
-Version: 1.3
+Version: 1.4
 */
 
-/*  2020-03-07 John Earl Hardesty
+/*  
+    2021-03-09 John Earl Hardesty
+        Update 1.4 added new contact page
+        Adding notes for a11y
+    2020-03-07 John Earl Hardesty
         Update 1.3 updated footer, added memberships and links
     2019-11-16 John Earl Hardesty
         Update 1.2 fixes for block-level padding issues and rewrite 
@@ -26,6 +30,7 @@ Version: 1.3
     /*background-color: #128A80;*/
 }
 .bg-turquoise {
+    /* a11y white color on this turquoise background fails WCAG-AA */
     background: #30d5c8; 
     border: 1px solid #10b5a8;
 }
@@ -41,6 +46,7 @@ Version: 1.3
     margin-top: 0em;
     padding-top: 0em;
 }
+/* a11y buttons with bootstrap primary and success styles fail WCAG-AA */
 .masthead-btn {
 	padding: 0.75em;
 }
@@ -54,6 +60,7 @@ Version: 1.3
 }
 .navbar-brand img {
 	/* was 64x43 prior */
+  /* ally this element must have alt text */
 	width: 40px;
     height: 27px;
 }
@@ -77,9 +84,11 @@ Version: 1.3
 .card-title a:link,
 .card-title a:visited,
 .card-title a:active {
+    /* a11y this color fails WCAG-AA */
     color: #128A80; 
 }
 .card-title a:hover {
+    /* a11y this color fails WCAG-AA */
     color: #128A80;
     text-decoration: none;
 }
@@ -145,6 +154,7 @@ abbr[title]:after {
 }
 @media screen and (min-width: 600px) {
 	abbr[title] {
+    /* a11y this color fails WCAG-AA but may be permissible given it is decorative */
 		border-bottom: 2px dotted #30d5c8;
 		text-decoration: none;
 		cursor:help;
@@ -167,8 +177,70 @@ abbr[title]:after {
 	padding-left: 0.1em;
 	color: #30d5c8;
 }
+/* about page headshots */
+.bubble-head {
+    -webkit-filter: drop-shadow(0px 5px 5px  rgb(130,130,130));
+    filter: drop-shadow(0px 3px 4px rgb(130,130,130)); 
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.85em;
+}
+
+/* 2021 Contact page styles, up to but NOT including footer hide */
+/* social media buttons */
+.fb-btn {
+  /* top to bottom gradient, #17A9FC to #0269E3 */
+  background: rgb(23,169,252);
+  background: linear-gradient(180deg, rgba(23,169,252,1) 0%, rgba(2,105,227,1) 100%) !important;
+}
+.ig-btn {
+  /* top left to bottom right, #4A69D5 to #E02D6F */
+  background: rgb(74,105,213);
+  background: linear-gradient(180deg, rgba(74,105,213,1) 0%, rgba(224,45,111,1) 100%);
+}
+.linkedin-btn {
+  background: #0A66C2;
+}
+.yt-btn {
+color: white;
+background: #FF0000;
+}
+.yt-btn:hover {
+background: white;
+color: black;
+}
+.yt-btn:hover i {
+  color: #FF0000;
+}
+.linkedin-btn, .fb-btn, .ig-btn, .yt-btn {
+  margin: 0em;
+  padding: 0.15em;
+}
+/* other contact page styles */
+.contact-buttons {
+  /* must go with row NOT col */
+  justify-content: center;
+}
+.contact-buttons div a, .contact-buttons div button {
+  font-size: large;
+}
+.contact-head {
+  filter: drop-shadow(0px 2px 1px rgb(110,110,110));
+}
+.btn-blurbs {
+  /* zero the margin from Bootstrap 4.x btn-block class */
+  margin-bottom: 0em !important;
+}
+.btn-blurbs+p {
+  margin-top: 0em;
+  padding-top: 0em;
+  font-size: small;
+  text-align: center;
+}
+
 
 /* footer (bottom of page) ---------------------------------------------------- */
+/* a11y this footer uses a style that fails WCAG-AA */
 .footer {
     padding-top: 0.5em;
     border-top: 2px solid #10b5a8;
@@ -205,7 +277,6 @@ a.external-link:hover::after {
 .nav-list li a:after, 
 a.external-link:after  {
     font-family: "Font Awesome 5 Free";
-    content: "\f054";
     font-weight: 900;
     display: inline-block;
     vertical-align: baseline;
@@ -215,10 +286,11 @@ a.external-link:after  {
     visibility: hidden;
     transition: .22s ease;
 }
+.nav-list li a:after {
+	content: "\f054";
+}
 a.external-link:after {
     content: "\f35d";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
 }
 .valign-middle {
     vertical-align: middle;
@@ -246,7 +318,11 @@ a.external-link:after {
 .nav-fb a:hover i {
 	color: #46b;
 }
-.nav-fb {
+.nav-ig a:hover i {
+	color: purple;
+}
+.nav-fb,
+.nav-ig {
 	font-size: 110%;
 }
 .nav-home a:hover i,
