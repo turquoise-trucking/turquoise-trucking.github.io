@@ -219,16 +219,24 @@ iframe {
   overflow:hidden;
   width: 18rem;
   height:2.5rem;
+  justify-content: center;
 }
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .nav-link {
-    font-size: 115%;
-    padding-bottom: 1.2em;
+    font-size: 120%;
+    padding: 0.5em 4em 1.2em;
+  }
+
+  .navbar-nav {
+    margin-left: 25%;
   }
   iframe {
     float: none;
     margin: 0.5em auto;
-    width: 21.5rem;
+    width: 80%;
+  }
+  .site-search {
+    text-align: center;
   }
 }
 
@@ -284,12 +292,12 @@ iframe {
 <div role="banner" class="masthead-wide masthead">
   <div class="masthead-gradient">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-sm-6">
           <a href="/"><img class="logo" src="/static-assets/turquoise-logo.png" alt="Turquoise Trucking"></a>
         </div>
-        <div class="col-sm-6 align-middle">
-          <!-- <iframe src="https://duckduckgo.com/search.html?site=turquoisetruck.com&prefill=Search Turquoise" frameborder="0"></iframe> -->
+        <div class="col-sm-6 site-search">
+          <iframe title="Search Turquoise" src="https://duckduckgo.com/search.html?site=turquoisetruck.com&prefill=Search Turquoise" frameborder="0"></iframe>
           <div class="btn-group float-right masthead-btn hidden">
             <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i>&nbsp;Call 844-799-7900</a>
             <a class="btn btn-primary" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i>&nbsp;Email&nbsp;us</a>
