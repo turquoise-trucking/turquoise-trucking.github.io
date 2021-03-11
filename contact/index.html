@@ -234,7 +234,13 @@ iframe {
   height: 32px;
   opacity: 0.8;
 }
-
+.btn-outline-success {
+  color: #1B6F2E;
+  border-color: #1B6F2E;
+}
+.btn-outline-success:hover {
+  background-color:#1B6F2E;
+}
 @media (max-width: 425px) { /* Mobile styles */
   .nav-link {
     font-size: 120%;
@@ -280,6 +286,7 @@ iframe {
   .site-search {
     text-align: center;
   }
+
   /* Need jQuery or similar to change classes for button press
   https://stackoverflow.com/questions/15811214/change-style-onclick
   .nav-tray {
@@ -614,12 +621,11 @@ and (min-width: 700px) {
 <script>
   $(document).ready(function(){
     $(function() {
-            var url = location.origin + location.pathname;
+            var url = location.pathname;
+            var url2 = url.replace('/','');
             $('.navitem a[href^="' + url + '"]')
               .addClass('active');
-              console.log(url);
-              console.log(location.origin);
-              console.log(location.pathname);
+              console.log("The active link should be " + url2);
             });
   });
 </script>
