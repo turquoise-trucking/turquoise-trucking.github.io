@@ -621,11 +621,13 @@ and (min-width: 700px) {
 <script>
   $(document).ready(function(){
     $(function() {
-            var url = location.pathname;
-            var url2 = url.replace(/\//g,'');
+            var url1 = location.pathname;
+            var url2 = url1.replace(/\//g,'');
             $('.navitem a[href^="' + url2 + '"]')
               .addClass('active');
               //console.log("The active link should be " + url2);
+              console.log("URL1 is "+ url1);
+              console.log("URL2 is "+ url2);
             });
   });
 </script>
