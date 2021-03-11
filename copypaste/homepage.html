@@ -266,13 +266,21 @@ iframe {
   .site-search {
     text-align: center;
   }
+  /* Need jQuery or similar to change classes for button press
+  https://stackoverflow.com/questions/15811214/change-style-onclick
   .nav-tray {
     transition: box-shadow 0.5s;
   }
-  .nav-tray:hover {
+  .nav-tray:focus-within {
   box-shadow: 0px 10px 10px #bbb;
-  } 
+  } */
 }
+@media only screen
+and (min-width: 700px) {
+  nav .form-inline a {
+    position: absolute;
+    right: 0em;
+  }
 
 /* footer color changes to meet WCAG-AA 
    footer work has moved to the driver verification page but should be in its own new-footer page */
@@ -352,6 +360,11 @@ iframe {
       <a class="navbar-brand" href="/">
       <img src="/static-assets/tt-nav.png" alt="Turquoise brand">
       </a>
+
+      <form class="form-inline my-2 my-md-0">
+        <a class="btn btn-outline-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i> <span class="sr-only">Call</span>&nbsp;844-799-7900</a>
+      </form>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="sr-only">Links</span> <span class="navbar-toggler-icon"></span>
       </button>
