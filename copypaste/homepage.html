@@ -223,11 +223,9 @@ iframe {
   filter:hue-rotate(60deg);
 }
 .navbar-brand img {
-  width: 32px; /* 52px for other */
+  width: 52px; /* 52px for other */
   height: 32px;
-  opacity: 1;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px;
+  opacity: 0.8;
 }
 
 @media (max-width: 425px) { /* Mobile styles */
@@ -368,7 +366,7 @@ and (min-width: 700px) {
     <nav class="navbar navbar-expand-md bg-light navbar-light">
       <!-- Brand -->
       <a class="navbar-brand" href="/">
-      <img src="/static-assets/tt-icon-64px.png" alt="Turquoise brand">
+      <img src="/static-assets/turquoise-icon-2021b.png" alt="Turquoise brand">
       </a>
 
       <form class="form-inline my-2 my-md-0">
@@ -379,19 +377,30 @@ and (min-width: 700px) {
         <span class="sr-only">Links</span> <span class="navbar-toggler-icon"></span>
       </button>
 
+      <script>
+          $(function() {
+            var url = location.origin + location.pathname;
+            $('nav a[href^="' + url + '"]')
+              .closest('li')
+              .addClass('active');
+});
+      </script>
       <!-- navbar links-->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/about/"><i class="fas fa-user-friends"></i> About</a></li>
           <li class="nav-item">
-            <a class="nav-link active" href="/contact/"><i class="far fa-comment-dots"></i> Contact</a></li>
+            <a class="nav-link" href="/contact/"><i class="far fa-comment-dots"></i> Contact</a></li>
           <li class="nav-item">
             <a class="nav-link" href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
           <li class="nav-item">
             <a class="nav-link" href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/homepage/"><i class="fas fa-warehouse"></i> Homepage</a></li>
         </ul>
       </div>
+
     </nav>
   </div>
 </div>
