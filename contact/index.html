@@ -377,14 +377,6 @@ and (min-width: 700px) {
         <span class="sr-only">Links</span> <span class="navbar-toggler-icon"></span>
       </button>
 
-      <script>
-          $(function() {
-            var url = location.origin + location.pathname;
-            $('nav a[href^="' + url + '"]')
-              .closest('li')
-              .addClass('active');
-});
-      </script>
       <!-- navbar links-->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
@@ -610,6 +602,18 @@ and (min-width: 700px) {
         </div>
     </div>
 </div>
+
+
+<script>
+  $(document).ready(function(){
+    $(function() {
+            var url = location.origin + location.pathname;
+            $('.navlist a[href^="' + url + '"]')
+              .closest('li')
+              .addClass('active');
+            });
+  });
+</script>
 
 </body>
 </html>
