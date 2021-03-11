@@ -626,13 +626,13 @@ and (min-width: 700px) {
 <script>
   $(document).ready(function(){
     $(function() {
-            var url1 = location.pathname;
-            var url2 = url1.replace(/\//g,'');
-            $('.nav-item a[href^="' + url1 + '"]')
+            var url = location.pathname;
+            //var url2 = url1.replace(/\//g,'');
+            $('.nav-item a[href^="' + url + '"]')
               .addClass('active');
               //console.log("The active link should be " + url2);
-              console.log("URL1 is "+ url1);
-              console.log("URL2 is "+ url2);
+              //console.log("URL1 is "+ url1);
+              //console.log("URL2 is "+ url2);
             });
   });
 </script>
