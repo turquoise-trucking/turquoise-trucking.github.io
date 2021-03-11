@@ -622,7 +622,7 @@ and (min-width: 700px) {
   $(document).ready(function(){
     $(function() {
             var url = location.pathname;
-            var url2 = url.replace('/','');
+            var url2 = url.replace(/\//g,'');
             $('.navitem a[href^="' + url + '"]')
               .addClass('active');
               console.log("The active link should be " + url2);
