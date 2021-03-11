@@ -214,7 +214,10 @@ Checklist to publish
   box-shadow: 0px 1px 5px #ccc;
 }
 .navbar {
-  padding: 0.3em 0.2em;
+  /*padding: 0.3em 0.2em;*/
+}
+nav {
+    margin-bottom: 0em !important;
 }
 footer {
   /* testing, remove footer, masthead */
@@ -357,28 +360,6 @@ and (min-width: 700px) {
 <body class="home page-template-default page page-id-2323">
 <div id="skiptocontent"><a href="#main-content">Skip to main content</a></div>
 
-<!-- Masthead: begins -->
-<div role="banner" class="masthead-wide masthead">
-  <div class="masthead-gradient">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-sm-6">
-          <a href="/"><img class="logo" src="/static-assets/turquoise-logo.png" alt="Turquoise Trucking"></a>
-        </div>
-        <div class="col-sm-6 site-search">
-          <iframe title="Search Turquoise" src="https://duckduckgo.com/search.html?site=turquoisetruck.com&prefill=Search Turquoise" frameborder="0"></iframe>
-          <div class="btn-group float-right masthead-btn hidden">
-            <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i>&nbsp;Call 844-799-7900</a>
-            <a class="btn btn-primary" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i>&nbsp;Email&nbsp;us</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Masthead: ends -->
-
-<!-- Copy from below line to just before footer, for WordPress -->
 <!-- Navigation: begins -->
 <div class="nav-tray sticky-top">
   <div class="container">
@@ -407,8 +388,6 @@ and (min-width: 700px) {
             <a class="nav-link" href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
           <li class="nav-item">
             <a class="nav-link" href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="/homepage/"><i class="fas fa-warehouse"></i> Homepage</a></li>
         </ul>
       </div>
 
@@ -416,6 +395,30 @@ and (min-width: 700px) {
   </div>
 </div>
 <!-- Navigation: ends -->
+
+<!-- Masthead: begins -->
+<div role="banner" class="masthead-wide masthead">
+  <div class="masthead-gradient">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <a href="/"><img class="logo" src="/static-assets/turquoise-logo.png" alt="Turquoise Trucking"></a>
+        </div>
+        <div class="col-sm-6 site-search">
+          <iframe title="Search Turquoise" src="https://duckduckgo.com/search.html?site=turquoisetruck.com&prefill=Search Turquoise" frameborder="0"></iframe>
+          <div class="btn-group float-right masthead-btn hidden">
+            <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i>&nbsp;Call 844-799-7900</a>
+            <a class="btn btn-primary" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i>&nbsp;Email&nbsp;us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Masthead: ends -->
+
+<!-- Copy from below line to just before footer, for WordPress -->
+
 
 <!-- Main content: begins -->
 <div id="main-content" class="container" role="main">
