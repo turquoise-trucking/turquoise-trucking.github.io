@@ -215,6 +215,7 @@ Checklist to publish
 }
 .navbar {
   /*padding: 0.3em 0.2em;*/
+  padding-left: 0em;
 }
 nav {
     margin-bottom: 0em !important;
@@ -266,9 +267,6 @@ iframe {
   .nav-item .active i {
     color: rgba(255,255,255,0.75) !important;
   }
-  .navbar-nav {
-    /* support zoomed viewport */
-  }
   .nav-item:first-child {
     padding-top: 1em;
   }
@@ -303,6 +301,39 @@ iframe {
   .nav-tray:focus-within {
   box-shadow: 0px 10px 10px #bbb;
   } */
+}
+/*.nav-item .active {  Pill look 
+  color: black !important;
+  background: white;
+  transform: scale(1.1);
+  border: 1px solid #ddd;
+  border-width: 0px 1px 1px 1px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px #ddd;
+  margin: 0em 1em;
+}*/
+.nav-item a {
+  margin: 5px 0.25em 0em;
+}
+.nav-item .active {
+  color: black !important;
+  border-top: 5px solid turquoise;
+  border-bottom: none;
+  background: rgb(64,224,208);
+  background: linear-gradient(180deg, rgba(64,224,208,0.4) 0%, rgba(255,255,255,1) 35%);
+  margin-top: 0em;
+}
+.navbar {
+  padding: 0.2em 0em;
+}
+/*.nav-item a:link, .nav-item a:visited {
+  transition: transform 0.1s ease-in-out;
+}
+.nav-item a:hover {
+  transform: scale(1.1);
+}*/
+.nav-item .active i {
+  color: #0F7169;
 }
 @media only screen
 and (min-width: 700px) {
@@ -385,7 +416,7 @@ and (min-width: 700px) {
           <li class="nav-item">
             <a class="nav-link" href="/contact/"><i class="far fa-comment-dots"></i> Contact</a></li>
           <li class="nav-item">
-            <a class="nav-link" href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
+            <a class="nav-link active" href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
           <li class="nav-item">
             <a class="nav-link" href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></li>
         </ul>
