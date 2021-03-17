@@ -24,6 +24,7 @@
       list-style-type: none;
       font-size: large;
       border-radius: 15px;
+      background: rgb(210,210,210);
     }
     ul  li {
       padding: 0.5em 0.5em;
@@ -31,7 +32,16 @@
     }
     ul li + ul li {
       padding: 0.3em;
-      background: pink;
+      background:rgb(220,220,220);
+    }
+    ul li + ul li + ul li {
+      background:rgb(230,230,230);
+    }
+    ul li + ul li + ul li + ul li {
+      background:rgb(240,240,240);
+    }
+    ul li + ul li + ul li + ul li + ul li {
+      background:rgb(250,250,250);
     }
     i {
       padding: 0.2em 0.5em 0.2em 0.3em;
@@ -46,32 +56,73 @@
 <body>
   <header>
     <h1 class="display-4">Cloud File Tree</h1>
+    <p class="lead">Press folders to show more</p>
   </header>
 
-<main class="container">
-  <section class="row justify-content-md-center">
-    <ul class="col-md-6">
-      <li id="accounting"><i class="bi bi-folder-fill"></i> Accounts Payable</li>
-        <ul id="accounting-files">
-          <li><i class="bi bi-folder-fill"></i> Expenses</li>
-            <ul class="received">
-              <li class="received-files"><i class="bi bi-folder-fill"></i> 2021</li>
-              <li class="received-files"><i class="bi bi-folder-fill"></i> 2020</li>
-            </ul>
-          <li><i class="bi bi-folder"></i> IFTA</li>
-          <li><i class="bi bi-folder"></i> Invoices</li>
-          <li><i class="bi bi-folder"></i> Received 1099</li>
-          <li><i class="bi bi-folder"></i> Payroll</li>
+  <main class="container">
+    <section class="row justify-content-center">
+      <ul class="col-md-6">
+        <li id="accounting"><i class="bi bi-folder-fill"></i> Accounts Payable</li>
+          <ul id="accounting-files">
+            <li id="expenses"><i class="bi bi-folder-fill"></i> Expenses</li>
+              <ul id="expenses-files">
+                <li><i class="bi bi-folder"></i> 2021</li>
+                <li><i class="bi bi-folder"></i> 2020</li>
+              </ul>
+            <li id="IFTA"><i class="bi bi-folder-fill"></i> IFTA</li>
+              <ul id="IFTA-files">
+                <li><i class="bi bi-folder"></i> 2021</li>
+                <li><i class="bi bi-folder"></i> 2020</li>
+              </ul>
+            <li id="invoices"><i class="bi bi-folder-fill"></i> Invoices</li>
+              <ul id="invoices-files">
+                <li><i class="bi bi-folder"></i> 2021</li>
+                <li><i class="bi bi-folder"></i> 2020</li>
+              </ul>
+            <li id="received"><i class="bi bi-folder-fill"></i> Received 1099</li>
+              <ul id="received-files">
+                <li><i class="bi bi-folder"></i> 2020</li>
+              </ul>
+            <li id="payroll"><i class="bi bi-folder-fill"></i> Payroll</li>
+              <ul id="payroll-files">
+                <li><i class="bi bi-folder"></i> 2021</li>
+                <li><i class="bi bi-folder"></i> 2020</li>
+              </ul>
+          </ul>
+        <li id="hr"><i class="bi bi-folder-fill"></i> Human Resources</li>
+          <ul id="hr-files">
+            <li id="drivers"><i class="bi bi-folder-fill"></i> Drivers</li>
+              <ul id="drivers-files">
+                <li><i class="bi bi-folder-fill"></i> 2021</li>
+                  <ul>
+                    <li><i class="bi bi-folder-fill"></i> Jerry Wright</li>
+                      <ul>
+                        <li><i class="bi bi-folder"></i> Confidential</li>
+                        <li><i class="bi bi-folder"></i> DQ</li>
+                      </ul>
+                  </ul>
+              </ul>
+            <li id="onboarding"><i class="bi bi-folder-fill"></i> Onboarding</li>
+              <ul id="onboarding-files">
+                <li><i class="bi bi-folder"></i> Company</li>
+                <li><i class="bi bi-folder"></i> Owner-operators</li>
+              </ul>
+            <li id="staff"><i class="bi bi-folder-fill"></i> Staff</li>
+              <ul id="staff-files">
+                <li><i class="bi bi-folder-fill"></i> 2021</li>
+                  <ul>
+                    <li><i class="bi bi-folder"></i> Rachel Kerslake</li>
+                  </ul>
+              </ul>
+          </ul>
+        <li id="op"><i class="bi bi-folder-fill"></i> Operations & Safety</li>
+        <li id="it"><i class="bi bi-folder"></i> Support</li>
+      </ul>
+    </section>
 
-        </ul>
-      <li><i class="bi bi-folder-fill"></i> Human Resources</li>
-      <li><i class="bi bi-folder-fill"></i> Operations & Safety</li>
-      <li><i class="bi bi-folder"></i> Support</li>
-    </ul>
-  </section>
+  </main>
   
 <!-- footer -->
-<div id='footer'></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -96,19 +147,51 @@
   <!-- page code -->
     <script>
       $(function () {
-        $('#accounting-files').hide();
-        $('.received-filed').hide();
+        // hide all nested unordered lists with an id containing the word files
+        $("ul[id*='files']").hide();
         $('#accounting').click(function(){
           $('#accounting-files').slideToggle('fast');
-          $('#accounting i, #accounting').toggleClass('selected')
+          $('#accounting').toggleClass('selected')
            });
-        $('.received').click(function(){
-          $('.received-files').slideToggle('fast');
-          $('#accounting i, #accounting').toggleClass('selected')
+        $('#expenses').click(function(){
+          $('#expenses-files').slideToggle('fast');
+          $('#expenses').toggleClass('selected')
+           })
+        $('#IFTA').click(function(){
+          $('#IFTA-files').slideToggle('fast');
+          $('#IFTA').toggleClass('selected')
+           })
+        $('#invoices').click(function(){
+          $('#invoices-files').slideToggle('fast');
+          $('#invoices').toggleClass('selected')
+           })
+        $('#received').click(function(){
+          $('#received-files').slideToggle('fast');
+          $('#received').toggleClass('selected')
+           })
+        $('#payroll').click(function(){
+          $('#payroll-files').slideToggle('fast');
+          $('#payroll').toggleClass('selected')
+           })
+        $('#hr').click(function(){
+          $('#hr-files').slideToggle('fast');
+          $('#hr').toggleClass('selected')
+           })
+        $('#drivers').click(function(){
+          $('#drivers-files').slideToggle('fast');
+          $('#drivers').toggleClass('selected')
+           })
+        $('#onboarding').click(function(){
+          $('#onboarding-files').slideToggle('fast');
+          $('#onboarding').toggleClass('selected')
+           })
+        $('#staff').click(function(){
+          $('#staff-files').slideToggle('fast');
+          $('#staff').toggleClass('selected')
            })
         })
         
         
     </script>
-    </body>
+</body>
 </html>
