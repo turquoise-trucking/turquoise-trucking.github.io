@@ -142,13 +142,38 @@
                         </ul>
                     </ul>
                 </ul>
-              <li><i class="bi bi-folder"></i> Broker Setup Packets</li>
-              <li><i class="bi bi-folder"></i> Inspections</li>
-              <li><i class="bi bi-folder"></i> Maintenance</li>
-              <li><i class="bi bi-folder"></i> Setup Packet</li>
-              <li><i class="bi bi-folder"></i> Trailers</li>
-              <li><i class="bi bi-folder"></i> Trucks</li>
-              <li><i class="bi bi-folder"></i> Violations</li>
+              <li id="setup"><i class=" bi-folder-fill"></i> Setup Packets</li>
+                <ul id="setup-files">
+                  <li><i class="bi bi-folder"></i> Brokers</li>
+                </ul>
+              <li id="trailers"><i class="bi bi-folder"></i> Trailers</li>
+                <ul id="trailers-files">
+                  <li><i class="bi bi-folder"></i> Owner-operators</li>
+                  <li><i class="bi bi-folder-fill"></i> Turquoise</li>
+                    <ul>
+                      <li><i class="bi bi-folder-fill"></i> 21T0640</li>
+                        <ul>
+                          <li><i class="bi bi-folder"></i> CAB Card</li>
+                          <li><i class="bi bi-folder"></i> Inspections</li>
+                          <li><i class="bi bi-folder"></i> Registration</li>
+                          <li><i class="bi bi-folder"></i> Violations</li>
+                        </ul>
+                    </ul>
+                </ul>
+              <li id="trucks"><i class="bi bi-folder"></i> Trucks</li>
+              <ul id="trucks-files">
+                <li><i class="bi bi-folder"></i> Owner-operators</li>
+                  <ul>
+                    <li><i class="bi bi-folder-fill"></i> 4638</li>
+                      <ul>
+                        <li><i class="bi bi-folder"></i> CAB Card</li>
+                        <li><i class="bi bi-folder"></i> Inspections</li>
+                        <li><i class="bi bi-folder"></i> Registration</li>
+                        <li><i class="bi bi-folder"></i> Violations</li>
+                      </ul>
+                  </ul>
+                <li><i class="bi bi-folder"></i> Turquoise</li>
+              </ul>
           </ul>
         <li id="it"><i class="bi bi-folder-fill"></i> Support</li>
           <ul id="it-files">
@@ -255,6 +280,18 @@
         $('#bol').click(function(){
           $('#bol-files').slideToggle('fast');
           $('#bol').toggleClass('selected')
+           })
+        $('#setup').click(function(){
+          $('#setup-files').slideToggle('fast');
+          $('#setup').toggleClass('selected')
+           })
+        $('#trailers').click(function(){
+          $('#trailers-files').slideToggle('fast');
+          $('#trailers').toggleClass('selected')
+           })
+        $('#trucks').click(function(){
+          $('#trucks-files').slideToggle('fast');
+          $('#trucks').toggleClass('selected')
            })
         $('#it').click(function(){
           $('#it-files').slideToggle('fast');
