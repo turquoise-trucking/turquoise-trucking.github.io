@@ -32,7 +32,7 @@
       margin-bottom: 1em;
     }
     ul li + ul li {
-      padding: 0.3em;
+      padding: 0.5em;
       background:rgb(225,225,225);
       box-shadow: 0px 4px 4px #ccc;
     }
@@ -51,6 +51,12 @@
     i {
       padding: 0.2em 0.5em 0.2em 0.3em;
     }
+    button i {
+      font-size: large;
+    }
+    .btn {
+      border-radius: 25px;
+    }
     .selected {
       color: white;
       background: black;
@@ -61,10 +67,10 @@
 <body>
   <header>
     <h1 class="display-4">Cloud File Tree</h1>
-    <p class="lead">Press folders to show more</p>
+    <p class="lead">Press folders to explore</p>
     <div class="btn-group" role="group" aria-label="expand and collapse all">
-      <button id="showall" type="button" class="btn btn-dark">Expand</button>
-      <button id="hideall" type="button" class="btn btn-dark">Collapse</button>
+      <button id="showall" type="button" class="btn btn-secondary"><i class="bi bi-plus-circle"></i> Expand</button>
+      <button id="hideall" type="button" class="btn btn-secondary">Collapse <i class="bi bi-dash-circle"></i></button>
     </div>
   </header>
 
@@ -146,7 +152,7 @@
                 <ul id="setup-files">
                   <li><i class="bi bi-folder"></i> Brokers</li>
                 </ul>
-              <li id="trailers"><i class="bi bi-folder"></i> Trailers</li>
+              <li id="trailers"><i class="bi bi-folder-fill"></i> Trailers</li>
                 <ul id="trailers-files">
                   <li><i class="bi bi-folder"></i> Owner-operators</li>
                   <li><i class="bi bi-folder-fill"></i> Turquoise</li>
@@ -161,9 +167,9 @@
                         </ul>
                     </ul>
                 </ul>
-              <li id="trucks"><i class="bi bi-folder"></i> Trucks</li>
+              <li id="trucks"><i class="bi bi-folder-fill"></i> Trucks</li>
               <ul id="trucks-files">
-                <li><i class="bi bi-folder"></i> Owner-operators</li>
+                <li><i class="bi bi-folder-fill"></i> Owner-operators</li>
                   <ul>
                     <li><i class="bi bi-folder-fill"></i> 4638</li>
                       <ul>
