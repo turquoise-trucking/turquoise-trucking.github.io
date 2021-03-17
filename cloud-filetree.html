@@ -62,6 +62,10 @@
   <header>
     <h1 class="display-4">Cloud File Tree</h1>
     <p class="lead">Press folders to show more</p>
+    <div class="btn-group" role="group" aria-label="expand and collapse all">
+      <button id="showall" type="button" class="btn btn-dark">Expand</button>
+      <button id="hideall" type="button" class="btn btn-dark">Collapse</button>
+    </div>
   </header>
 
   <main class="container">
@@ -121,7 +125,35 @@
               </ul>
           </ul>
         <li id="op"><i class="bi bi-folder-fill"></i> Operations & Safety</li>
-        <li id="it"><i class="bi bi-folder"></i> Support</li>
+          <ul id="op-files">
+            <li id="accidents"><i class="bi bi-folder-fill"></i> Accidents</li>
+              <ul id="accidents-files">
+                <li><i class="bi bi-folder"></i> AT001</li>
+                <li><i class="bi bi-folder"></i> AT002</li>
+              </ul>
+              <li id="bol"><i class="bi bi-folder-fill"></i> BOLs</li>
+                <ul id="bol-files">
+                  <li><i class="bi bi-folder-fill"></i> 2021</li>
+                    <ul>
+                      <li><i class="bi bi-folder-fill"></i> Owner-operators</li>
+                      <li><i class="bi bi-folder-fill"></i> Company drivers</li>
+                        <ul>
+                          <li><i class="bi bi-folder"></i> 5337</li>
+                        </ul>
+                    </ul>
+                </ul>
+              <li><i class="bi bi-folder"></i> Broker Setup Packets</li>
+              <li><i class="bi bi-folder"></i> Inspections</li>
+              <li><i class="bi bi-folder"></i> Maintenance</li>
+              <li><i class="bi bi-folder"></i> Setup Packet</li>
+              <li><i class="bi bi-folder"></i> Trailers</li>
+              <li><i class="bi bi-folder"></i> Trucks</li>
+              <li><i class="bi bi-folder"></i> Violations</li>
+          </ul>
+        <li id="it"><i class="bi bi-folder-fill"></i> Support</li>
+          <ul id="it-files">
+            <li><i class="bi bi-folder"></i> Training</li>
+          </ul>
       </ul>
     </section>
 
@@ -154,6 +186,17 @@
       $(function () {
         // hide all nested unordered lists with an id containing the word files
         $("ul[id*='files']").hide();
+
+        // button to expand all folders
+        $('button#showall').click(function(){
+          $("ul[id*='files']").show();
+           });
+        // button to collapse all folders
+        $('button#hideall').click(function(){
+          $("ul[id*='files']").hide();
+           }); 
+        
+        // folder expansion
         $('#accounting').click(function(){
           $('#accounting-files').slideToggle('fast');
           $('#accounting').toggleClass('selected')
@@ -194,7 +237,25 @@
           $('#staff-files').slideToggle('fast');
           $('#staff').toggleClass('selected')
            })
+        $('#op').click(function(){
+          $('#op-files').slideToggle('fast');
+          $('#op').toggleClass('selected')
+           })
+        $('#accidents').click(function(){
+          $('#accidents-files').slideToggle('fast');
+          $('#accidents').toggleClass('selected')
+           })
+        $('#bol').click(function(){
+          $('#bol-files').slideToggle('fast');
+          $('#bol').toggleClass('selected')
+           })
+        $('#it').click(function(){
+          $('#it-files').slideToggle('fast');
+          $('#it').toggleClass('selected')
+           })
         })
+        
+        
         
         
     </script>
