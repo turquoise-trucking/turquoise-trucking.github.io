@@ -189,16 +189,23 @@
 
         // button to expand all folders
         $('button#showall').click(function(){
+          // show the "files" under a folder
           $("ul[id*='files']").show();
+          // remove the selected style from all visible objects
+          // prevents lingering selection styles when buttons are used
+          $("*:visible").removeClass('selected');
            });
         // button to collapse all folders
         $('button#hideall').click(function(){
           $("ul[id*='files']").hide();
+          $("*:visible").removeClass('selected');
            }); 
         
         // folder expansion
         $('#accounting').click(function(){
+          // slides down to reveal more objects at fast speed
           $('#accounting-files').slideToggle('fast');
+          // styles the interacted element
           $('#accounting').toggleClass('selected')
            });
         $('#expenses').click(function(){
