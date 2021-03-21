@@ -1,16 +1,22 @@
-# Style guide for Cloud
+# Style Guide for Cloud
 
 Written 2021-03-18 by John Earl Hardesty
 
+*Reading time ~ 6 minutes*
+
+Consider using the [new Microsoft Edge](https://www.microsoft.com/en-us/edge/features) to read this document for you. In the Settings and more menu (3 dots) choose Read Aloud. 
+
+[TOC]
+
 ## Introduction
 
-A style guide helps users adhere to a set of rules. For cloud storage it will answer questions like date and time formats, how to name files, so on. 
+A style guide helps us adhere to a set of rules. For cloud storage it will answer questions like date and time formats, how to name files, and so on. 
 
-This guide assumes organization is by department.  
+This guide assumes organization is short and deep or a hybrid.  
 
-* **By department** makes folder structure important 
+* **Short and deep** makes folder structure important 
 * **Long and shallow** makes filenames important
-* **Hybrid approach** makes both important based on how shallow the file tree is
+* **Hybrid** makes both important based on how shallow the file tree is
 
 Regardless of how we organize, a style guide must be followed. 
 
@@ -178,8 +184,9 @@ To OCR a document it must be scanned by an app (such as [Adobe Scan](https://acr
 2021-03-19
 
 * This style guide was split from the original Cloud Storage document
-
 * Scanning Documents section added
 
-  
+2021-03-22 First Publication
+
+
 
