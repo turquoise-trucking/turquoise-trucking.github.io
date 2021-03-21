@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Cloud Storage</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.25em ;} 
+ table, 
+ .hidethis {
+     display: none !important
+ }
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="cloud-storage" class="md-header-anchor"></a><span>Cloud Storage</span></h1><p><span>Written 2021-03-10 by John Earl Hardesty</span></p>
+    <!-- https://wordstotime.com/ using fast 160 WPM -->
+    <p><em>Reading time about 15 minutes and 20 seconds.</em></p> 
+    <p>Listen to this paper out loud (excluding tables and long lists).
+        <audio controls>
+            <source src="cloud-storage.m4a" type="audio/mp4">
+        </audio>
+    </p>
+    
+<div class='md-toc hidethis' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n453"><a class="md-toc-inner" href="#cloud-storage">Cloud Storage</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n458"><a class="md-toc-inner" href="#proposal">Proposal</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n463"><a class="md-toc-inner" href="#access-control">Access control</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n465"><a class="md-toc-inner" href="#creating-a-folder">Creating a folder</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n487"><a class="md-toc-inner" href="#members">Members</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n522"><a class="md-toc-inner" href="#groups">Groups</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n641"><a class="md-toc-inner" href="#organizing-files">Organizing files</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n643"><a class="md-toc-inner" href="#short-and-deep">Short and deep</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n794"><a class="md-toc-inner" href="#folder-demo">Folder demo</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n797"><a class="md-toc-inner" href="#long-and-shallow">Long and shallow</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n802"><a class="md-toc-inner" href="#hybrid-approach">Hybrid approach</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n823"><a class="md-toc-inner" href="#pc-backups">PC backups</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n839"><a class="md-toc-inner" href="#backup-and-restore">Backup and restore</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n857"><a class="md-toc-inner" href="#recommendation">Recommendation</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n860"><a class="md-toc-inner" href="#searching-dropbox">Searching Dropbox</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n868"><a class="md-toc-inner" href="#creating-new-documents">Creating new documents</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1016"><a class="md-toc-inner" href="#wrapping-up">Wrapping up</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n903"><a class="md-toc-inner" href="#changelog">Changelog</a></span></p></div>
+
+<h2><a name="proposal" class="md-header-anchor"></a><span>Proposal</span></h2><p><span>As part of our paperless office initiative, we have chosen </span><a href='https://www.dropbox.com/business'><span>Dropbox Business</span></a><span> as our cloud solution. </span></p><p><span>There are </span><strong><span>5 Terabytes</span></strong><span> of storage shared across all members. If we assume each PDF averages one megabyte, and we decide to only store documents, </span><strong><span>Dropbox can store 5 million PDFs</span></strong><span>. Of course, documents vary by size and we can store more than just documents on the cloud.</span></p><p><strong><span>All documents should be stored in Dropbox</span></strong><span>, including documents already stored in other cloud solutions.</span></p><p><span>This document covers how members and groups are managed, where files are stored, backup options, searching, and creating new documents.</span></p><h2><a name="access-control" class="md-header-anchor"></a><span>Access control</span></h2><p><span>This section covers how new folders are made and who can access them. Also, proposed member and group schemes. By default, everyone can edit new folders.</span></p><h3><a name="creating-a-folder" class="md-header-anchor"></a><span>Creating a folder</span></h3><p><span>Visit </span><a href='https://www.dropbox.com/home'><span>Dropbox</span></a><span> and navigate to where you want to create a folder. Then press </span><strong><span>+ Create</span></strong><span> and </span><strong><span>Folder</span></strong><span>. </span></p><p><img src="create-folder.png" referrerpolicy="no-referrer" alt="Folder option selected in the Create drop-down menu"></p><p><span>The folder permission window will open.</span></p><p><img src="folder-permissions.png" referrerpolicy="no-referrer" alt="Name focused in the Create Folder window. Everyone at Turquoise Trucking checked with Can edit."></p><p><span>Name the folder following rules in our style guide. Everyone in an organization can edit new folders unless specified. Options are:</span></p><ul><li><p><span>Can edit</span></p><ul><li><span>People can edit, delete, comment, and add the files to their Dropbox</span></li></ul></li><li><p><span>Can view</span></p><ul><li><span>People can view, download, and comment</span></li></ul></li></ul><p><span>Let&#39;s take a step back. Cloud storage should replace traditional paper filing. When we determine access to a digital file we should consider it the same way as our real-life filing system. Are files kept in a filing cabinet? If so, is it locked? These questions can help determine who has access to digital files.</span></p><p><span>The whole point of having multiple members is to restrict access. Let&#39;s choose specific people. </span></p><p><img src="specific-people.png" referrerpolicy="no-referrer" alt="Sample folder with a to field to add members or groups."></p><p><span>You may choose people by their email, name, or group. </span><strong><span>Groups offer wider</span></strong><span> control and are </span><strong><span>easier to maintain over time</span></strong><span>. Chances are, you will always have an accounting department and a dispatch team right?</span></p><p><span>What if an employee leaves? Removing them from a group in the admin panel is easy. What about all the folders in the organization? If folders are given access based on members you would have to update every single folder.</span></p><h3><a name="members" class="md-header-anchor"></a><span>Members</span></h3><p><strong><span>People, users, members, licenses, are all the same thing in Dropbox.</span></strong><span> So, if we intend to keep only 3 licenses (the default) then a person would be someone that knows the username and password to a Dropbox account. </span></p><p><span>Currently, there are 3 members:</span></p><ol start='' ><li><span>Turquoise Trucking, </span><strong><span>contact</span></strong><span>@turquoise</span></li><li><strong><span>Dispatch Team</span></strong><span>, dispatch@turquoise</span></li><li><strong><span>Matt Keel</span></strong><span>, matt@turquoise</span></li></ol><p><strong><span>Contact</span></strong><span> was the original Dropbox account member. While Dispatch Team and Matt Keel were added after upgrading to Dropbox Business. These members can be changed at any time.</span></p><p><span>To cover all staff members we would need to purchase more licenses.  </span></p><p><strong><span>Each additional license will cost $150/year or $12.50/month when paid annually.</span></strong></p><figure><table><thead><tr><th><span>Licenses / Users</span></th><th><span>Total per Year</span></th></tr></thead><tbody><tr><td><span>3</span></td><td><span>$450</span></td></tr><tr><td><span>4</span></td><td><span>$600</span></td></tr><tr><td><span>5</span></td><td><span>$750</span></td></tr><tr><td><span>6</span></td><td><span>$900</span></td></tr><tr><td><span>7</span></td><td><span>$1050</span></td></tr></tbody></table></figure><p><span>These totals do not include sales tax.</span></p><p><span>From a security perspective, no one should </span><em><span>share</span></em><span> access. Every user should have their own user account. But, that would be very expensive. </span></p><p><span>Clearly, we need more than 3 licenses but not over 7. Let&#39;s consider groups.</span></p><p>&nbsp;</p><h3><a name="groups" class="md-header-anchor"></a><span>Groups</span></h3><p><span>With only three members I&#39;ve created four groups</span></p><p><strong><span>Current members that can edit areas</span></strong><span> </span></p><figure><table><thead><tr><th><span>Members</span></th><th style='text-align:center;' ><span>Accounts Payable</span></th><th style='text-align:center;' ><span>Human Resources</span></th><th style='text-align:center;' ><span>Support</span></th><th style='text-align:center;' ><span>Operations</span></th></tr></thead><tbody><tr><td><span>Contact</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>✏️</span></td></tr><tr><td><span>Dispatch</span></td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' ><span>✏️</span></td></tr><tr><td><span>Matt</span></td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' ><span>✏️</span></td></tr></tbody></table></figure><ul><li><p><span>Accounts Payable</span></p><ul><li><span>Members that deal with invoices, receipts, settlements</span></li></ul></li><li><p><span>Human Resources</span></p><ul><li><span>Members that deal with personnel, hiring, terminations</span></li></ul></li><li><p><span>Support</span></p><ul><li><span>Members that deal with IT, technical support, infrastructure</span></li></ul></li><li><p><span>Operations</span></p><ul><li><span>Members that deal with trucks, trailers, BOLs, loads, safety </span></li></ul></li></ul><p><span>There are only so many ways to manage four groups with only 3 members.</span></p><p><span>Let&#39;s consider real-world groups. Rashad and Bow are founders of Turquoise and should have edit access to everything. Their group is immutable and should not be shared with anyone but them. Everyone should have access to operations. Financial files may not need to be viewed by everyone but they should only be edited by accounting staff. Driver onboarding, DQ and confidential, are HR related files.  Support files should be viewable to everyone.</span></p><p><strong><span>If we had a additional license</span></strong><span> we can expand on these groups:</span></p><ul><li><p><span>Founders (Rashad and Bow)</span></p><ul><li><span>Can view and edit all files</span></li></ul></li><li><p><span>Accounts Payable (Rashad and Rachel)</span></p><ul><li><span>Can edit financial files</span></li></ul></li><li><p><span>Operations &amp; Safety (Bow, EJ, Rashad, Matt, Rachel)</span></p><ul><li><span>Can edit load paperwork</span></li></ul></li><li><p><span>Human Resources (Matt)</span></p><ul><li><span>Can edit driver files</span></li></ul></li></ul><p><strong><span>Proposed groups that can ✏️ edit  </span></strong></p><figure><table><thead><tr><th><span>Groups</span></th><th style='text-align:center;' ><span>Accounts Payable</span></th><th style='text-align:center;' ><span>Human Resources</span></th><th style='text-align:center;' ><span>Operations</span></th><th style='text-align:center;' ><span>(Anything)</span></th></tr></thead><tbody><tr><td><span>Founders</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>✏️</span></td></tr><tr><td><span>Accounts Payable</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>👁️</span></td><td style='text-align:center;' ><span>👁️</span></td><td style='text-align:center;' ><span>👁️</span></td></tr><tr><td><span>Human Resources</span></td><td style='text-align:center;' ><span>👁️</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>👁️</span></td><td style='text-align:center;' ><span>👁️</span></td></tr><tr><td><span>Operations</span></td><td style='text-align:center;' ><span>👁️</span></td><td style='text-align:center;' ><span>👁️</span></td><td style='text-align:center;' ><span>✏️</span></td><td style='text-align:center;' ><span>👁️</span></td></tr></tbody></table></figure><p><span>Because we are a small office everyone needs view access to everything. We don&#39;t lock particular file cabinets. Our cloud solution should reflect our real world organization scheme.</span></p><p><strong><span>What needs to be changed?</span></strong></p><ul><li><p><span>Contact member renamed to Founders</span></p><ul><li><span>Change password and share only between Rashad and Bow</span></li><li><span>Support, or anyone that has admin access to Dropbox should also be in this group</span></li></ul></li><li><p><span>APR Team @ Turquoise </span><strong><span>added</span></strong><span> as a license</span></p><ul><li><span>This is shared between Rachel, Jaan, anyone dealing with accounting</span></li><li><span>Financial data is a critical department, trust whomever we share it with</span></li></ul></li><li><p><span>Operations &amp; Safety</span></p><ul><li><span>This is shared between EJ and Bow</span></li></ul></li><li><p><span>Matt is the sole HR person</span></p><ul><li><span>If that changes a new email address must be made to reflect an HR department. This will probably be internal. Could be easier to make a cheap Gmail account like </span><a href='mailto:turquoise.hr@gmail.com' target='_blank' class='url'>turquoise.hr@gmail.com</a><span>.</span></li></ul></li></ul><p><span>In this proposal we need </span><strong><span>one additional license</span></strong><span>.</span></p><p><span>Positives:</span></p><ul><li><span>Cheap</span></li></ul><p><span>Negatives:</span></p><ul><li><span>Security risk sharing log-in credentials </span></li></ul><p><strong><span>Groups and members seem the same?</span></strong><span> Well, in effect they are because we have far fewer licenses to employees. Groups, as a Dropbox feature, may not even need to be used.</span></p><h2><a name="organizing-files" class="md-header-anchor"></a><span>Organizing files</span></h2><p><span>There are three ways to organize Dropbox; short and deep, long and shallow, or a hybrid of both.</span></p><h3><a name="short-and-deep" class="md-header-anchor"></a><span>Short and deep</span></h3><p><span>There is a shorter list of files at the top, but their structure is deep like the roots of a tree. This is a bucket approach, putting related pieces of information into similar buckets. </span></p>
+
+
+<div class="hidethis">
+<p><span>Below we organize top-level folders </span><strong><span>based on our live Dropbox account:</span></strong><span> </span></p><blockquote><p><strong><span>Bold text is new folders</span></strong></p><p><em><span>Italic text is proposed changes</span></em></p><p><span>Chevrons (&gt;) indicate a folder leading to another folder</span></p></blockquote><p><strong><span>Accounts Payable</span></strong></p><ul><li><p><span>2020 Received 1099</span></p><ul><li><em><span>Received 1099 &gt; 2020</span></em></li></ul></li><li><p><span>2021 Expenses</span></p><ul><li><em><span>Expenses &gt; 2021</span></em></li></ul></li><li><p><span>Accounting Stuff</span></p><ul><li><span>Some of these may be placed in the root of the Accounts Payable folder</span></li></ul></li><li><p><span>IFTA 2020</span></p></li><li><p><span>IFTA 2021</span></p><ul><li><em><span>IFTA &gt; 2021</span></em></li><li><em><span>IFTA &gt; 2020</span></em></li></ul></li><li><p><span>Invoices 2020</span></p></li><li><p><span>Invoices 2021</span></p><ul><li><em><span>Invoices &gt; 2021</span></em></li><li><em><span>Invoices &gt; 2020</span></em></li></ul></li><li><p><span>Payroll 2020</span></p></li><li><p><span>Payroll 2021</span></p><ul><li><em><span>Payroll &gt; 2021</span></em></li><li><span>Payroll  &gt; 2021</span></li></ul></li></ul><p><strong><span>Human Resources</span></strong></p><ul><li><p><span>Driver On Boarding</span></p><ul><li><em><span>Onboarding</span></em></li></ul></li><li><p><span>new drivers</span></p><ul><li><span>These will be migrated into the Drivers folder</span></li></ul></li><li><p><strong><span>Drivers</span></strong></p><ul><li><p><em><span>(Year of Hire) &gt; (Name)</span></em></p><ul><li><strong><span>Confidential</span></strong></li><li><strong><span>DQ</span></strong></li></ul></li></ul></li></ul><p><strong><span>Operations &amp; Safety</span></strong></p><ul><li><p><span>Broker Setup Files</span></p><ul><li><span>Moved to Set Up Packets</span></li></ul></li><li><p><span>Open Loads</span></p><ul><li><span>Is this abandon?</span></li></ul></li><li><p><span>Set Up Packets</span></p><ul><li><span>Includes our own in the root then a Broker Setup Packets folder</span></li></ul></li><li><p><span>Turquoise Trucks</span></p><ul><li><em><span>Trucks</span></em><span> (has same sub-menus as trailers)</span></li></ul></li><li><p><strong><span>Trailers</span></strong></p><ul><li><strong><span>Maintenance</span></strong></li><li><span>Violations</span></li><li><strong><span>Registrations</span></strong></li><li><strong><span>CAB cards</span></strong></li><li><strong><span>Inspections</span></strong></li></ul></li><li><p><strong><span>Accidents</span></strong></p><ul><li><span>Rarer than other events, these are given an auto-incrementing number based on LoadStop</span></li></ul></li></ul><p><strong><span>Support</span></strong></p><ul><li><p><strong><span>Training</span></strong></p><ul><li><span>Support files specific to drivers such as LoadStop and KeepTruckin&#39;</span></li><li><span>QP Lessons</span></li></ul></li></ul><p><strong><span>Scans</span></strong></p><ul><li><em><span>ScanScape</span></em><span> files</span></li><li><span>All scans can go here and be organized later on</span></li></ul><p><strong><span>Unknown?</span></strong></p><ul><li><p><span>desk</span></p></li><li><p><span>Masaustu</span></p></li><li><p><span>My PC (OM1)</span></p><ul><li><span>Rachel remove</span></li></ul></li><li><p><span>Screenshots</span></p><ul><li><span>remove</span></li></ul></li><li><p><span>turqfile </span></p><ul><li><strong><span>Accessorials</span></strong><span> and other files to organize later</span></li></ul></li></ul>
+</div>
+
+
+<h4><a name="folder-demo" class="md-header-anchor"></a><span>Folder demo</span></h4><p><a href='https://turquoise-trucking.github.io/cloud-filetree.html'><span>Explore an interactive file tree</span></a><span> to see a short and deep layout in action. </span></p><p><img src="cloud-file-tree.png" style="zoom:25%;" /></p><h3><a name="long-and-shallow" class="md-header-anchor"></a><span>Long and shallow</span></h3><p><span>We could mimic how files are stored now. This leads to a long list of files but their structure is shallow. The benefit would be less clicks to get to resources. But, would lead to visual clutter. </span></p><p><img src="long-and-shallow.png" alt="Twenty-five folders in three columns." /></p><p><a href='https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two'><span>A psychology study</span></a><span> in 1956 by George Miller demonstrates that our short-term memory is able to recall information in about 7 pieces, plus or minus 2. This is most likely due to </span><a href='https://en.wikipedia.org/wiki/Chunking_(psychology)'><span>chunking</span></a><span> which is a design principle in a number of fields. I won&#39;t delve into the specifics of cognitive psychology as it is beyond the scope of this document.</span></p><p><span>I would not recommend this organization scheme. The more unique resources we upload to the cloud, the longer the list of files become. </span></p><h3><a name="hybrid-approach" class="md-header-anchor"></a><span>Hybrid approach</span></h3><p><span>We could combine both styles. An example would be an inspection on Al&#39;s truck. Let&#39;s see how they would be organized in all 3 organizational styles.</span></p><ol start='' ><li><p><strong><span>Short and deep</span></strong><span> inspections occur on either a truck or trailer which belong to Operations. </span><strong><span>The folder structure is critical.</span></strong><span> The file name should contain the date, but otherwise it can be called anything.</span></p><blockquote><p><span>Operations and Safety &gt; Trucks &gt; Owner-operators &gt; Al 9499 &gt; Inspections &gt; 2021 &gt; </span><strong><span>03-17.pdf</span></strong></p></blockquote></li><li><p><strong><span>Long and shallow</span></strong><span> inspections are a flat file with names and types. The </span><strong><span>filename of the inspection is critical</span></strong><span>. Otherwise, we won&#39;t know exactly what each document is without opening them.</span></p><blockquote><p><span>Inspections &gt; </span><strong><span>2021-03-17 Al 9499.pdf</span></strong></p></blockquote></li><li><p><strong><span>Hybrid approach</span></strong><span> inspections would provide some specificity while reducing how many folders deep resources are stored. A few examples include:</span></p><blockquote><p><span>Operations and Safety &gt; Inspections &gt; Trucks &gt; </span><strong><span>2021-03-17 AL 9499.pdf</span></strong></p><p><span>Operations and Safety &gt; Inspections &gt; Al 9499 &gt; </span><strong><span>2021-03-17 Al.pdf</span></strong></p><p><span>Inspections &gt; 2021 &gt; Trucks &gt; </span><strong><span>03-17 Al 9499.pdf</span></strong></p><p><span>Inspections &gt; 2021 &gt; Al 9499 &gt; </span><strong><span>03-17.pdf</span></strong></p></blockquote></li></ol><p><span>A hybrid approach is flexible but requires more work in how data is structured. We would need to sit down and figure out specifics on a case-by-case basis. </span></p><h2><a name="pc-backups" class="md-header-anchor"></a><span>PC backups</span></h2><p><span>Dropbox can </span><a href='https://help.dropbox.com/installs-integrations/sync-uploads/computer-backup'><span>backup users computers</span></a><span> but this has security concerns when sharing login information. </span></p><p><span>For example, the Accounts Payable department has three members; Rachel, Rashad, and Jaan. Rashad belongs to the Founders group (or member if we don&#39;t buy many licenses) so we can restrict access between him and Bow. Meanwhile, Jaan may use the NOC PC or the custom PC &quot;Cybertron&quot; in the dispatch office. Both Rachel and Jaan would have access to files across three computers. </span></p><p><span>That said, any backup solution is better than no backup solution. </span></p><p><a href='https://www.google.com/drive/'><span>Google Drive</span></a><span> is also an option.</span></p><p><span>We already leverage </span><a href='https://workspace.google.com/'><span>Google Workspace</span></a><span> at Turquoise. This affords every Gmail account </span><strong><span>30 GB of storage</span></strong><span>. Specific folders should be chosen to sync. Places where important files live include:</span></p><ul><li><span>Documents</span></li><li><span>Desktop</span></li><li><span>Downloads</span></li><li><span>Pictures</span></li></ul><p><span>With enough space you could also point to the user folder itself. In Windows 10 that is in </span><strong><span>(C:) Users</span></strong><span> &gt; </span><strong><em><span>user name</span></em></strong><span> by default where </span><em><span>user name</span></em><span> is the name you log in to Windows with. </span></p><h3><a name="backup-and-restore" class="md-header-anchor"></a><span>Backup and restore</span></h3><p><span>Microsoft approves of two options to </span><a href='https://support.microsoft.com/en-us/windows/backup-and-restore-in-windows-10-352091d2-bb9d-3ea3-ed18-52ef2b88cbef'><span>backup Windows 10</span></a><span>. </span></p><p><span>Using OneDrive to backup user files such as; documents, desktop, and downloads. Or File History which requires an external hard drive. </span></p><p><span>There are </span><strong><span>benefits</span></strong><span> to using on-site backups with an external hard drive:</span></p><ul><li><span>Quick access to data without an internet connection</span></li><li><span>Lower cost compared to paying a cloud subscription</span></li><li><span>Ease of installation</span></li></ul><p><strong><span>Disadvantages</span></strong><span> include:</span></p><ul><li><span>Damage due to accident or natural disaster </span></li><li><span>Security because of theft</span></li></ul><p><span>Using encryption is one way to counter that last point. But, many of our PCs are laptops. Which makes &quot;grab and go theft&quot; more problematic.</span></p><h3><a name="recommendation" class="md-header-anchor"></a><span>Recommendation</span></h3><p><strong><span>Google Drive should cover most of our backup use cases.</span></strong><span> We overestimate how much storage space we typically use. Unless Gmail is used as a storage solution (Dispatch email) each user should have ample space to store their user files. This keeps personal files private to each users Gmail login. </span></p><p><span>Dropbox Business may be used as well with one caveat. </span><strong><span>Group members can view and edit each others personal files.</span></strong><span> Although, this may be considered a feature. Being able to access all files, across computers, would yield powerful search capabilities. Which is a great segue into the next section.</span></p><h2><a name="searching-dropbox" class="md-header-anchor"></a><span>Searching Dropbox</span></h2><p><span>The power of having everything digital is the ability to search across files. The search interface may change slightly between the Dropbox desktop app, mobile app, and website. The photos in this document are from the desktop app. </span></p><p><img src="search-results.png" alt="Dropbox search on the word 'illinois'"/></p><p><span>By default, Dropbox searches on text files. The Results number is misleading. and change as you scroll. Pressing the </span><strong><span>by type</span></strong><span> button shows a list of file types to specify searches for. </span></p><p><img src="search-sort.png" referrerpolicy="no-referrer" alt="View options to sort by most relevant."></p><p><span>Results can be sorted by most relevant, most recent, or least recent. Most relevant would return documents with more occurrences of keywords. Most recent sorts newer files at the top. While least recent reverses the order.</span></p><p><img src="search-view.png" referrerpolicy="no-referrer" alt="View options to show results in a large grid."></p><p><span>Results show as a grid by default. When you need to visually search files choose to view results as a large grid.</span></p><h2><a name="creating-new-documents" class="md-header-anchor"></a><span>Creating new documents</span></h2><p><span>You can create documents directly inside Dropbox. These include:</span></p><ul><li><p><span>Microsoft 365 Online</span></p><ul><li><span>These require a commercial license of Microsoft 365</span></li><li><a href='https://www.microsoft.com/en-us/microsoft-365/word'><span>Word document</span></a></li><li><a href='https://www.microsoft.com/en-us/microsoft-365/excel'><span>Excel workbook</span></a></li><li><a href='https://www.microsoft.com/en-us/microsoft-365/powerpoint'><span>PowerPoint presentation</span></a></li></ul></li><li><p><span>Google Docs</span></p><ul><li><a href='https://www.google.com/docs/about/'><span>Google docs</span></a></li><li><a href='https://www.google.com/sheets/about/'><span>Google sheets</span></a></li><li><a href='https://www.google.com/slides/about/'><span>Google slides</span></a></li></ul></li><li><p><span>Shortcut</span></p><ul><li><span>Points to a web page or other online resource</span></li></ul></li><li><p><a href='https://en.wikipedia.org/wiki/Dropbox_Paper'><span>Paper</span></a><span> (Available as </span><strong><span>Create Paper doc</span></strong><span>)</span></p><ul><li><span>Collaborative document that can have images, videos, and other media embedded into it</span></li></ul></li></ul><p><span>There are pros and cons to each of these filetypes. Use whichever is most familiar to you. </span><strong><span>Dropbox Paper</span></strong><span> offers excellent tutorials to get you started. </span></p><p><span>Microsoft 365, Google Docs, and Paper can all be exported to multiple formats including PDF. But, you should not export to PDF if you are working with a </span><a href='https://en.wikipedia.org/wiki/Living_document'><span>living document</span></a><span> or require further collaboration. </span></p><h2><a name="wrapping-up" class="md-header-anchor"></a><span>Wrapping up</span></h2><p><span>This is a large document. It was actually much larger before I moved the style guide to its own document.</span></p><p><strong><span>Access control</span></strong></p><ul><li><span>License per each employee makes the most sense but is financially prohibitive</span></li><li><span>For now, let&#39;s explore and build Dropbox into an essential part of a paperless office</span></li></ul><p><strong><span>Organizing Files</span></strong></p><ul><li><span>Short and deep or a hybrid approach should be used</span></li><li><span>Regardless of organization scheme, everyone must follow the style guide</span></li></ul><p><strong><span>PC Backups</span></strong></p><ul><li><p><span>Google Drive would work for most PCs </span></p><ul><li><span>But requires a Google Workspace account assigned to each</span></li></ul></li><li><p><span>Dropbox Business would allow all group members to view and modify backup files</span></p><ul><li><span>Unless each PC had its own, unique Dropbox license</span></li><li><span>Searches would work across every file at Turquoise</span></li></ul></li></ul><h2><a name="changelog" class="md-header-anchor"></a><span>Changelog</span></h2><p><span>This is a living document. Changes will show up below.</span></p><p><span>2021-03-21Pre-release revisions</span></p><ul><li><p><span>Access Control</span></p><ul><li><span>Clarified member synonyms </span></li><li><span>Changed </span><strong><span>By department</span></strong><span> organization scheme to </span><strong><span>Short and deep</span></strong></li></ul></li><li><p><span>Computer backups</span></p><ul><li><span>Renamed to </span><strong><span>PC backups</span></strong></li></ul></li><li><p><span>Added Wrapping Up section</span></p></li><li><p><span>Revisions</span></p></li></ul><p><span>2021-03-22 First publication</span></p></div>
+</body>
+</html>
