@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Contact us or drop by our Cedar Rapids office &bull; Turquoise Trucking</title>
+<title>Home Page &bull; Turquoise Trucking</title>
 <meta name="author" content="John Earl Hardesty">
 <!-- favicon -->
 <link rel="icon" type="image/png" sizes="16x16" href="/static-assets/tt-icon-16px.png">
@@ -36,8 +36,15 @@
 <link rel='stylesheet' id='bootstrap-css'  href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css?ver=5.6.2' type='text/css' media='all' />
 <link rel='stylesheet' id='fontawesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css?ver=5.6.2' type='text/css' media='all' />
 <link rel='stylesheet' id='core-css'  href='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-content/themes/2019-turquoise/style.css?ver=5.6.2&#038;time=1614375196' type='text/css' media='all' />
-<script type='text/javascript' src='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1&#038;time=1614375196' id='jquery-core-js'></script>
-<script type='text/javascript' src='https://secureservercdn.net/45.40.155.175/65f.c94.myftpupload.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2&#038;time=1614375196' id='jquery-migrate-js'></script>
+
+<!-- have to correctly call jQuery to use it -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+
+
 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js?ver=5.6.2' id='bootstrap-js'></script>
 <script src="https://kit.fontawesome.com/74abbf3163.js" crossorigin="anonymous"></script>
 <!-- <link rel="stylesheet" href="wcag-aaa.css"> -->
@@ -77,7 +84,6 @@ Checklist to publish
 
 
 /* 2021 Contact page styles, up to but NOT including footer hide */
-/* social media buttons */
 .fb-btn {
     /* top to bottom gradient, #17A9FC to #0269E3 */
     background: rgb(23,169,252);
@@ -102,12 +108,7 @@ Checklist to publish
 .yt-btn:hover i {
     color: #FF0000;
 }
-.linkedin-btn, .fb-btn, .ig-btn, .yt-btn {
-    margin: 0em;
-    padding: 0.15em;
-}
 
-/* other contact page styles */
 .contact-buttons {
     /* must go with row NOT col */
     justify-content: center;
@@ -128,13 +129,218 @@ Checklist to publish
     font-size: small;
     text-align: center;
 }
+/* neat style, hold onto it but Rashad doesn't like it  */
+.home-card-neat i {
+  position: absolute;
+  top: -0.15em;
+  left: -0.15em;
+  font-size: 280%;
+  text-shadow: 0px 2px 2px rgb(50,150,150);
+  color: turquoise;
+}
+.home-card i {
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  font-size: 150%;
+  text-shadow: 0px 2px 2px rgb(50,150,150);
+  color: turquoise;
+}
+.home-button i {
+  color: turquoise;
+  font-size: 150%;
+  text-shadow: 0px 1px 0px rgb(50,150,150);
+}
+.home-card {
+  text-align: center;
+}
 
-
-
-
+@media (min-width: 576px) and (max-width: 992px) {
+  .home-card i {
+    font-size: 150%;
+  }
+}
+.btn-turquoise {
+  /* WCAG-AA */
+  color: #2B2B2B;
+  background: #30d5c8;
+  font-weight: bold;
+}
+.carousel-caption span {
+  background: rgb(0,0,0,0.5); 
+  border-radius: 5px; 
+  padding: 0.1em 0.5em 0.25em;
+  font-size: large;
+}
+/* OVERWRITING STYLES */
+.card-title a:link,
+.card-title a:visited,
+.card-title a:active {
+    color: #0F7169; 
+}
+.card-title a:link {
+  text-decoration: underline;
+}
+.card-title {
+  margin-bottom: 0.5em;
+}
+.card .btn-block {
+  margin-bottom: 0em !important;
+}
+.homerow .card {
+  margin-bottom: 0.75em !important
+}
+.homerow .card-body {
+  padding: 0.6em 1em;
+}
+.home-social {
+  border: 1px solid #dfdfdf;
+  color: #0F7169;
+  font-size: 120%;
+}
+.home-social:hover, .home-button:hover {
+  background: #0F7169;
+  color: white;
+}
+.home-button {
+  border: 1px solid #0F7169;
+  color: #0F7169;
+  font-weight: bold;
+}
+.call-us {
+  background: #208337
+}
+.nav-tray {
+  box-shadow: 0px 1px 5px #ccc;
+}
+.navbar {
+  /*padding: 0.3em 0.2em;*/
+  padding-left: 0em;
+}
+nav {
+    margin-bottom: 0em !important;
+}
 footer {
   /* testing, remove footer, masthead */
   display: none;
+}
+iframe {
+  margin: 2em auto 1em;
+  float: right;
+  overflow:hidden;
+  width: 18rem;
+  height:2.5rem;
+  justify-content: center;
+  filter:hue-rotate(60deg);
+}
+.navbar-brand img {
+  width: 52px; /* 52px for other */
+  height: 32px;
+  opacity: 0.8;
+}
+.btn-outline-success {
+  color: #1B6F2E;
+  border-color: #1B6F2E;
+}
+.btn-outline-success:hover {
+  background-color:#1B6F2E;
+}
+@media (max-width: 425px) { /* Mobile styles */
+  .nav-link {
+    font-size: 120%;
+    margin: 0.5em 1em 1.2em;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    background: #eee;
+    color: rgba(0,0,0,0.75) !important;
+  }
+  .nav-link i {
+    font-size: 120%;
+    padding: 0.1em 1em;
+    color: #0F7169;
+  }
+  .nav-item .active {
+    background: #0F7169;
+    color: rgba(255,255,255,0.95) !important;
+    font-weight: bold;
+  }
+  .nav-item .active i {
+    color: rgba(255,255,255,0.75) !important;
+  }
+  .nav-item:first-child {
+    padding-top: 1em;
+  }
+  .nav-link[href^="/abo"]::after {
+    content: " Turquoise";
+  }
+  .nav-link[href^="/cont"]::after {
+    content: " Us";
+  }
+  .nav-link[href^="/dri"] {
+    content: "Drive for Turquoise";
+  }
+  iframe {
+    float: none;
+    margin: 0.5em auto;
+    width: 75%;
+    transition: box-shadow 0.5s;
+  }
+  iframe:focus {
+    box-shadow: 0px 10px 10px #bbb;
+    width: 85%;
+  }
+  .site-search {
+    text-align: center;
+  }
+
+  /* Need jQuery or similar to change classes for button press
+  https://stackoverflow.com/questions/15811214/change-style-onclick
+  .nav-tray {
+    transition: box-shadow 0.5s;
+  }
+  .nav-tray:focus-within {
+  box-shadow: 0px 10px 10px #bbb;
+  } */
+}
+/*.nav-item .active {  Pill look 
+  color: black !important;
+  background: white;
+  transform: scale(1.1);
+  border: 1px solid #ddd;
+  border-width: 0px 1px 1px 1px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px #ddd;
+  margin: 0em 1em;
+}*/
+.nav-item a {
+  margin: 5px 0.25em 0em;
+}
+.nav-item .active {
+  color: black !important;
+  border-top: 5px solid turquoise;
+  border-bottom: none;
+  background: rgb(64,224,208);
+  background: linear-gradient(180deg, rgba(64,224,208,0.4) 0%, rgba(255,255,255,1) 35%);
+  margin-top: 0em;
+}
+.navbar {
+  padding: 0.2em 0em;
+}
+/*.nav-item a:link, .nav-item a:visited {
+  transition: transform 0.1s ease-in-out;
+}
+.nav-item a:hover {
+  transform: scale(1.1);
+}*/
+.nav-item .active i {
+  color: #0F7169;
+}
+@media only screen
+and (min-width: 700px) {
+  nav .form-inline a {
+    position: absolute;
+    right: 0em;
+  }
 }
 
 /* footer color changes to meet WCAG-AA 
@@ -182,194 +388,181 @@ footer {
 } */
 </style>
 </head>
-
-<body class="page-template-default page page-id-2335">
+<body class="home page-template-default page page-id-2323">
 <div id="skiptocontent"><a href="#main-content">Skip to main content</a></div>
-<!-- masthead -->
+
+<!-- Navigation: begins -->
+<div class="nav-tray sticky-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+      <!-- Brand -->
+      <a class="navbar-brand" href="/">
+      <img src="/static-assets/turquoise-icon-2021b.png" alt="Turquoise brand">
+      </a>
+
+      <form class="form-inline my-2 my-md-0">
+        <a class="btn btn-outline-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i> <span class="sr-only">Call</span>&nbsp;844-799-7900</a>
+      </form>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="sr-only">Links</span> <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/about/"><i class="fas fa-user-friends"></i> About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact/"><i class="far fa-comment-dots"></i> Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</div>
+<!-- Navigation: ends -->
+
+<!-- Masthead: begins -->
 <div role="banner" class="masthead-wide masthead">
-    <div class="masthead-gradient">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <a href="/"><img class="logo" src="/static-assets/turquoise-logo.png" alt="Turquoise Trucking"></a>
-                </div>
-                <div class="col-sm-6 align-middle">
-                    <div class="btn-group float-right masthead-btn">
-                        <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i>&nbsp;Call 844-799-7900</a>
-                        <a class="btn btn-primary" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i>&nbsp;Email&nbsp;us</a>
-                    </div>
-                </div>
-            </div>
+  <div class="masthead-gradient">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <a href="/"><img class="logo" src="/static-assets/turquoise-logo.png" alt="Turquoise Trucking"></a>
         </div>
+        <div class="col-sm-6 site-search">
+          <iframe title="Search Turquoise" src="https://duckduckgo.com/search.html?site=turquoisetruck.com&prefill=Search Turquoise" frameborder="0"></iframe>
+          <div class="btn-group float-right masthead-btn hidden">
+            <a class="btn btn-success" href="tel:+18447997900" role="button"><i class="fas fa-phone"></i>&nbsp;Call 844-799-7900</a>
+            <a class="btn btn-primary" href="mailto:contact@turquoisetruck.com" role="button"><i class="fas fa-envelope"></i>&nbsp;Email&nbsp;us</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+<!-- Masthead: ends -->
 
-  <div class="nav-tray sticky-top">
-<div class="container">
-<nav class="navbar navbar-expand-md bg-light navbar-light"><a class="navbar-brand" href="/">
-<img src="/static-assets/tt-nav.png" alt="">
-</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-<span class="navbar-toggler-icon"></span>
-</button>
+<!-- Copy from below line to just before footer, for WordPress -->
 
-<!-- navbar links-->
-<div id="collapsibleNavbar" class="collapse navbar-collapse">
-<ul class="navbar-nav">
- 	<li class="nav-item"><a class="nav-link" href="/about/">
-<i class="fas fa-user-friends"></i> About</a></li>
- 	<li class="nav-item"><a class="nav-link active" href="/contact/">
-<i class="far fa-comment-dots"></i> Contact</a></li>
- 	<li class="nav-item"><a class="nav-link" href="/drivers/">
-<i class="fas fa-truck-moving"></i> Drivers</a></li>
- 	<li class="nav-item"><a class="nav-link" href="/customers/">
-<i class="fas fa-warehouse"></i> Customers</a></li>
-</ul>
-</div>
-</nav></div>
-</div>
-<!-- page contents -->
+
+<!-- Main content: begins -->
 <div id="main-content" class="container" role="main">
-  <h1 class="h2 display-4">Contact Us</h1>
-  <p class="lead">Turquoise Trucking would love to hear from you. Give us a call, send us an email, and connect with us on social media. You can also drop by our office here in Cedar Rapids.</p>
+  <h1 class="display-4" style="font-size: 260%;">Welcome to Turquoise Trucking</h1>
+  <p class="lead">With over 20 years of experience in Cedar Rapids, we provide companies with safe, efficient, and reliable transportation solutions across the United States.</p>
 
+  <!-- Uncomment this section for an alert 
+  <div class="alert alert-warning text-center" role="alert">
+    <strong>Our office phones are currently experiencing technical problems.</strong></div>
+  -->
 
-  <!-- begin: Call us and Drop by-->
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card"><img class="card-img-top" src="/static-assets/contact-phone.jpg" alt="Closeup of a telephone keypad.">
+  <!-- 2021-03-10:  Instead of cards horizontally in a row, 
+                    move them in a column on left, move carousel to right.
+                    Most content will be above the fold. -->
+
+  <div class="row homerow">
+    <!-- Aside: begins -->
+    <div class="col-sm-4 col-md-6 col-lg-4">
+      <!-- Dive for Us card -->
+      <div class="card">
         <div class="card-body">
-
-          <!-- call us -->
-          <h2 class="h4 card-title">Call Us</h2>
-          <div class="card-text">
-            <p class="wps">Speak with us directly and let us know how we can help you.</p>
-            <div class="row contact-buttons">
-              <div class="col-md-10 col-lg-8">
-                <a class="btn btn-success btn-block" href="tel:+1844799790"><i class="fas fa-phone"></i> Call 844-799-7900</a>
-              </div>
-            </div>
-            <div class="row contact-buttons">
-              <div class="col-md-10 col-lg-8">
-                <!-- https://clipboardjs.com/ -->
-                <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script> 
-                <script>
-                  new ClipboardJS('#fax');
-                </script>
-                <button type="button" id="fax" 
-                  class="btn btn btn-secondary btn-block btn-blurbs" 
-                  data-clipboard-text="844-205-7353"
-                  title="Copy fax number to clipboard">
-                  <i class="fas fa-fax"></i> Fax 844-205-7353
-                </button>
-                <p class="wps">Copy fax number to the clipboard</p>
-              </div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Weekdays: <strong>6 AM</strong> to <strong>6 PM</strong> Central</li>
-              <li class="list-group-item">Saturdays: <strong>7 AM</strong> to <strong>12 PM</strong> Central</li>
-              <li class="list-group-item">Closed Sundays</li>
-            </ul>
-          </div>
-
+          <h2 class="home-card h4 card-title"><a href="/drivers/"><i class="fas fa-truck-moving"></i> Drive For Us</a></h2>
+          <p class="card-text">Company drivers and owner operators, your journey starts here.</p>
+          <a href="http://www.driver-reach.com/l/4rpbv" role="button" class="btn btn-info btn-block btn-turquoise" target="_blank" rel="noopener noreferrer">Apply&nbsp;Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <!-- Customers card -->
+      <div class="card">
+        <div class="card-body">
+          <h2 class="home-card h4 card-title"><a href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></h2>
+          <p class="card-text">Your freight delivered safely and on-time using our 2019 or newer trailers.</p>
+        </div>
+      </div>
+      <!-- About Us card -->
+      <div class="card">
+        <div class="card-body">
+          <h2 class="home-card h4 card-title"><a href="/about/"><i class="fas fa-user-friends"></i> About Us</a></h2>
+          <p class="card-text">Learn more about Turquoise and our commitment to you.</p>
+          <!--<a class="btn btn-outline-info btn-block" href="/contact/"><i class="far fa-comment-dots"></i> Contact Us</a> -->
         </div>
       </div>
     </div>
+    <!-- Aside: ends -->
 
-    <div class="col-sm-6">
-      <div class="card"><img class="card-img-top" src="/static-assets/contact-google-map.png" alt="Map with Turquoise Trucking location pinned.">
-        <div class="card-body">
-
-          <!-- drop by -->
-          <h2 class="h4 card-title">Drop By</h2>
-          <div class="card-text">
-            <div class="alert alert-danger" role="alert">
-              <a href="/covid-19/" class="alert-link">Due to COVID-19</a> please call ahead if visiting.
+    <!-- Carousel: begins -->
+    <div class="col-sm-8 col-md-6 col-lg-8">
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/static-assets/vert-slide1.png" alt="Truck at sunset.">
+            <div class="carousel-caption d-none d-md-block">
+              <p><span>This is the first slide.</span></p>
             </div>
-            <p class="wps">Visit our office in Cedar Rapids, Iowa. We are right off I-380 near US 30.</p>
-            <div class="row contact-buttons">
-              <div class="col-md-10 col-lg-8">
-                <a class="btn btn-outline-danger external-link btn-block btn-blurbs" href="https://g.page/TurquoiseTrucking?share" target="_blank" rel="noreferrer noopener"><i class="fas fa-map-marker-alt"></i> Directions</a>
-                <p class="wps">Directions open in Google Maps</p> <!-- why does this page build fail? -->
-              </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/static-assets/vert-slide2.png" alt="We honor our troops by paying them more. Veteran drivers earn more.">
+            <div class="carousel-caption d-none d-md-block">
+              <p><span>A second slide.</span></p>
             </div>
-            <div class="row contact-buttons">
-              <div class="col-md-10 col-lg-8">
-                <address>
-                  <p class="lead">3330 Southgate Ct SW Ste&nbsp;222<br>
-                  Cedar Rapids IA 52404</p>
-                </address>
-              </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/static-assets/vert-slide3.png" alt="Side view of a white Turquoise truck.">
+            <div class="carousel-caption d-none d-md-block">
+              <p><span>This will be the third slide.</span></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 h-100" src="/static-assets/vert-slide4.png" alt="Turquoise truck parked in front of a field.">
+            <div class="carousel-caption d-none d-md-block">
+              <p><span>Finally, a fourth slide.</span></p>
             </div>
           </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
   </div>
-  <!-- end: Call us and Drop by -->
-
-  <!-- begin: social media and email us -->
+  
+  <!-- Buttons below-the-fold: begins -->
   <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-
-          <!-- social media -->
-          <h2 class="h4 card-title">Social Media</h2>
-          <div class="card-text">
-            <p class="wps">Connect and follow us on these platforms.</p>
-            <div class="row contact-buttons">
-              <div class="col-md-10 col-lg-8">
-                  <!-- add further social media networks here -->
-                  <a class="btn btn-primary external-link fb-btn btn-block" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
-                  <a class="btn btn-primary external-link ig-btn btn-block" role="button" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
-                  <a class="btn btn-primary external-link linkedin-btn btn-block" role="button" href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i> LinkedIn</a>
-                  <a class="btn btn-danger external-link yt-btn btn-block" role="button" href="https://www.youtube.com/channel/UCFuaGJd23Of_bGWgfVyzPIA" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube fa-lg"></i> YouTube</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="col-sm-4">
+      <div class="btn-group btn-block" role="group" aria-label="Social media">
+        <a role="button" class="btn btn-outline-info home-social" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i><span class="hidden">Facebook</span></a>
+        <a role="button" class="btn btn-outline-info home-social" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i><span class="hidden">Instagram</span></a>
+        <a role="button" class="btn btn-outline-info home-social"  href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i><span class="hidden">LinkedIn</span></a>
+        <a role="button" class="btn btn-outline-info home-social"  href="https://www.youtube.com/channel/UCFuaGJd23Of_bGWgfVyzPIA" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube fa-lg"></i><span class="hidden">YouTube</span></a>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-
-          <!-- email us -->
-          <h2 class="h4 card-title">Email Us</h2>
-          <div class="card-text">  
-            <div class="row" style="margin-bottom: 1em;">
-              <div class="col-sm-4">
-                <img class="img-fluid contact-head" src="/static-assets/about-face-matt.png" alt="Matt, staring with full beard and unbuttoned shirt.">
-              </div>
-              <div class="col-sm-8">
-                <p class="lead"><strong>Drivers</strong> interested in Turquoise, do you have any questions?</p>
-                  <div class="row contact-buttons">
-                    <div class="col-md-12 col-lg-8">
-                      <a class="btn btn-primary btn-block" role="button" href="mailto:matt@turquoisetruck.com"><i class="fas fa-envelope"></i> Email Matt</a>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <img class="img-fluid contact-head" src="/static-assets/about-face-rashad.png" alt="Rashad, smiling with stubble beard and unbuttoned shirt.">
-              </div>
-              <div class="col-sm-8">
-                <p class="lead">Do you have <strong>corporate</strong> or <strong>relation</strong> questions? </p>
-                <div class="row contact-buttons">
-                  <div class="col-md-12 col-lg-8">
-                    <a class="btn btn-primary btn-block" role="button" href="mailto:contact@turquoisetruck.com"><i class="fas fa-envelope"></i> Email Rashad</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="col-sm-4">
+      <!-- <a class="btn btn-primary external-link fb-btn btn-block" role="button" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i> Follow us on Facebook</a> -->
+      <a class="btn btn-outline-dark btn-block home-button" href="/driver-verification/">
+        <i class="fas fa-user-check"></i> Driver Verification</a>
+    </div>
+    <div class="col-sm-4">
+      <a class="btn btn-outline-dark btn-block home-button" href="/covid-19/"><i class="fas fa-people-arrows"></i> COVID-19 Statement</a>
     </div>
   </div>
-  <!-- end: social media and email us -->
+  <!-- Buttons below-the-fold: ends -->
+
+<!-- Main content: ends -->
 </div>
 
 <!-- primary footer -->
@@ -462,6 +655,21 @@ footer {
         </div>
     </div>
 </div>
+
+
+<script>
+  $(document).ready(function(){
+    $(function() {
+            var url = location.pathname;
+            //var url2 = url1.replace(/\//g,'');
+            $('.nav-item a[href^="' + url + '"]')
+              .addClass('active');
+              //console.log("The active link should be " + url2);
+              //console.log("URL1 is "+ url1);
+              //console.log("URL2 is "+ url2);
+            });
+  });
+</script>
 
 </body>
 </html>
