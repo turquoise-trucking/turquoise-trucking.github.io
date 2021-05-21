@@ -1,0 +1,31 @@
+<html>
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var sites = [
+      "http://www.thinkgeek.com/",
+      "http://www.artzstudio.com/2009/04/jquery-performance-rules/",
+      "http://www.example.com"
+    ];
+    var currentSite = sites.length;
+
+    $(document).ready(function () {
+      var $iframe = $("iframe").attr("src","http://www.google.com");
+      setInterval(function() {
+        (currentSite == 0) ? currentSite = sites.length - 1 : currentSite = currentSite -1;
+        $iframe.attr("src",sites[currentSite]);
+      }, 7000);
+    });
+  </script>  
+  <style type="text/css" media="screen">
+    iframe {
+      height: 100%;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe></iframe>
+</body>
+</html>
