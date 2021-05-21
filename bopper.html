@@ -9,7 +9,7 @@
     var currentSite = sites.length;
 
     $(document).ready(function () {
-      var $iframe = $("iframe").attr("src","http://www.google.com");
+      var $iframe = $("iframe").attr("src","https://tracking.loadstop.com/App/Trackings");
       setInterval(function() {
         (currentSite == 0) ? currentSite = sites.length - 1 : currentSite = currentSite -1;
         $iframe.attr("src",sites[currentSite]);
