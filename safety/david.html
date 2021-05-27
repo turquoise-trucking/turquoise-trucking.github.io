@@ -1,0 +1,101 @@
+ <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>David Scores W01 to W20</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="safety.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      // LEAVE DATA OUT FOR INACTIVE DRIVERS
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Week', 'David',],
+          ['W01', 46,],
+          ['W02', 46,],
+          ['W03', 46,],
+          ['W04', 46,],
+          ['W05', 46,],
+          ['W06', 46,],
+          ['W07', 46,],
+          ['W08', 46,],
+          ['W09', 46,],
+          ['W10', 46,],
+          ['W11', 46,],
+          ['W12', 46,],
+          ['W13', 46,],
+          ['W14', 46,],
+          ['W15', 46,],
+          ['W16', 46,],
+          ['W17', 46,],
+          ['W18', 46,],
+          ['W19', 46,],
+          ['W20', 46,]
+        ]);
+
+        var options = {
+          title: 'David Safety Scores from W01 (January 4) to W20 (May 23)',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          vAxis: {baseline: 35}
+        };
+
+        
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="narration">
+      <h2>David</h2>
+      <h3><strong>19th</strong></h3>
+      <p>46 Average, lowest, and highest score</p>
+      <p>He is consistently not safe</p>
+    </div>
+    <div id="drivers">
+      <p><a href="index.html">Entire Fleet</a></p>
+      <p>
+        <a href="adam.html">Adam</a> &bull; 
+        <a href="al.html">Al</a> &bull; 
+        <a href="anthony.html">Anthony</a> &bull; 
+        <a href="brad.html">Brad</a>
+      </p>
+      <p>
+        <a href="conrad.html">Conrad</a> &bull; 
+        <a href="david.html">David</a> &bull; 
+        <a href="greg.html">Greg</a> &bull; 
+        <a href="jason.html">Jason</a> 
+      </p> 
+      <p>
+        <a href="joseph.html">Joseph</a> &bull; 
+        <a href="kwally.html">Kwally</a> &bull; 
+        <a href="larry.html">Larry</a> &bull; 
+        <a href="lisa.html">Lisa</a> 
+      </p>
+      <p>
+        <a href="mike.html">Mike</a> &bull; 
+        <a href="moe.html">Moe</a> &bull; 
+        <a href="nikita.html">Nikita</a> &bull;
+        <a href="orlando.html">Orlando</a> 
+      </p>
+      <p>
+        <a href="ricky.html">Ricky</a> &bull;
+        <a href="ronald.html">Ronald</a> &bull;
+        <a href="ryan-m.html">Ryan M</a> 
+      </p>
+      <p>
+        <a href="ryan-t.html">Ryan T</a> &bull;
+        <a href="salih.html">Salih</a> &bull;
+        <a href="tim.html">Tim</a> 
+      </p>
+    </div>
+    <div id="curve_chart"></div>
+
+  </body>
+</html>

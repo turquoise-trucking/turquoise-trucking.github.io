@@ -1,0 +1,103 @@
+ <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Brad Scores W01 to W20</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="safety.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      // LEAVE DATA OUT FOR INACTIVE DRIVERS
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Week', 'Brad',],
+          ['W01', 78,],
+          ['W02', 78,],
+          ['W03', 78,],
+          ['W04', 78,],
+          ['W05', 78,],
+          ['W06', 78,],
+          ['W07', 80,],
+          ['W08', 80,],
+          ['W09', 80,],
+          ['W10', 80,],
+          ['W11', 80,],
+          ['W12', 80,],
+          ['W13', 80,],
+          ['W14', 80,],
+          ['W15', 80,],
+          ['W16',80,],
+          ['W17', ,],
+          ['W18', ,],
+          ['W19', ,],
+          ['W20', ,]
+        ]);
+
+        var options = {
+          title: 'Brad Safety Scores from W01 (January 4) to W20 (May 23)',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          vAxis: {baseline: 35}
+        };
+
+        
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="narration">
+      <h2>Brad</h2>
+      <h3><strong>5th</strong></h3>
+      <p>79.4 Average</p>
+      <p>78 Lowest score</p>
+      <p>80 Highest score</p>
+      <p>He is consistently safe</p>
+    </div>
+    <div id="drivers">
+      <p><a href="index.html">Entire Fleet</a></p>
+      <p>
+        <a href="adam.html">Adam</a> &bull; 
+        <a href="al.html">Al</a> &bull; 
+        <a href="anthony.html">Anthony</a> &bull; 
+        <a href="brad.html">Brad</a>
+      </p>
+      <p>
+        <a href="conrad.html">Conrad</a> &bull; 
+        <a href="david.html">David</a> &bull; 
+        <a href="greg.html">Greg</a> &bull; 
+        <a href="jason.html">Jason</a> 
+      </p> 
+      <p>
+        <a href="joseph.html">Joseph</a> &bull; 
+        <a href="kwally.html">Kwally</a> &bull; 
+        <a href="larry.html">Larry</a> &bull; 
+        <a href="lisa.html">Lisa</a> 
+      </p>
+      <p>
+        <a href="mike.html">Mike</a> &bull; 
+        <a href="moe.html">Moe</a> &bull; 
+        <a href="nikita.html">Nikita</a> &bull;
+        <a href="orlando.html">Orlando</a> 
+      </p>
+      <p>
+        <a href="ricky.html">Ricky</a> &bull;
+        <a href="ronald.html">Ronald</a> &bull;
+        <a href="ryan-m.html">Ryan M</a> 
+      </p>
+      <p>
+        <a href="ryan-t.html">Ryan T</a> &bull;
+        <a href="salih.html">Salih</a> &bull;
+        <a href="tim.html">Tim</a> 
+      </p>
+    </div>
+    <div id="curve_chart"></div>
+
+  </body>
+</html>
