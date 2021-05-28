@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Conrad Scores W01 to W20</title>
+    <title>Larry Scores W01 to W20</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="safety.css">
@@ -14,31 +14,31 @@
       // LEAVE DATA OUT FOR INACTIVE DRIVERS
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Week', 'Conrad',],
-          ['W01', 91,],
-          ['W02', 91,],
-          ['W03', 91,],
-          ['W04', 91,],
-          ['W05', 91,],
-          ['W06', 91,],
-          ['W07', 91,],
-          ['W08', 91,],
-          ['W09', 91,],
-          ['W10', 91,],
-          ['W11', 91,],
-          ['W12', ,],
-          ['W13', 91,],
-          ['W14', 91,],
-          ['W15', 91,],
-          ['W16', 91,],
-          ['W17', 92,],
-          ['W18', 92,],
-          ['W19', 92,],
-          ['W20', 92,]
+          ['Week', 'Larry',],
+          ['W01', ,],
+          ['W02', ,],
+          ['W03', ,],
+          ['W04', ,],
+          ['W05', ,],
+          ['W06', ,],
+          ['W07', ,],
+          ['W08', ,],
+          ['W09', ,],
+          ['W10', 64,],
+          ['W11', 64,],
+          ['W12', 64,],
+          ['W13', 64,],
+          ['W14', 64,],
+          ['W15', 64,],
+          ['W16', 65,],
+          ['W17', 65,],
+          ['W18', 66,],
+          ['W19', 67,],
+          ['W20', 68,]
         ]);
 
         var options = {
-          title: 'Conrad Safety Scores from W01 (January 4) to W20 (May 23)',
+          title: 'Larry Safety Scores from W01 (January 4) to W20 (May 23)',
           curveType: 'function',
           legend: { position: 'bottom' },
           vAxis: {baseline: 35}
@@ -52,13 +52,14 @@
     </script>
   </head>
   <body>
-    <div class="safe" id="narration">
-      <h2>Conrad</h2>
-      <h3><strong>1st</strong></h3>
-      <p>91.2 Average</p>
-      <p>91 Lowest score</p>
-      <p>92 Highest score</p>
-      <p>He is consistently the safest</p>
+    <div class="average" id="narration">
+      <h2>Larry</h2>
+      <h3><strong>11th</strong></h3>
+      <p>64.55 Average</p>
+      <p>64 Lowest score</p>
+      <p>68 Highest score</p>
+      <p>He has improved.</p>
+      <p class="new">His safety score was generated from W10</p>
     </div>
     <div id="drivers">
       <p><a href="index.html">Entire Fleet</a></p>
@@ -69,7 +70,7 @@
         <a href="brad.html">Brad</a>
       </p>
       <p>
-        <strong><a href="conrad.html">Conrad</a></strong> &bull; 
+        <a href="conrad.html">Conrad</a> &bull; 
         <a href="david.html">David</a> &bull; 
         <a href="greg.html">Greg</a> &bull; 
         <a href="jason.html">Jason</a> 
@@ -77,7 +78,7 @@
       <p>
         <a href="joseph.html">Joseph</a> &bull; 
         <a href="kwally.html">Kwally</a> &bull; 
-        <a href="larry.html">Larry</a> &bull; 
+        <strong><a href="larry.html">Larry</a></strong> &bull; 
         <a href="lisa.html">Lisa</a> 
       </p>
       <p>
