@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Ricky Scores W01 to W20</title>
+    <title>Jerry Scores W01 to W20</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="safety.css">
@@ -14,31 +14,31 @@
       // LEAVE DATA OUT FOR INACTIVE DRIVERS
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Week', 'Ricky',],
-          ['W01', 50,],
-          ['W02', 50,],
-          ['W03', 50,],
-          ['W04', 50,],
-          ['W05', 52,],
-          ['W06', 52,],
+          ['Week', 'Jerry',],
+          ['W01', ,],
+          ['W02', ,],
+          ['W03', ,],
+          ['W04', ,],
+          ['W05', ,],
+          ['W06', ,],
           ['W07', ,],
-          ['W08', 52,],
-          ['W09', 51,],
-          ['W10', 51,],
-          ['W11', 51,],
-          ['W12', 51,],
-          ['W13', 51,],
-          ['W14', 51,],
-          ['W15', 51,],
-          ['W16', 51,],
-          ['W17', 51,],
-          ['W18', ,],
-          ['W19', 51,],
-          ['W20', 51,]
+          ['W08', ,],
+          ['W09', ,],
+          ['W10', ,],
+          ['W11', ,],
+          ['W12', ,],
+          ['W13', 59,],
+          ['W14', 59,],
+          ['W15', 61,],
+          ['W16', 62,],
+          ['W17', 63],
+          ['W18', 65,],
+          ['W19', 66,],
+          ['W20', 69,]
         ]);
 
         var options = {
-          title: 'Ricky Safety Scores from W01 (January 4) to W20 (May 23)',
+          title: 'Jerry Safety Scores from W01 (January 4) to W20 (May 23)',
           curveType: 'function',
           legend: { position: 'bottom' },
           vAxis: {baseline: 35}
@@ -52,14 +52,14 @@
     </script>
   </head>
   <body>
-    <div class="unsafe" id="narration">
-      <h2>Ricky</h2>
-      <h3><strong>17th</strong></h3>
-      <p>51 Average</p>
-      <p>50 Lowest score</p>
-      <p>52 Highest score</p>
-      <p>He is consistently not safe</p>
-      <p style="display: none;" class="new">His safety score was generated from W10</p>
+    <div class="average" id="narration">
+      <h2>Jerry</h2>
+      <h3><strong>15th</strong></h3>
+      <p>60.6 Average</p>
+      <p>59 Lowest score</p>
+      <p>69 Highest score</p>
+      <p>He has greatly improved</p>
+      <p class="new">Their safety score was generated from W13</p>
     </div>
     <div id="drivers">
       <p><a href="index.html">Entire Fleet</a></p>
@@ -76,7 +76,7 @@
         <a href="jason.html">Jason</a> 
       </p> 
       <p>
-        <a href="jerry.html">Jerry</a> &bull; 
+        <strong><a href="jerry.html">Jerry</a></strong> &bull; 
         <a href="joseph.html">Joseph</a> &bull; 
         <a href="kwally.html">Kwally</a> &bull; 
         <a href="larry.html">Larry</a>
@@ -89,7 +89,7 @@
       </p>
       <p>
         <a href="orlando.html">Orlando</a> &bull;
-        <strong><a href="ricky.html">Ricky</a></strong> &bull;
+        <a href="ricky.html">Ricky</a> &bull;
         <a href="ronald.html">Ronald</a> &bull;
         <a href="ryan-m.html">Ryan M</a> 
       </p>
