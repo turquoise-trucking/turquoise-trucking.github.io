@@ -404,13 +404,13 @@
         <div class="row dark">
           <ul class="col list-group list-group-flush">
             <li class="list-group-item"><i class="bi bi-check-lg"></i> Minimum 2 years of CDL A experience</li>
-            <li class="list-group-item"><i class="bi bi-check-lg"></i> Clean criminal background check</li>
-            <li class="list-group-item"><i class="bi bi-check-lg"></i> Clean MVR</li>
+            <li class="list-group-item"><i class="bi bi-check-lg"></i> At least 12 days in a row OTR <i class="bi bi-question-circle-fill"></i></li>
+            <li class="list-group-item"><i class="bi bi-check-lg"></i> Become a 1099 contractor</li>
           </ul>
           <ul class="col list-group list-group-flush">
-            <li class="list-group-item"><i class="bi bi-check-lg"></i> Minimum 12 days in a row OTR</li>
-            <li class="list-group-item"><i class="bi bi-check-lg"></i> No DWI or DUI</li>
-            <li class="list-group-item"><i class="bi bi-check-lg"></i> Pass drug test</li>
+            <li class="list-group-item"><i class="bi bi-check-lg"></i> Clean MVR & background check</li>
+            <li class="list-group-item"><i class="bi bi-check-lg"></i> No DWIs or DUIs</li>
+            <li class="list-group-item"><i class="bi bi-check-lg"></i> Pass a drug test</li>
           </ul>
         </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -428,8 +428,13 @@
   </div>
 </main>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<!-- bootstrap 5 bundle with popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+})
+</script>
 
 
       
