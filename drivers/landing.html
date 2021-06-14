@@ -102,6 +102,11 @@
   .footer p a {
     color: turquoise;
   }
+  .poplink {
+    text-decoration: none;
+    padding-left: 0.40em;
+    padding-right: 0.40em;
+  }
   </style>
 </head>
 
@@ -110,10 +115,11 @@
 <body data-bs-spy="scroll" data-bs-target="#driver-navbar" data-bs-offset="50" tabindex="0" >
 
 <script>
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
-  })
+  //var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  //var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  //return new bootstrap.Popover(popoverTriggerEl)
+  //})
+
 </script>
     
 <main>
@@ -157,7 +163,7 @@
     <img class="d-block mx-auto mb-4 turq-logo" src="../static-assets/turquoise-logo.png" alt="">
     <h1 class="display-5 fw-bold" style="color: white">Drive for Turquoise</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Over the road, across America. At Turquoise you're a name, not a number.</p>
+      <p class="lead mb-4">Over the road, across America. At Turquoise you're family, not a number.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a type="button" href="#ss2" class="btn btn-warning btn-lg px-4 gap-3">Company drivers</a>
         <a type="button" href="#ss3" class="btn btn-light btn-lg px-4">Owner operators</a>
@@ -409,7 +415,7 @@
         <div class="row dark">
           <ul class="col list-group list-group-flush">
             <li class="list-group-item"><i class="bi bi-check-lg"></i> Minimum 2 years of CDL A experience</li>
-            <li class="list-group-item"><i class="bi bi-check-lg"></i> At least 12 days in a row OTR <i data-bs-toggle="popover" title="Over the road policy" data-bs-content="Drivers accrue days off the longer they stay out. If you need to be home more often, let us know." class="bi bi-question-circle-fill"></i></li>
+            <li class="list-group-item"><i class="bi bi-check-lg"></i> At least 12 days in a row OTR <a class="poplink text-white" tabindex="0" role="button" data-bs-trigger="focus" data-bs-toggle="popover" title="Over the road policy" data-bs-content="The longer you're over the road, the more days off you get. Need more home time, let us know."><i class="bi bi-question-circle-fill"></i></a></li>
             <li class="list-group-item"><i class="bi bi-check-lg"></i> Become a 1099 contractor</li>
           </ul>
           <ul class="col list-group list-group-flush">
@@ -437,6 +443,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
 </script>
 
+<script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+</script>
 
       
   </body>
