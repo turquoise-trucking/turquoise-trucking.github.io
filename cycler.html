@@ -3,19 +3,21 @@
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <script>
-    var files=['cycler1.html','cycler2.html','cycler3.html']//etc
-    function loadlink(file) {
+    var index = 1;
+    function loadlink() {
   
-      $('#load_here').load(file, function () {
+      $('#load_here').load('cycler' + index + '.html', function () {
         $(this).unwrap().addClass('scale-in');
       });
     }
   
-    loadlink(files[0]); // This will run on page load
-    setInterval(function () {
-      var nextFile=files.shift();
-      loadlink(nextFile) // this will run after every 5 seconds
-      files.push(nextFile);
+    loadlink(); // This will run on page load
+    var timer = setInterval(function () {
+      index++;
+      loadlink() // this will run after every 1 minute
+      if(index == 5) {
+         clearInterval(timer);
+      }
     }, 60000);
   </script>
 </head>
