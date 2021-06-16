@@ -2,24 +2,8 @@
 <head>
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-  <script>
-    var index = 1;
-    function loadlink() {
-  
-      $('#load_here').load('cycler' + index + '.html', function () {
-        $(this).unwrap().addClass('scale-in');
-      });
-    }
-  
-    loadlink(); // This will run on page load
-    var timer = setInterval(function () {
-      index++;
-      loadlink() // this will run after every 1 minute
-      if(index == 4) {
-         clearInterval(timer);
-      }
-    }, 30000);
-  </script>
+  <meta http-equiv="refresh" content="30;url=cycler1.html">
+
 </head>
 <body>
 <div id="load_here"></div>
