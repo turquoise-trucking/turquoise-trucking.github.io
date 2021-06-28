@@ -69,6 +69,23 @@
       color: turquoise;
       padding-left: 0em;
     }
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      bottom: 0;
+      top: auto;
+    }
+    .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      transform-origin: right bottom;
+    }
+    .swiper-container-horizontal > .swiper-pagination-progressbar,
+    .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+      bottom: 0;
+      top: auto;
+    }
+    .swiper-container-vertical > .swiper-pagination-progressbar,
+    .swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+      bottom: 0;
+      top: auto;
+    }
     @media screen 
       and (min-width: 800px) {
         .intro p {
