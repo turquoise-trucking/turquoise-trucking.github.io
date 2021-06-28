@@ -8,38 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&family=Roboto&display=swap" rel="stylesheet">
   <!-- swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
     .swiper-container {
-      width: 600px;
-      height: 300px;
+      width: 90%;
+      height: 90%;
     }
   </style>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    });
-  </script>
 </head>
 
 
@@ -62,7 +37,31 @@
     <div class="swiper-button-next"></div>
 
     <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    <!--<div class="swiper-scrollbar"></div>-->
   </div>
+
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //  el: '.swiper-scrollbar',
+      // },
+    });
+  </script>
   </body>
 </html>
