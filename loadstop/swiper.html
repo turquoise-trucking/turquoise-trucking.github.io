@@ -10,9 +10,24 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <style>
-    .swiper-container {
+    /*.swiper-container {
       width: 90%;
       height: 90%;
+    }*/
+    .swiper-slide img{
+      object-fit: scale-down;
+      height: 100vh;
+    }
+    .swiper-slide p {
+      font-size: 200%;
+      color: white;
+      background: black;
+      /*position: absolute;*/
+      font-family: Nunito;
+    }
+    .small {
+      font-size: 100%;
+      position: relative;
     }
   </style>
 </head>
@@ -24,9 +39,26 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">
+        <img src="01.png">
+      </div>
+      <div class="swiper-slide">
+        <p class="small">Hi, Turquoise driver. This is John. Today, I’m going to show you how to use LoadStop Driver. If this is your first video of orientation, great! If you’re watching this after a slew of safety videos, I’m sorry. (Laughter)</p>
+        <p class="small">I’m going to make one request. Please don’t fast forward through this. LoadStop is crucial software to learn here at Turquoise. You can pause this video at any time.</p>
+        <p class="small">Download LoadStop Driver from the App Store (iPhone) or Google Play (Android) and follow along.</p>
+        <p class="small">LoadStop gives you dispatch info and an easy way to submit paperwork. It also tracks you during a load and automatically (or manually) creates events we can use to determine in and out times.</p>
+        <p class="small">If you’re a company driver and using a truck tablet it might be logged in to another driver. You can press the hamburger (3 lines) menu and tap Log Out to get to this screen.</p>
+        <p class="small">First, let’s sign up! Chances are this is your first time using LoadStop.</p>
+        <p class="small">Click the gray Sign Up button.</p>
+        <img src="01.png">
+        
+      </div>
+      <div class="swiper-slide">
+        <img src="02.png">
+      </div>
+      <div class="swiper-slide">
+        <img src="02.png">
+        <p>Beep</p></div>
       ...
     </div>
     <!-- If we need pagination -->
