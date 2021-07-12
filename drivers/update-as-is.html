@@ -397,11 +397,26 @@ and (min-width: 700px) {
 .driver-heading-photo p {
   font-size: 7vw;
 }
+/* tightens bootstrap 4.x stypes for mobile */
+.card-img-overlay, .card-body {
+  padding: 0.25rem
+}
+.card-header, .list-group-item {
+  padding: 0.4rem;
+}
 @media screen 
   and (min-width: 800px) {
     .driver-heading-photo p {
-      font-size: 2vw;
+      font-size: 4vw;
     }
+    /* these reset stypes to defaults from bootstrap 4.x */
+    .card-img-overlay, .card-body {
+      padding: 1.25rem
+    }
+    .card-header, .list-group-item {
+      padding: 0.75rem 1.25rem;
+    }
+  }
 </style>
 </head>
 <body class="home page-template-default page page-id-2323">
@@ -514,7 +529,7 @@ and (min-width: 700px) {
 </div>
 
 <div class="card text-white">
-  <img src="7004-flag-wide.jpg" class="card-img" alt="Blue semi truck with Turquoise Trucking decals parked with an American flag behind it.">
+  <img src="7004-flag-wide.jpg" class="card-img" alt="Blue Cascadia truck with Turquoise Trucking decals parked with an American flag behind it.">
     <div class="card-img-overlay driver-heading-photo">
       <p class="card-title display-4">Company Drivers</p>
     </div>
@@ -548,6 +563,7 @@ and (min-width: 700px) {
             </ul>
           </div>
         </div>
+        <h3 class="text-center">Solo & Team</h3>
         <ul style="text-align: center;" class="list-group list-group-flush">
           <li class="list-group-item">Detention, Layover, and Extra Stops are paid</li>
           <li class="list-group-item">Occupational accidental insurance</li>
@@ -580,12 +596,10 @@ and (min-width: 700px) {
 </div>
 
 <div class="card text-white">
-  <img src="8536-freightliner1-wide.jpg" class="card-img" alt="Blue truck parked near trees.">
-  <!--
-  <div class="card-img-overlay" style="background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.20) 75%);">
+  <img src="8536-freightliner1-wide.jpg" class="card-img" alt="Blue Cascadia truck parked near trees.">
+  <div class="card-img-overlay driver-heading-photo">
     <p class="card-title display-4">Owner Operators</p>
   </div>
--->
 </div>
 
 <div class="row">
