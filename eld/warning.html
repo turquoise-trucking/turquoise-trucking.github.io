@@ -40,6 +40,7 @@
     main {
       margin-top: 0;
       padding: 0em;
+      z-index: 0;
     }
     #border {
       border: 0.5em dashed black;
@@ -59,10 +60,17 @@
     h1 {
       font-size: 8vw;
     }
-    h1, #due {
+    h1 {
       background: black;
       /* color: turquoise;*/
       color: rgba(235, 235, 0,1);
+    }
+    #due {
+      color: rgba(235, 235, 0,1);
+      background: black;
+    }
+    .turquoise {
+      background: rgba(235, 235, 0,1);
     }
     #any, #due {
       font-size: 5vw;
@@ -79,6 +87,7 @@
     #result {
       font-size: 6vw;
       font-weight: 800;
+      color: black;
     }
     #eld {
       font-size: 12vw;
@@ -94,6 +103,24 @@
     sup {
       font-size: 2.5vw;
     }
+    section {
+      color: black;
+      background: rgba(0,0,0,0);
+      z-index: 15;
+    }
+    img {
+      position:fixed;
+      /*
+      width: 80vw;
+      top: 10em;
+      bottom: 1em;
+      left: 2em; */
+      width: 250px;
+      bottom: 60px;
+      /*left: 2.9em;*/
+      left: 115px;
+      z-index: 0;
+    }
   </style>
 </head>
 
@@ -102,26 +129,29 @@
   <main>
     <h1>WARNING</h1>
     <div id="border">
-      <p id="any">Any Violation Occurence</p>
-      <p id="eld">KeepTruckin</p>
-      <p id="due">Due to Driver Negligence</p>
-      <p id="result">Will Result In:</p>
-      <section>
-        <div>
-          1<sup>st</sup> Violation<br>
-          2<sup>nd</sup> Violation<br>
-          3<sup>rd</sup> Violation<br>
-          4<sup>th</sup> Violation  
+      <div class="turquoise"> <!-- To keep border yellow and inside Turquoise, must enclose sign -->
+        <p id="any">Any Violation Occurence</p>
+        <p id="eld">KeepTruckin</p>
+        <p id="due">Due to Driver Negligence</p>
+        <p id="result">Will Result In:</p>
+        <section>
+          <div>
+            1<sup>st</sup> Violation<br>
+            2<sup>nd</sup> Violation<br>
+            3<sup>rd</sup> Violation<br>
+            4<sup>th</sup> Violation  
+          </div>
+          <div>
+            $75 Fine<br>
+            $150 Fine<br>
+            $500 Fine<br>
+            <strong>TERMINATION<br>
+            WITHOUT REHIRE</strong>
+          </div>
+        </section>
+        <img src="turquoise-logo.png">
+        <!--<p><strong>WITHOUT REHIRE</strong></p>-->
         </div>
-        <div>
-          $75 Fine<br>
-          $150 Fine<br>
-          $500 Fine<br>
-          <strong>TERMINATION<br>
-          WITHOUT REHIRE</strong>
-        </div>
-      </section>
-      <!--<p><strong>WITHOUT REHIRE</strong></p>-->
     </div>
   </main>
    
