@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Home Page &bull; Turquoise Trucking</title>
+<title>Update &bull; Turquoise Trucking</title>
 <meta name="author" content="John Earl Hardesty">
 
 <!-- 2021-03-25 prevents robots from listing this page -->
@@ -53,600 +53,235 @@
 <script src="https://kit.fontawesome.com/74abbf3163.js" crossorigin="anonymous"></script>
 <!-- <link rel="stylesheet" href="wcag-aaa.css"> -->
 
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
+<style type="text/css">
 
-
-
-
-
-
-/* John Earl Hardesty 2021-03-08
-
-Checklist to publish
-- Copy from navigation to footer, check the previous page on WordPress site for bounds
-- Any media using absolute links must be made relative
-  > http://turquoisetruck.com/static-assets/about-face-matt.png  (WRONG)
-  > /static-assets/about-face-matt.png (Correct)
-- Integrate styles into the primary stylesheet
-
- */
-
-
-
-
-
-/* 2021 Contact page styles, up to but NOT including footer hide */
-.fb-btn {
-    /* top to bottom gradient, #17A9FC to #0269E3 */
-    background: rgb(23,169,252);
-    background: linear-gradient(180deg, rgba(23,169,252,1) 0%, rgba(2,105,227,1) 100%) !important;
-}
-.ig-btn {
-    /* top left to bottom right, #4A69D5 to #E02D6F */
-    background: rgb(74,105,213);
-    background: linear-gradient(180deg, rgba(74,105,213,1) 0%, rgba(224,45,111,1) 100%);
-}
-.linkedin-btn {
-    background: #0A66C2;
-}
-.yt-btn {
-  color: white;
-  background: #FF0000;
-}
-.yt-btn:hover {
-  background: white;
-  color: black;
-}
-.yt-btn:hover i {
-    color: #FF0000;
-}
-
-.contact-buttons {
-    /* must go with row NOT col */
-    justify-content: center;
-}
-.contact-buttons div a, .contact-buttons div button {
-    font-size: large;
-}
-.contact-head {
-    filter: drop-shadow(0px 2px 1px rgb(110,110,110));
-}
-.btn-blurbs {
-    /* zero the margin from Bootstrap 4.x btn-block class */
-    margin-bottom: 0em !important;
-}
-.btn-blurbs+p {
-    margin-top: 0em;
-    padding-top: 0em;
-    font-size: small;
-    text-align: center;
-}
-/* neat style, hold onto it but Rashad doesn't like it  */
-.home-card-neat i {
-  position: absolute;
-  top: -0.15em;
-  left: -0.15em;
-  font-size: 280%;
-  text-shadow: 0px 2px 2px rgb(50,150,150);
-  color: turquoise;
-}
-.home-card i {
-  position: absolute;
-  top: 0.2em;
-  left: 0.2em;
-  font-size: 150%;
-  text-shadow: 0px 2px 2px rgb(50,150,150);
-  color: turquoise;
-}
-.home-button i {
-  color: turquoise;
-  font-size: 150%;
-  text-shadow: 0px 1px 0px rgb(50,150,150);
-}
-.home-card {
-  text-align: center;
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-  .home-card i {
-    font-size: 150%;
+  .driver-heading-photo {
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.20) 75%);
   }
-}
-.btn-turquoise {
-  /* WCAG-AA */
-  color: #2B2B2B;
-  background: #30d5c8;
-  font-weight: bold;
-}
-.carousel-caption span {
-  background: rgb(0,0,0,0.5); 
-  border-radius: 5px; 
-  padding: 0.1em 0.5em 0.25em;
-  font-size: large;
-}
-/* OVERWRITING STYLES */
-.card-title a:link,
-.card-title a:visited,
-.card-title a:active {
-    color: #0F7169; 
-}
-.card-title a:link {
-  text-decoration: underline;
-}
-.card-title {
-  margin-bottom: 0.5em;
-}
-.card .btn-block {
-  margin-bottom: 0em !important;
-}
-.homerow .card {
-  margin-bottom: 0.75em !important
-}
-.homerow .card-body {
-  padding: 0.6em 1em;
-}
-.home-social {
-  border: 1px solid #dfdfdf;
-  color: #0F7169;
-  font-size: 120%;
-}
-.home-social:hover, .home-button:hover {
-  background: #0F7169;
-  color: white;
-}
-.home-button {
-  border: 1px solid #0F7169;
-  color: #0F7169;
-  font-weight: bold;
-}
-.call-us {
-  background: #208337
-}
-.nav-tray {
-  box-shadow: 0px 1px 5px #ccc;
-}
-.navbar {
-  /*padding: 0.3em 0.2em;*/
-  padding-left: 0em;
-}
-nav {
-    margin-bottom: 0em !important;
-}
-footer {
-  /* testing, remove footer, masthead */
-  display: none;
-}
-iframe {
-  margin: 2em auto 1em;
-  float: right;
-  overflow:hidden;
-  width: 18rem;
-  height:2.5rem;
-  justify-content: center;
-  filter:hue-rotate(60deg);
-}
-.navbar-brand img {
-  width: 52px; /* 52px for other */
-  height: 32px;
-  opacity: 0.8;
-}
-.btn-outline-success {
-  color: #1B6F2E;
-  border-color: #1B6F2E;
-}
-.btn-outline-success:hover {
-  background-color:#1B6F2E;
-}
-@media (max-width: 425px) { /* Mobile styles */
-  .nav-link {
-    font-size: 120%;
-    margin: 0.5em 1em 1.6em;
-    border: 1px solid #dfdfdf;
-    border-radius: 10px;
-    background: #eee;
-    color: rgba(0,0,0,0.75) !important;
+  .driver-heading-photo p {
+    font-size: 7vw;
   }
-  .nav-link i {
-    font-size: 120%;
-    padding: 0.1em 1em;
-    color: #0F7169;
+  /* tightens bootstrap 4.x stypes for mobile */
+  .card-img-overlay, .card-body {
+    padding: 0.25rem
   }
-  .nav-item .active {
-    background: #0F7169;
-    color: rgba(255,255,255,0.95) !important;
-    font-weight: bold;
+  .card-header, .list-group-item {
+    padding: 0.4rem;
   }
-  .nav-item .active i {
-    color: rgba(255,255,255,0.75) !important;
-  }
-  .nav-item:first-child {
-    padding-top: 1em;
-  }
-  .nav-link[href^="/abo"]::after {
-    content: " Turquoise";
-  }
-  .nav-link[href^="/cont"]::after {
-    content: " Us";
-  }
-  .nav-link[href^="/dri"] {
-    content: "Drive for Turquoise";
-  }
-  iframe {
-    float: none;
-    margin: 0.5em auto;
-    width: 75%;
-    transition: box-shadow 0.5s;
-  }
-  iframe:focus {
-    box-shadow: 0px 10px 10px #bbb;
-    width: 85%;
-  }
-  .site-search {
-    text-align: center;
-  }
-
-  /* Need jQuery or similar to change classes for button press
-  https://stackoverflow.com/questions/15811214/change-style-onclick
-  .nav-tray {
-    transition: box-shadow 0.5s;
-  }
-  .nav-tray:focus-within {
-  box-shadow: 0px 10px 10px #bbb;
-  } */
-}
-/*.nav-item .active {  Pill look 
-  color: black !important;
-  background: white;
-  transform: scale(1.1);
-  border: 1px solid #ddd;
-  border-width: 0px 1px 1px 1px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 2px #ddd;
-  margin: 0em 1em;
-}*/
-.nav-item a {
-  margin: 5px 0.25em 0em;
-}
-.nav-item .active {
-  color: black !important;
-  border-top: 5px solid turquoise;
-  border-bottom: none;
-  background: rgb(64,224,208);
-  background: linear-gradient(180deg, rgba(64,224,208,0.4) 0%, rgba(255,255,255,1) 35%);
-  margin-top: 0em;
-}
-.navbar {
-  padding: 0.2em 0em;
-}
-/*.nav-item a:link, .nav-item a:visited {
-  transition: transform 0.1s ease-in-out;
-}
-.nav-item a:hover {
-  transform: scale(1.1);
-}*/
-.nav-item .active i {
-  color: #0F7169;
-}
-@media only screen
-and (min-width: 700px) {
-  nav .form-inline a {
-    position: absolute;
-    right: 0em;
-  }
-}
-
-/* footer color changes to meet WCAG-AA 
-   footer work has moved to the driver verification page but should be in its own new-footer page */
-/*
-.btn-group {
-    filter: drop-shadow(0px 2px 3px rgb(120,170,170));
-}
-.btn-group a {
-    padding: 0.25em 0.75em;
-}
-.btn-group a i {
-    margin: 0 auto;
-}
-.bg-turquoise {
-    color: black;
-    background: #BCF0EE !important;
-    border: 1px solid rgb(0,0,0,0) !important;
-}
-.footer {
-    border-top: 1px solid #68F1E6 !important;
-}
-.footer a {
-    color: #17726B !important;
-}
-.footer-dark {
-    background: #111 !important;
-    color: #D8F8F5 !important;
-}
-.footer-dark a   {
-    color: #31D6C8 !important;
-}
-.nav-home a:hover i,
-.nav-about a:hover i,
-.nav-contact a:hover i,
-.nav-drivers a:hover i,
-.nav-customers a:hover i {
-	color: black !important;
-}
-.contact-list a:hover i.fa-phone,
-.contact-list a:hover i.fa-map-marker-alt,
-.contact-list a:hover i.fa-envelope,
-.contact-list a:hover i.fa-fax {
-	color: black !important;
-} */
-
-.driver-heading-photo {
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.20) 75%);
-}
-.driver-heading-photo p {
-  font-size: 7vw;
-}
-/* tightens bootstrap 4.x stypes for mobile */
-.card-img-overlay, .card-body {
-  padding: 0.25rem
-}
-.card-header, .list-group-item {
-  padding: 0.4rem;
-}
-@media screen 
-  and (min-width: 800px) {
-    .driver-heading-photo p {
-      font-size: 4vw;
+  @media screen 
+    and (min-width: 800px) {
+      .driver-heading-photo p {
+        font-size: 4vw;
+      }
+      /* these reset stypes to defaults from bootstrap 4.x */
+      .card-img-overlay, .card-body {
+        padding: 1.25rem
+      }
+      .card-header, .list-group-item {
+        padding: 0.75rem 1.25rem;
+      }
     }
-    /* these reset stypes to defaults from bootstrap 4.x */
-    .card-img-overlay, .card-body {
-      padding: 1.25rem
-    }
-    .card-header, .list-group-item {
-      padding: 0.75rem 1.25rem;
-    }
-  }
 </style>
 </head>
+
 <body class="home page-template-default page page-id-2323">
 
+<!-- masthead goes here -->
 
-
-<div class="nav-tray sticky-top">
-<div class="container">
-<nav class="navbar navbar-expand-md bg-light navbar-light">
-<!-- Brand -->
-<a class="navbar-brand" href="/">
-<img src="/static-assets/tt-nav.png" alt="">
-</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<!-- navbar links-->
-<div class="collapse navbar-collapse" id="collapsibleNavbar">
-<ul class="navbar-nav">
- <li class="nav-item">
-<a class="nav-link" href="/about/"><i class="fas fa-user-friends"></i> About Turquoise</a></li>
- <li class="nav-item">
-<a class="nav-link" href="/contact/"><i class="far fa-comment-dots"></i> Contact Us</a></li>
- <li class="nav-item">
-  <a class="nav-link active" href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
- <li class="nav-item">
-<a class="nav-link" href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></li>
-</ul>
-</div>
-</nav></div>
-</div>
 <!-- page contents -->
 <div id="main-content" class="container" role="main">
-<h1 class="display-4">Drive For Us</h1>
-<p class="lead">We are always looking for <abbr title="Over the road">OTR</abbr> company drivers and owner operators to join our family. No-touch freight, no forced dispatch, weekly pay, and more. Drive Turquoise.</p>
+  <h1 class="display-4">Drive For Us</h1>
+  <p class="lead">We are always looking for <abbr title="Over the road">OTR</abbr> company drivers and owner operators to join our family. No-touch freight, no forced dispatch, weekly pay, and more. Drive Turquoise.</p>
 
-<div class="container-fluid">
-<div class="row justify-content-center">
-<div class="col">
-              <a href="http://www.driver-reach.com/l/4rpbv" role="button" class="btn btn-info btn-lg btn-block bg-turquoise" target="_blank" rel="noopener noreferrer">Drivers&nbsp;Apply&nbsp;Now&nbsp;<i class="fas fa-external-link-alt"></i></a></div>
-</div>
-
-<div class="row">
-<div class="col-md-6">
-<div class="card">
-<h2 class="card-header">
-                      Turquoise Driver Perks</h2>
-<div class="card-body">
-<p class="card-text">All Turquoise drivers enjoy these perks:</p>
-
-<div class="row">
-<div class="col-sm">
-<ul class="list-group list-group-flush">
- <!--
- <li class="list-group-item list-group-item-success"><strong>$1500 Sign on Bonus</strong></li>
--->
- <li class="list-group-item">Yearly up to <strong>$8000</strong> in Safety Bonuses</li>
- <li class="list-group-item">Health Insurance Available</li>
- <li class="list-group-item">Direct Deposit</li>
- <li class="list-group-item"><strong>100% No-touch</strong> Freight</li>
- <li class="list-group-item">Dry Van, Live Load/Unload</li>
- <li class="list-group-item">Referral Bonus Program</li>
- <li class="list-group-item">Veterans are paid extra</li>
- <li class="list-group-item">Guaranteed Home Time</li>
- <li class="list-group-item">Paid Weekly</li>
- <li class="list-group-item">Cash Advances Available</li>
- <li class="list-group-item">Assigned Equipment</li>
- <li class="list-group-item">1099 Contractor position</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="col-md-6">
-<div class="card">
-                  <img src="/static-assets/drivers-hirearea-truck.png" class="card-img-top" alt="">
-<div class="card-body">
-<h2 class="card-title">Our Hiring Area</h2>
-<p class="card-text">We prefer to hire drivers from the Eastern US. However, if you live in one of the following states exceptions can be made on a case by case basis. We&#8217;re flexible.</p>
-
-<div class="row">
-<div class="col">
-<ul>
- <li>Arizona</li>
- <li>California</li>
- <li>Colorado</li>
- <li>North Dakota</li>
- <li>South Dakota</li>
- <li>Florida</li>
- <li>Idaho</li>
-</ul>
-</div>
-<div class="col">
-<ul>
- <li>Montana</li>
- <li>Nevada</li>
- <li>New Mexico</li>
- <li>Oregon</li>
- <li>Utah</li>
- <li>Washington</li>
- <li>Wyoming</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="card text-white">
-  <img src="7004-flag-wide.jpg" class="card-img" alt="Blue Cascadia truck with Turquoise Trucking decals parked with an American flag behind it.">
-    <div class="card-img-overlay driver-heading-photo">
-      <p class="card-title display-4">Company Drivers</p>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col">
+        <a href="http://www.driver-reach.com/l/4rpbv" role="button" class="btn btn-info btn-lg btn-block bg-turquoise" target="_blank" rel="noopener noreferrer">Drivers&nbsp;Apply&nbsp;Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
+      </div>
     </div>
-</div>
 
-<div class="row">
-  <div class="col-md-8">
-    <div class="card">
-      <!-- <img class="card-img-top" src="/static-assets/drivers-company.jpg" alt=""> -->
-      <h2 class="card-header">Company Drivers</h2>
-      <div class="card-body">
-        <div class="card-text">Drive a Turquoise truck and join the family.</div>
-        <div class="row">
-          <div class="col-md-6">
-            <h3 class="text-center">Solo</h3>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">$10,400 <strong>sign on</strong> bonus</li>
-              <li class="list-group-item">$1400 <strong>min. guaranteed</strong> per week</li>
-              <li class="list-group-item">Earn up to <strong>$86,000</strong> per year, up to 60 cpm loaded/empty pro miles</li>
-              <li class="list-group-item"><strong>Safety bonus</strong> program</li>
-              <li class="list-group-item"><strong>Rider and pet program</strong></li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h3 class="text-center">Team</h3>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">$20,400 <strong>sign on</strong> bonus (split)</li>
-              <li class="list-group-item">$3200 <strong>min. guaranteed</strong> per week (split)</li>
-              <li class="list-group-item">Earn up to <strong>$180,000</strong> per year, up to 74 cpm (split) loaded/empty pro miles</li>
-              <li class="list-group-item"><strong>Safety and performance bonus</strong> program
-            </ul>
+    <!-- all perks & hiring area -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <h2 class="card-header">Turquoise Driver Perks</h2>
+          <div class="card-body">
+            <p class="card-text">All Turquoise drivers enjoy these perks:</p>
+            <div class="row">
+              <div class="col-sm">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Yearly up to <strong>$8000</strong> in Safety Bonuses</li>
+                  <li class="list-group-item">Health Insurance Available</li>
+                  <li class="list-group-item">Direct Deposit</li>
+                  <li class="list-group-item"><strong>100% No-touch</strong> Freight</li>
+                  <li class="list-group-item">Dry Van, Live Load/Unload</li>
+                  <li class="list-group-item">Referral Bonus Program</li>
+                  <li class="list-group-item">Veterans are paid extra</li>
+                  <li class="list-group-item">Guaranteed Home Time</li>
+                  <li class="list-group-item">Paid Weekly</li>
+                  <li class="list-group-item">Cash Advances Available</li>
+                  <li class="list-group-item">Assigned Equipment</li>
+                  <li class="list-group-item">1099 Contractor position</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <h3 class="text-center">Solo & Team</h3>
-        <ul style="text-align: center;" class="list-group list-group-flush">
-          <li class="list-group-item">Detention, Layover, and Extra Stops are paid</li>
-          <li class="list-group-item">Occupational accidental insurance</li>
-          <li class="list-group-item">Loaded and empty miles are paid</li>
-          <li class="list-group-item">Prepass and TollPass equipped</li>
-          <li class="list-group-item">Paid orientation</li>
-          <li class="list-group-item">Paid Time Off</li>         
-        </ul>
       </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <h2 class="card-header">Requirements for Company Drivers</h2>
-      <div class="card-body">
-        <div class="card-text">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Minimum 2 years of CDL A experience</li>
-            <li class="list-group-item">Valid CDL A License</li>
-            <li class="list-group-item">Minimum Age 25 Years Old</li>
-            <li class="list-group-item">Clean MVR</li>
-            <li class="list-group-item">Pass drug test</li>
-            <li class="list-group-item">No DWI or DUI within last 5 years</li>
-            <li class="list-group-item">Clean criminal background check</li>
-          </ul>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="/static-assets/drivers-hirearea-truck.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h2 class="card-title">Our Hiring Area</h2>
+            <p class="card-text">We prefer to hire drivers from the Eastern US. However, if you live in one of the following states exceptions can be made on a case by case basis. We&#8217;re flexible.</p>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li>Arizona</li>
+                  <li>California</li>
+                  <li>Colorado</li>
+                  <li>North Dakota</li>
+                  <li>South Dakota</li>
+                  <li>Florida</li>
+                  <li>Idaho</li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>Montana</li>
+                  <li>Nevada</li>
+                  <li>New Mexico</li>
+                  <li>Oregon</li>
+                  <li>Utah</li>
+                  <li>Washington</li>
+                  <li>Wyoming</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div class="card text-white">
-  <img src="8536-freightliner1-wide.jpg" class="card-img" alt="Blue Cascadia truck parked near trees.">
-  <div class="card-img-overlay driver-heading-photo">
-    <p class="card-title display-4">Owner Operators</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="card">
-      <!-- <img class="card-img-top" src="/static-assets/drivers-owner.jpg" alt=""> -->
-      <h2 class="card-header">Owner Operators</h2>
-      <div class="card-body">
-        <div class="card-text">Bring your own equipment and drive for our family.</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><strong>$1,500</strong> sign on bonus </li>
-          <li class="list-group-item">Average <strong>$9985</strong> weekly gross revenue for solo dry van </li>
-          <li class="list-group-item">Average <strong>$3.14</strong> per loaded mile </li>
-          <li class="list-group-item">Average <strong>$6800 cash out</strong> weekly for solo </li>
-          <li class="list-group-item">Turquoise Transparency Policy <br> We <strong>forward rate confirmation</strong> from customer </li>
-          <li class="list-group-item">Get <strong>100% of Fuel Surcharge</strong> pay </li>
-          <li class="list-group-item">Fuel discount program <strong>save up to</strong> $11,585 per year </li>
-          <li class="list-group-item">Optional Power only drop and hook loads available </li>
-          <li class="list-group-item"><strong>No forced dispatch</strong>; decide your destination/area of operation </li>
-          <li class="list-group-item">Repair emergency bill assist </li>
-          <li class="list-group-item">Occupational accidental insurance available </li>
-        </ul>
-      </div>
+    <div class="card text-white">
+      <img src="7004-flag-wide.jpg" class="card-img" alt="Blue Cascadia truck with Turquoise Trucking decals parked with an American flag behind it.">
+        <div class="card-img-overlay driver-heading-photo">
+          <p class="card-title display-4">Company Drivers</p>
+        </div>
     </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card">
-      <h2 class="card-header">Requirements for Owner Operators</h2>
-      <div class="card-body">
-        <div class="card-text">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">8 years old or newer equipment</li>
-            <li class="list-group-item">Equipment must pass DOT</li>
-            <li class="list-group-item">Minimum 2 years of CDL A experience</li>
-            <li class="list-group-item">Valid CDL A License</li>
-            <li class="list-group-item">Minimum Age 25 Years Old</li>
-            <li class="list-group-item">Clean MVR</li>
-            <li class="list-group-item">Pass drug test</li>
-            <li class="list-group-item">No DWI or DUI within last 5 years</li>
-          </ul>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <!-- <img class="card-img-top" src="/static-assets/drivers-company.jpg" alt=""> -->
+          <h2 class="card-header">Company Drivers</h2>
+          <div class="card-body">
+            <div class="card-text">Drive a Turquoise truck and join the family.</div>
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-center">Solo</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">$10,400 <strong>sign on</strong> bonus</li>
+                  <li class="list-group-item">$1400 <strong>min. guaranteed</strong> per week</li>
+                  <li class="list-group-item">Earn up to <strong>$86,000</strong> per year, up to 60 cpm loaded/empty pro miles</li>
+                  <li class="list-group-item"><strong>Safety bonus</strong> program</li>
+                  <li class="list-group-item"><strong>Rider and pet program</strong></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h3 class="text-center">Team</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">$20,400 <strong>sign on</strong> bonus (split)</li>
+                  <li class="list-group-item">$3200 <strong>min. guaranteed</strong> per week (split)</li>
+                  <li class="list-group-item">Earn up to <strong>$180,000</strong> per year, up to 74 cpm (split) loaded/empty pro miles</li>
+                  <li class="list-group-item"><strong>Safety and performance bonus</strong> program
+                </ul>
+              </div>
+            </div>
+            <h3 class="text-center">Solo & Team</h3>
+            <ul style="text-align: center;" class="list-group list-group-flush">
+              <li class="list-group-item">Detention, Layover, and Extra Stops are paid</li>
+              <li class="list-group-item">Occupational accidental insurance</li>
+              <li class="list-group-item">Loaded and empty miles are paid</li>
+              <li class="list-group-item">Prepass and TollPass equipped</li>
+              <li class="list-group-item">Paid orientation</li>
+              <li class="list-group-item">Paid Time Off</li>         
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <h2 class="card-header">Requirements for Company Drivers</h2>
+          <div class="card-body">
+            <div class="card-text">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Minimum 2 years of CDL A experience</li>
+                <li class="list-group-item">Valid CDL A License</li>
+                <li class="list-group-item">Minimum Age 25 Years Old</li>
+                <li class="list-group-item">Clean MVR</li>
+                <li class="list-group-item">Pass drug test</li>
+                <li class="list-group-item">No DWI or DUI within last 5 years</li>
+                <li class="list-group-item">Clean criminal background check</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-</div>
+    <div class="card text-white">
+      <img src="8536-freightliner1-wide.jpg" class="card-img" alt="Blue Cascadia truck parked near trees.">
+      <div class="card-img-overlay driver-heading-photo">
+        <p class="card-title display-4">Owner Operators</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <!-- <img class="card-img-top" src="/static-assets/drivers-owner.jpg" alt=""> -->
+          <h2 class="card-header">Owner Operators</h2>
+          <div class="card-body">
+            <div class="card-text">Bring your own equipment and drive for our family.</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>$1,500</strong> sign on bonus </li>
+              <li class="list-group-item">Average <strong>$9985</strong> weekly gross revenue for solo dry van </li>
+              <li class="list-group-item">Average <strong>$3.14</strong> per loaded mile </li>
+              <li class="list-group-item">Average <strong>$6800 cash out</strong> weekly for solo </li>
+              <li class="list-group-item">Turquoise Transparency Policy <br> We <strong>forward rate confirmation</strong> from customer </li>
+              <li class="list-group-item">Get <strong>100% of Fuel Surcharge</strong> pay </li>
+              <li class="list-group-item">Fuel discount program <strong>save up to</strong> $11,585 per year </li>
+              <li class="list-group-item">Optional Power only drop and hook loads available </li>
+              <li class="list-group-item"><strong>No forced dispatch</strong>; decide your destination/area of operation </li>
+              <li class="list-group-item">Repair emergency bill assist </li>
+              <li class="list-group-item">Occupational accidental insurance available </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <h2 class="card-header">Requirements for Owner Operators</h2>
+          <div class="card-body">
+            <div class="card-text">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">8 years old or newer equipment</li>
+                <li class="list-group-item">Equipment must pass DOT</li>
+                <li class="list-group-item">Minimum 2 years of CDL A experience</li>
+                <li class="list-group-item">Valid CDL A License</li>
+                <li class="list-group-item">Minimum Age 25 Years Old</li>
+                <li class="list-group-item">Clean MVR</li>
+                <li class="list-group-item">Pass drug test</li>
+                <li class="list-group-item">No DWI or DUI within last 5 years</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- primary footer -->
