@@ -59,7 +59,8 @@
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.20) 75%);
   }
   .driver-heading-photo p {
-    font-size: 7vw;
+    /* font-size: 7vw; */
+    font-size: calc(1.3rem + 3vw)
   }
   /* tightens bootstrap 4.x stypes for mobile */
   .card-img-overlay, .card-body {
@@ -71,7 +72,8 @@
   @media screen 
     and (min-width: 800px) {
       .driver-heading-photo p {
-        font-size: 4vw;
+        /* font-size: 4vw; */
+        font-size: calc(1.5rem + 2.2vw);
       }
       /* these reset stypes to defaults from bootstrap 4.x */
       .card-img-overlay, .card-body {
@@ -130,7 +132,7 @@
       </div>
       <div class="col-md-6">
         <div class="card">
-          <img src="/static-assets/drivers-hirearea-truck.png" class="card-img-top" alt="">
+          <img src="/static-assets/drivers-hirearea-truck.png" class="card-img-top" alt="Map of the US with most of the eastern states highlighted.">
           <div class="card-body">
             <h2 class="card-title">Our Hiring Area</h2>
             <p class="card-text">We prefer to hire drivers from the Eastern US. However, if you live in one of the following states exceptions can be made on a case by case basis. We&#8217;re flexible.</p>
@@ -173,7 +175,6 @@
     <div class="row">
       <div class="col-md-8">
         <div class="card">
-          <!-- <img class="card-img-top" src="/static-assets/drivers-company.jpg" alt=""> -->
           <h2 class="card-header">Company Drivers</h2>
           <div class="card-body">
             <div class="card-text">Drive a Turquoise truck and join the family.</div>
@@ -240,7 +241,6 @@
     <div class="row">
       <div class="col-md-6">
         <div class="card">
-          <!-- <img class="card-img-top" src="/static-assets/drivers-owner.jpg" alt=""> -->
           <h2 class="card-header">Owner Operators</h2>
           <div class="card-body">
             <div class="card-text">Bring your own equipment and drive for our family.</div>
@@ -281,112 +281,22 @@
       </div>
     </div>
 
-  </div>
-</div>
+  </div> <!-- close container fluid -->
+</div> <!-- close main content -->
 
 <!-- primary footer -->
-<footer>
-    <div class="section footer-classic footer context-light bg-turquoise">
-        <div class="container">
-            <div class="row row-30">
-                <div class="col-md-4 col-xl-5">
-                    <div class="pr-xl-4"><a class="brand" href="/"><img class="brand-logo-light" src="/static-assets/turquoise-badge.png" alt="Turquoise Trucking" width="181" height="50"></a>
-                        <p>With over 20 years of experience in the trucking business, we provide companies with safe, efficient, and reliable transportation solutions across the United States.</p>
-                        <div class="btn-group" role="group" aria-label="Social media">
-                            <a role="button" class="btn btn-light text-dark" href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square fa-lg"></i><span class="hidden">Facebook</span></a>
-                            <a role="button" class="btn btn-light text-dark" href="https://www.instagram.com/turquoisetruckusa/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-lg"></i><span class="hidden">Instagram</span></a>
-                            <a role="button" class="btn btn-light text-dark"  href="https://www.linkedin.com/company/turquoise-trucking" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin-in fa-lg"></i><span class="hidden">LinkedIn</span></a>
-                            <a role="button" class="btn btn-light text-dark"  href="https://www.youtube.com/channel/UCFuaGJd23Of_bGWgfVyzPIA" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube fa-lg"></i><span class="hidden">YouTube</span></a>
-                          </div>
-                        <ul class="nav-list">   
-                            <!--
-                            <li class="nav-fb"><a href="https://www.facebook.com/TurquoiseTrucking/" target="_blank" rel="noreferrer" class="external-link"><i class="fab fa-facebook-square fa-lg"></i> Follow us on Facebook</a></li>
-							<li class="nav-ig"><a href="https://www.instagram.com/turquoisetruckusa/" target="_blank" class="external-link"><i class="fab fa-instagram-square fa-lg"></i> #TurquoiseTruckUSA</a></li>
-                            -->
-                            <li class="nav-fb"><a href="https://www.redcross.org/" target="_blank" rel="noreferrer" class="external-link"><img src="static-assets/red-cross-transparent.png" alt="" class="redcross"> We support the Red&nbsp;Cross</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h3>Contacts</h3>
-                    <dl class="contact-list">
-                        <dt>Phone:</dt>
-                        <dd><a href="tel:+18447997900"><i class="fas fa-phone fa-lg"></i> 844-799-7900</a><br>
- <a href="tel:+13192890707"><i class="fas fa-phone fa-lg"></i> 319-289-0707</a></dd>
-                    </dl>
-					<dl class="contact-list">
-						<dt>Fax:</dt>
-						<dd><a href="fax:+18442057353"><i class="fas fa-fax fa-lg"></i> 844-205-7353</a></dd>
-					</dl>
-                    <dl class="contact-list">
-                        <dt>Address:</dt>
-                        <dd><a class="external-link" href="https://g.page/TurquoiseTrucking?share" target="_blank" rel="noreferrer"><i class="fas fa-map-marker-alt fa-lg"></i> 3330 Southgate Ct SW Ste&nbsp;222 
-                            <br> Cedar Rapids IA 52404</a></dd>
-                    </dl>
-                    <dl class="contact-list">
-                        <dt>Email:</dt>
-                        <dd><a href="mailto:contact@turquoisetruck.com"><i class="fas fa-envelope fa-lg"></i> Send us a message</a></dd>
-                    </dl>
-                </div>
-                <div class="col-md-4 col-xl-3">
-                    <h3>Links</h3>
-                    <ul class="nav-list">
-                        <li class="nav-home"><a href="/"><i class="fas fa-home"></i> Home</a></li>
-                        <li class="nav-about"><a href="/about/"><i class="fas fa-user-friends"></i> About Turquoise</a></li>
-                        <li class="nav-contact"><a href="/contact/"><i class="far fa-comment-dots"></i> Contact Us</a></li>
-                        <li class="nav-drivers"><a href="/drivers/"><i class="fas fa-truck-moving"></i> Drivers</a></li>
-                        <li class="nav-customers"><a href="/customers/"><i class="fas fa-warehouse"></i> Customers</a></li>
-						<li class="nav-customers"><a href="/covid-19/"><i class="fas fa-people-arrows"></i> COVID-19 Statement</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h3>Memberships &amp; Causes <i class="fas fa-external-link-alt"></i></h3>
-                    <p class="hidden">Following links open external web sites.</p>
-                </div>
-            </div> 
-            <div class="row membership">
-                <div class="col">
-                    <ul>
-                        <li><a href="https://www.cvsa.org/" target="_blank"><img alt="CVSA, Commercial Vehicle Safety Alliance." src="/static-assets/footer-CVSA.png"></a></li>
-                        <li><a href="https://www.nastc.com/" target="_blank"><img alt="NASTC, National Association of Small Trucking Companies." src="/static-assets/footer-NASTC.png"></a></li>
-                        <li><a href="http://www.iowamotortruck.com/" target="_blank"><img alt="IMTA, Iowa Motor Trucking Association." src="/static-assets/footer-IMTA.png"></a></li>
-                        <li><a href="https://www.soiowa.org/" target="_blank"><img alt="Special Olympics Iowa." src="/static-assets/footer-SO.svg"></a></li>
-                        <li><a href="https://www.stjude.org/" target="_blank"><img alt="St. Jude Children's Research Hospital" src="static-assets/footer-stjude.png"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- secondary footer -->
-<div class="footer-dark small">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-xl-9">
-                <p>Made with <a class="external-link" href="https://getbootstrap.com/"><i class="fab fa-bootstrap"></i> Bootstrap</a> and <a class="external-link" href="https://fontawesome.com/"><i class="fab fa-font-awesome-flag"></i> Font Awesome</a> in <a class="external-link" href="http://www.cedar-rapids.org/">Cedar Rapids</a>.</p>
-            </div>
-            <div class="col-md-4 col-xl-3">
-                <p>Copyright &copy; Turquoise, LLC.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <script>
   $(document).ready(function(){
     $(function() {
-            var url = location.pathname;
-            //var url2 = url1.replace(/\//g,'');
-            $('.nav-item a[href^="' + url + '"]')
-              .addClass('active');
-              //console.log("The active link should be " + url2);
-              //console.log("URL1 is "+ url1);
-              //console.log("URL2 is "+ url2);
-            });
+      var url = location.pathname;
+      //var url2 = url1.replace(/\//g,'');
+      $('.nav-item a[href^="' + url + '"]')
+        .addClass('active');
+        //console.log("The active link should be " + url2);
+        //console.log("URL1 is "+ url1);
+        //console.log("URL2 is "+ url2);
+      });
   });
 </script>
 
