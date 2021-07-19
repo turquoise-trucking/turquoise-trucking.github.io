@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.83.1">
+  <meta name="author" content="John Hardesty for Turquoise Trucking">
+
   <title>Drive for Turquoise</title>
 
   <!-- Bootstrap core CSS -->
@@ -30,7 +30,6 @@
       -moz-user-select: none;
       user-select: none;
     }
-
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
@@ -43,10 +42,11 @@
     border-width: 1px 0;
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
   }
-
   @media (min-width: 992px) {
-    .rounded-lg-3 { border-radius: .3rem; }
-  }
+    .rounded-lg-3 {
+      border-radius: .3rem; 
+      }
+    }
   .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("conrad.jpg");
@@ -70,7 +70,6 @@
   }
   .scrollspy {
     height: 100%;
-    
   }
   body {
     position: relative;
@@ -110,19 +109,10 @@
   </style>
 </head>
 
-
-
-<body data-bs-spy="scroll" data-bs-target="#driver-navbar" data-bs-offset="50" tabindex="0" >
-
-<script>
-  //var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  //var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  //return new bootstrap.Popover(popoverTriggerEl)
-  //})
-
-</script>
-    
+<body data-bs-spy="scroll" data-bs-target="#driver-navbar" data-bs-offset="50" tabindex="0" > 
 <main>
+
+  <!-- scroll spy navbar -->
   <nav id="driver-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="../static-assets/tt-icon-apple.png" width="32"></a>
@@ -139,11 +129,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#ss3">Owners operators</a>
-          </li><li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#ss4">Perks</a>
-          </li><li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#ss5">Testimonials</a>
-          </li><li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#ss6">Hiring Area</a>
           </li>
           <li class="nav-item">
@@ -275,8 +268,7 @@
           <li class="list-group-item">OCAC & Health insurance available</li>
           <li class="list-group-item">Paid weekly with direct deposit</li>
           <li class="list-group-item">Cash advances available</li>
-          <li class="list-group-item">Referral bonus program</li>
-          
+          <li class="list-group-item">Referral bonus program</li> 
         </ul>
       </div>
       
@@ -440,16 +432,16 @@
 </main>
 
 <!-- bootstrap 5 bundle with popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+  crossorigin="anonymous">
 </script>
-
 <script>
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
   })
 </script>
-
-      
-  </body>
+</body>
 </html>
