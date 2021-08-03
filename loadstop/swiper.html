@@ -50,9 +50,25 @@
       margin-left: 0.5em;
       margin-right: 0.5em;
       position: absolute;
-      bottom: 1em;
       font-size: 4.25vw;
       display: block;
+      bottom: 1em;
+    }
+    .s-top {
+      bottom: auto;
+      top: 2em;
+    }
+    .s-shipment {
+      top: 9em;
+      bottom: auto;
+    }
+    .s-middle {
+      top: 15em;
+      bottom: auto;
+    }
+    .s-lower {
+      top: auto;
+      bottom: 8em
     }
     section:target {
       display: none;
@@ -152,29 +168,29 @@
         <p>If you’re a company driver and using a truck tablet it might be logged in to another driver. You can press the hamburger (3 lines) menu and tap Log Out to get to this screen.</p>
       </div>
       <!-- 01 -->
-      <div class="swiper-slide"><img src="01.png"></div>
+      <div class="swiper-slide"><img src="01.webp"></div>
       <div class="swiper-slide">
         <section>
           <p class="small">First, let’s sign up! Chances are this is your first time using LoadStop.</p>
           <p class="small">Click the gray Sign Up button.</p>
         </section>
-        <img src="01.png">
+        <img src="01.webp">
       </div>
       
       
       <!-- 02 -->
-      <div class="swiper-slide"><img src="02.png"></div>
+      <div class="swiper-slide"><img src="02.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Sign Up</h2>
           <p>This is easy. Enter your first and last name followed by your cell number.</p>
           <p>Your phone number has to be the one we have on file. And it must be able to accept text messages.</p>
         </section>
-        <img src="02.png">
+        <img src="02.webp">
       </div>
 
       <!-- 03A -->
-      <div class="swiper-slide"><img src="03.png"></div>
+      <div class="swiper-slide"><img src="03.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Verification Code</h2>
@@ -190,11 +206,11 @@
           <p>This could change at any point. Good rule of thumb is the most recent text message you get with a code is probably the one you’ll want.</p>
           <p>If that doesn’t work, click Resend code. Still nothing? Make sure we have your correct phone number on our end and that the number you just entered is the right one.</p>
         </section>
-        <img src="03.png">
+        <img src="03.webp">
       </div>
 
       <!-- 04 -->
-      <div class="swiper-slide"><img src="04.png"></div>
+      <div class="swiper-slide"><img src="04.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Dashboard</h2>
@@ -206,17 +222,17 @@
       </div>
 
       <!-- 05 -->
-      <div class="swiper-slide"><img src="05.png"></div>
+      <div class="swiper-slide"><img src="05.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Pending load</h2>
           <p>During training we will dispatch a test load. You get a brief summary of the load, how many stops, appointments, and distance.</p>
         </section>
-        <img src="05.png">
+        <img src="05.webp">
       </div>
       
       <!-- 06 -->
-      <div class="swiper-slide"><img src="06.png"></div>
+      <div class="swiper-slide"><img src="06.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Accept a load</h2>
@@ -227,19 +243,19 @@
       </div>
 
       <!-- 07A -->
-      <div class="swiper-slide"><img src="07.png"></div>
+      <div class="swiper-slide"><img src="07.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-shipment">
           <h2>Shipment Details</h2>
           <p>Across the top you have details, documents, and notes.</p>
           <p>Details is the main load area; with full load details and event buttons. Documents is all the paperwork that you take photos of. Notes are personal and just a spot to jot down information quickly.</p>
         </section>
-        <img src="07.png">
+        <img src="07.webp">
       </div>
 
       <!-- 07B -->
       <div class="swiper-slide">
-        <section>
+        <section class="s-shipment">
           <h2>Shipment Details <em>cont'd</em></h2>
           <p>For test loads we will assign a dummy truck and trailer. During an actual load your current truck and trailer will be displayed. If these aren’t right, give us a call. You should always know what trailer your pulling for your logs as it is.</p>
           <p>Three main buttons including moving (the default), pause, and complete shipment. Most important button is complete shipment but we won’t cover that till near the end.</p>
@@ -248,19 +264,19 @@
       </div>
 
       <!-- 08 -->
-      <div class="swiper-slide"><img src="08.png"></div>
+      <div class="swiper-slide"><img src="08.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Stops</h2>
           <p>Notice the info for each stop. You get a brief visual of the stop and address. Pickup number, quantity, weight, and any instructions. Below are appointment times.</p>
         </section>
-        <img src="08.png">
+        <img src="08.webp">
       </div>
 
       <!-- 09 -->
-      <div class="swiper-slide"><img src="09.png"></div>
+      <div class="swiper-slide"><img src="09.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Stops <em>cont'd</em></h2>
           <p>Each stop has their own buttons that we’ll go over in a bit.</p>
         </section>
@@ -268,89 +284,89 @@
       </div>
 
       <!-- 10 -->
-      <div class="swiper-slide"><img src="10.png"></div>
+      <div class="swiper-slide"><img src="10.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>SMS Message</h2>
           <p>What happens if LoadStop Driver isn’t working or you run out of data? Dispatch information is also sent as a text message to your phone. It isn’t much but it could be just enough to get headed in the right direction.</p>
           <p>If data isn’t a problem, the link at the bottom leads to a webpage that summarizes the load for you. It gives all the same information as the LoadStop app would.</p>
         </section>
-        <img src="10.png">
+        <img src="10.webp">
       </div>
 
       <!-- 11 -->
-      <div class="swiper-slide"><img src="11.png"></div>
+      <div class="swiper-slide"><img src="11.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-top">
           <h2>Event Buttons</h2>
           <p>Each stop has buttons with it. These are event buttons. Let’s say you’re about to start to your first stop and click en route. LoadStop Driver asks if you’re sure.</p>
           <p>Tapping yes will send us an event with a timestamp. This is a great feature that will help with things like detention tracking. They are organized left to right, top to bottom. Tap when you’re at the pickup, when loading starts, etc.</p>
         </section>
-        <img src="11.png">
+        <img src="11.webp">
       </div>
 
       <!-- 12 -->
-      <div class="swiper-slide"><img src="12.png"></div>
+      <div class="swiper-slide"><img src="12.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-top">
           <h2>Event Buttons <em>cont'd</em></h2>
           <p>But, It’s always a good idea to call your dispatcher with in and out times as well as get them on your paperwork.</p>
         </section>
-        <img src="12.png">
+        <img src="12.webp">
       </div>
 
       <!-- 13 -->
-      <div class="swiper-slide"><img src="13.png"></div>
+      <div class="swiper-slide"><img src="13.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Add Paperwork</h2>
           <p>To add paperwork, tap Documents at the top. We only want signed BOLs from the receiver, we won’t need them from the shipper. For multi-drop loads just send the paperwork after the last stop.</p>
           <p>Tap the plus in the green circle at the bottom.</p>
         </section>
-        <img src="13.png">
+        <img src="13.webp">
       </div>
 
       <!-- 14 -->
-      <div class="swiper-slide"><img src="14.png"></div>
+      <div class="swiper-slide"><img src="14.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Add Paperwork <em>cont'd</em></h2>
           <p>If you’d already took photos with another app like your built-in camera choose Select from Library. Otherwise, tap Take a Picture.</p>
         </section>
-        <img src="14.png">
+        <img src="14.webp">
       </div>
 
       <!-- 15 -->
-      <div class="swiper-slide"><img src="15.png"></div>
+      <div class="swiper-slide"><img src="15.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Take a Photo</h2>
           <p>The photo screen has a few options to change flash or color mode. When in doubt simply take a photo.</p>
         </section>
-        <img src="15.png">
+        <img src="15.webp">
       </div>
 
       <!-- 17 -->
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Photo Settings</h2>
           <p>There are a few settings that could help you take a better photo. Paperwork is money, it’s how you get paid. Without solid paperwork the load you just delivered doesn’t mean much to the broker a few weeks down the road.</p>
           <p>The 3 circle button filters the photo. Clearest paperwork is Black & White but Grayscale works too.</p>
         </section>
-        <img src="17.png">
+        <img src="17.webp">
       </div>
 
       <!-- 18 -->
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Photo Settings <em>cont'd</em></h2>
           <p>The lightning bolt controls flash. In low lighting situations set this to On. Any strong contrasts (shadows) also affect the quality of a photo.</p>
         </section>
-        <img src="18.png">
+        <img src="18.webp">
       </div>
 
       <!-- 19A -->
-      <div class="swiper-slide"><img src="19.png"></div>
+      <div class="swiper-slide"><img src="19.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Photo Technique</h2>
@@ -360,7 +376,7 @@
             <li>Flatten the paperwork as best you can</li>
           </ul>
         </section>
-        <img src="19.png">
+        <img src="19.webp">
       </div>
 
       <!-- 19B -->
@@ -373,94 +389,94 @@
             <li>Lift the camera high, then tilt it back slightly and reposition. This tends to correct orientation problems where the paperwork is flipped the wrong way.</li>
           </ul>
         </section>
-        <img src="19.png">
+        <img src="19.webp">
       </div>
 
       <!-- 21 -->
-      <div class="swiper-slide"><img src="21.png"></div>
+      <div class="swiper-slide"><img src="21.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Add New Documents</h2>
           <p>To take multiple pages, take multiple photos. If the paperwork says page 1 of 5, make sure you’re sending us 5 pages.</p>
           <p>Tap a photo to edit.</p>
         </section>
-        <img src="21.png">
+        <img src="21.webp">
       </div>
 
       <!-- 23 -->
-      <div class="swiper-slide"><img src="23.png"></div>
+      <div class="swiper-slide"><img src="23.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Edit a Photo</h2>
           <p>From left to right, the bottom buttons are crop, filter, rotate, and delete.</p>
           <p><strong>Cropping</strong> allows you to trim the edges of the photo.</p>
           <p><strong>Filter</strong> works the same as in-camera.</p>
           <p><strong>Rotate</strong> fixes any photos that ended up flipped or sideways.</p>
         </section>
-        <img src="23.png">
+        <img src="23.webp">
       </div>
 
       <!-- 24 -->
-      <div class="swiper-slide"><img src="24.png"></div>
+      <div class="swiper-slide"><img src="24.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-middle">
           <h2>Adjust Corners</h2>
           <p>Drag the corners to get the whole page without the background.</p>
         </section>
-        <img src="24.png">
+        <img src="24.webp">
       </div>
 
       <!-- 25 -->
-      <div class="swiper-slide"><img src="25.png"></div>
+      <div class="swiper-slide"><img src="25.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Send Documents</h2>
           <p>Now we have two documents. To send documents, tap the share button on the bottom right.</p>
         </section>
-        <img src="25.png">
+        <img src="25.webp">
       </div>
 
       <!-- 27 -->
-      <div class="swiper-slide"><img src="27.png"></div>
+      <div class="swiper-slide"><img src="27.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-lower">
           <h2>Select File Type</h2>
           <p>This is a BOL so tap that, then tap the green Upload Document button.</p>
           <p>LoadStop only supports files related to a load; like BOLs, lumpers, and scale tickets. If you need to send something like an inspection or updated medical card we use other software for that.</p>
         </section>
-        <img src="27.png">
+        <img src="27.webp">
       </div>
 
       <!-- 28 -->
-      <div class="swiper-slide"><img src="28.png"></div>
+      <div class="swiper-slide"><img src="28.webp"></div>
       <div class="swiper-slide">
         <section>
           <h2>Document Added</h2>
           <p>This oddly worded prompt appears when you add a document. It should read View Document and Okay.</p>
           <p>Tap Cancel and Details to go back.</p>
         </section>
-        <img src="28.png">
+        <img src="28.webp">
       </div>
 
       <!-- 29 -->
-      <div class="swiper-slide"><img src="29.png"></div>
+      <div class="swiper-slide"><img src="29.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-top">
           <h2>Complete Shipment</h2>
           <p>When you’ve been unloaded at your last stop and submitted paperwork it’s time to close out the load..</p>
           <p>Tap Complete Shipment at the top of Details. A prompt will ask if you’re sure.</p>
         </section>
-        <img src="29.png">
+        <img src="29.webp">
       </div>
 
       <!-- 30 -->
-      <div class="swiper-slide"><img src="30.png"></div>
+      <div class="swiper-slide"><img src="30.webp"></div>
       <div class="swiper-slide">
-        <section>
+        <section class="s-top">
           <h2>Complete Shipment <em>cont'd</em></h2>
           <p>Once you complete a load it will be moved to your history tab in the Dashboard.</p>
         </section>
-        <img src="30.png">
+        <img src="30.webp">
       </div>
 
       <!-- Outro -->
