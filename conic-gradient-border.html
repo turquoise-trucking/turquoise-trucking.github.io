@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conic Gradient Border demo</title>
+  <style>
+    .conic-card {
+      --startDeg: 0deg;
+      inline-size: 50vmin;
+      block-size: 50vmin;
+      border: 5vmin solid hsl(100 100% 60%);
+      border-image-slice: 1;
+      border-image-source: conic-gradient(
+        from var(--startDeg, 0deg),
+        hsl(100 100% 60%), 
+        hsl(200 100% 60%),
+        hsl(100 100% 60%)
+      );
+      display: grid;
+      place-content: center;
+      padding: 4ch;
+      box-sizing: border-box;
+      font-size: 10vmin;
+    }
+    html {
+      block-size: 100%;
+      inline-size: 100%;
+    }
+    body {
+      min-block-size: 100%;
+      min-inline-size: 100%;
+      background: hsl(204 100% 5%);
+      color: white;
+      margin: 0;
+      display: grid;
+      place-content: center;
+      font-family: system-ui;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- From Terry Mun at https://codepen.io/terrymun/pen/mdVGjMB-->
+  <div class="conic-card">
+    Conic Gradient Border
+  </div>
+</body>
+</html>
