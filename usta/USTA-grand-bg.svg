@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created using Krita: https://krita.org -->
+
+<svg
+   width="616.7558pt"
+   height="471.88251pt"
+   viewBox="0 0 616.75581 471.88251"
+   version="1.1"
+   id="svg2547"
+   sodipodi:docname="USTA-grand-bg.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:export-filename="..\..\05-11 Website\og-image pre.png"
+   inkscape:export-xdpi="140.08786"
+   inkscape:export-ydpi="140.08786"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview50"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="1.8568938"
+     inkscape:cx="330.65973"
+     inkscape:cy="358.39422"
+     inkscape:window-width="3840"
+     inkscape:window-height="2050"
+     inkscape:window-x="-12"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2547" />
+  <defs
+     id="defs2519" />
+  <g
+     aria-label="USTA"
+     id="shape0"
+     style="font-size:100px;font-family:'Faster One';letter-spacing:13;word-spacing:0;fill:#fe0000;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:0"
+     inkscape:label="USTA" />
+  <path
+     id="shape3"
+     fill="#fbfbfb"
+     fill-rule="evenodd"
+     d="m 255.8934,229.95094 21.8712,-12.38168 c 20.5399,21.09138 34.2631,13.04208 40.8163,-6.18082 l 24.9975,7.96936 c -4.565,24.73404 12.182,31.31144 30.19,24.59314 l 13.563,21.875 c -14.235,11.3452 -17.33,26.5676 5.568,40.6828 l -6.718,24.7487 c -25.295,-2.942 -33.895,7.149 -23.865,30.582 l -22.804,13.877 c -15.559,-19.423 -30.8574,-15.945 -40.869,5.485 l -23.625,-7.125 c 1.2058,-18.547 -4.1661,-32.911 -32.6446,-24.257 l -12.72795,-22.628 c 15.28565,-13.016 21.93355,-28.1724 -5.78945,-41.1888 l 7.82237,-24.4394 c 17.60653,2.2863 31.69323,-1.918 24.21463,-31.6123 z"
+     inkscape:label="Gear outline" />
+  <rect
+     id="shape02"
+     transform="matrix(0.99999979,-6.5458225e-4,8.4106474e-4,0.99999965,0,0)"
+     fill="#061069"
+     fill-rule="evenodd"
+     stroke-opacity="0"
+     stroke="#000000"
+     stroke-width="0"
+     stroke-linecap="square"
+     stroke-linejoin="bevel"
+     width="682.28821"
+     height="30.937494"
+     x="-24.16259"
+     y="79.997643"
+     inkscape:label="Blue line" />
+</svg>

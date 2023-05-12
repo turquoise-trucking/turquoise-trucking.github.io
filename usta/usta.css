@@ -1,0 +1,54 @@
+.usta-bar-blue {
+  background: 061069;
+}
+/* use for structure to hide from screens but remain for screenreaders */
+.hide {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip; rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; 
+}
+header {
+  background-image: url("USTA-grand.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 100%;
+  height: 650px;
+  margin: 0;
+  padding: 0;
+
+}
+.header-inner {
+  /*background-color: #061069;*/
+  padding: 2em;
+}
+.header-inner button {
+  float: right;
+}
+.side-photo {
+  width: 90%;
+  filter: drop-shadow(0 3px 0.2rem #444);
+  border-radius: 0.75rem;
+}
+.feature-icon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.75rem;
+}
+.list-group-item, .list-group {
+  margin-left: 0;
+  padding-left: 0 !important;
+}
+.divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(105, 105, 105, .1);
+  border: solid rgba(205, 205, 205, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);
+}
