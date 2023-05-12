@@ -32,8 +32,8 @@ header {
 }
 .side-photo {
   width: 90%;
-  filter: drop-shadow(0 3px 0.2rem #444);
-  border-radius: 0.75rem;
+  /* filter: drop-shadow(0 3px 0.2rem #444);
+  border-radius: 0.75rem; */
 }
 .feature-icon {
   width: 6rem;
