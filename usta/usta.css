@@ -1,6 +1,9 @@
 .usta-blue {
   color: #061069 !important;
 }
+.usta-blue-bg {
+  background-color: #061069 !important;
+}
 .usta-red:hover {
   background-color: #fd022b !important;
 }
@@ -37,13 +40,14 @@ header {
   float: right;
 }
 .side-photo {
-  width: 90%;
+  width: 100%;
+  margin-top: em;
   /* filter: drop-shadow(0 3px 0.2rem #444);
   border-radius: 0.75rem; */
 }
 .feature-icon {
-  width: 6rem;
-  height: 6rem;
+  width: auto;
+  /*height: 6rem;*/
   border-radius: 0.75rem;
   background-color: #061069;
   color: white;
@@ -59,4 +63,16 @@ header {
   border: solid rgba(205, 205, 205, .15);
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);
+}
+.display-6 {
+  font-size: 1.5rem !important;
+  padding: 0 0.25em 0.2em;
+  text-align: center;;
+  
+}
+svg.services {
+  display: block;
+  width: 92px;
+  height: 92px;
+  margin: 0.5em auto 0.2em;
 }
