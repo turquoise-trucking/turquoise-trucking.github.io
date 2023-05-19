@@ -33,12 +33,6 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  
-  <!-- original boilerplate 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  -->
 
   <link rel="stylesheet" href="usta.css">
 
@@ -49,12 +43,15 @@
   <header id="top" class="call">
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded shadow-sm" aria-label="Navbar">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-          <a class="navbar-brand col-lg-3 me-0" href="#">USTA</a>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbars">
+          <a class="navbar-brand col-lg-3 me-0 usta-blue" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+          </svg></a>
           <ul class="navbar-nav col-lg-6 justify-content-lg-center">
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
@@ -67,9 +64,9 @@
             </li>
           </ul>
           <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-            <a href="tel:+13194507800"><button class="btn btn-dark usta-blue-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <a href="tel:+13194507800" class="btn btn-dark rounded-pill usta-blue-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-            </svg> Call us 319-450-7800</button></a>
+            </svg> Call us 319-450-7800</a>
           </div>
         </div>
       </div>
@@ -77,7 +74,7 @@
     <div class="header-inner">
       <h1 class="hide">US Truck Assistance</h1>
       <p class="hide">USTA, US Truck Assistance, 24 7 service.</p>
-    <div>
+    </div>
   </header>
 
   <div class="divider"></div>
@@ -86,7 +83,7 @@
     <h2 id="services" class="display-4 fw-bold text-body-emphasis">Services you can trust</h2>
     <div class="row row-cols-1 row-cols-lg-2 align-items-md-center g-4 py-5">
       <div class="col d-flex flex-column align-items-center justify-content-center g-4">
-        <img class="side-photo border rounded-3 shadow" src="usta-shop.jpg" alt="Front of the USTA shop May 2023"/>
+        <img class="side-photo border rounded-3 shadow" src="usta-shop.jpg" alt="Front of the USTA shop May 2023" loading="lazy">
       </div>
 
       <div class="col">
@@ -194,7 +191,7 @@
       </div>
 
       <div class="col d-flex flex-column align-items-center justify-content-center g-4">
-        <img class="side-photo side-photo border rounded-3 shadow" src="usta-truck.jpg" alt="White work truck with the USTA decal on the door sitting in front of the shop."/>
+        <img class="side-photo side-photo border rounded-3 shadow" src="usta-truck.jpg" alt="White work truck with the USTA decal on the door sitting in front of the shop." loading="lazy">
       </div>
     </div>
   </div>
@@ -206,13 +203,13 @@
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Call or email us to schedule an appointment.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="tel:+13194507800"><button class="btn btn-lg px-4 gap-3 btn-dark usta-blue-bg"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <a href="tel:+13194507800" class="btn btn-lg px-4 gap-3 btn-dark usta-blue-bg"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-        </svg> Call us 319-450-7800</button></a>
-        <a href="mailto:jen@ustaservice.com"><button class="btn btn-lg px-4 gap-3 btn-outline-success "><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+        </svg> Call us 319-450-7800</a>
+        <a href="mailto:jen@ustaservice.com" class="btn btn-lg px-4 gap-3 btn-outline-success"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
           <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2h3Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
           <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
-        </svg> Send us an email</button></a>
+        </svg> Send us an email</a>
       </div>
     </div>
   </div>
@@ -222,19 +219,19 @@
   <div class="px-4 pt-5 my-5 text-center">
     <h2 id="map" class="display-4 fw-bold text-body-emphasis">Stop by today</h2>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">We’re located in Cedar Rapids, Iowa. Take Exit 253 from US-30 or Exit 17 on I-380.</p>
+      <p class="lead mb-4">We’re located in Cedar Rapids, Iowa. <br>Take Exit 253 from US-30 or Exit 17 on I-380.</p>
       <p class="lead mb-4">4215 Booth St SW Building A,<br>
         Cedar Rapids, IA 52404</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-center mb-5 center">
-        <a href="https://goo.gl/maps/mAQYH5Z6D3sufrcq6" target="_blank"><button type="button" class="btn btn-outline-danger btn-lg px-4 me-sm-3 usta-red">  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+        <a href="https://goo.gl/maps/mAQYH5Z6D3sufrcq6" target="_blank" class="btn btn-outline-danger btn-lg px-4 me-sm-3 usta-red"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
           <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
           <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
-        </svg> Directions</button></a>
+        </svg> Directions</a>
       </div>
     </div>
     <div>
       <div class="container px-5">
-        <img src="usta-map.png" class="img-fluid border rounded-3 shadow mb-4" alt="Example image" width="600" loading="lazy">
+        <img src="usta-map.png" class="img-fluid border rounded-3 shadow mb-4" alt="Map of streets with USTA pinned in the center in red." width="600" loading="lazy">
       </div>
     </div>
   </div>
@@ -247,7 +244,7 @@
   
       <a href="#top" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         
-        <img src="usta-footer.svg" width="50px" alt="USTA icon"/>
+        <img src="usta-footer.svg" width="50" alt="USTA icon" loading="lazy">
       </a>
   
       <ul class="nav col-md-4 justify-content-end">
