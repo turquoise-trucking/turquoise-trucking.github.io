@@ -43,11 +43,7 @@ header {
   min-height: 20rem;
   padding: 1em 1em 0 0;
 }
-.mx-auto {
-  display: block;
-  max-width: 75vw;
-  margin-top: 1em;
-}
+
 /* main content -------------------- */
 .side-photo {
   width: 100%;
